@@ -18,13 +18,13 @@ const Landing = () => (
         }
         h1 {
           font-family: Futura;
-          font-size: 70px;
+          font-size: 80px;
           font-weight: 600;
           margin-bottom: 25px;
           text-shadow: 15px 15px #d9d9d9;
         }
         p {
-          font-size: 23px;
+          font-size: 27px;
           font-weight: 500;
           letter-spacing: 2px;
         }
