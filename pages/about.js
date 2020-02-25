@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 
-export default function About() {
+export default About = () => {
   return (
     <Layout>
       <p>This is the about page</p>
     </Layout>
   );
-}
+};

@@ -1,5 +1,5 @@
 import { PostLink, PostImg } from "../actions/Post";
-import database from "../data_storage/database";
+import { database } from "../data_storage/database";
 
 const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
   const renderDatabase = () => {

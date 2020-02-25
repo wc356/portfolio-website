@@ -1,5 +1,5 @@
 import Card from "./Card";
-import database from "../data_storage/database";
+import { database } from "../data_storage/database";
 
 // const values = Object.values(database);
 // const entries = Object.entries(database);

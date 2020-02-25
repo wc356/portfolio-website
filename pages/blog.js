@@ -1,51 +1,75 @@
-import Layout from "../components/Layout";
 import Link from "next/link";
+import Layout from "../components/Layout";
+import { blogContent } from "../data_storage/database";
 
-// Add Post
-const getPosts = () => [
-  {
-    id: "challenges of self-taught",
-    title: "Challenges of Self-Taught Developers (rant)"
-  },
-  { id: "loops", title: "Looping through objects" },
-  { id: "reflections", title: "Current Reflections" }
-];
+export default () => {
+  // Add Post
+  const addPosts = () => {
+    const posts = blogContent.map(post => (
+      <>
+        <li className="post" key={post.id}>
+          <PostLink key={post.id} post={post} />
+        </li>
+        <style jsx>
+          {`
+            .post {
+              display: flex-box;
+              width: 800px;
+              background-color: white;
+              padding: 40px;
+              margin-bottom: 10px;
+              box-shadow: LightGray 0px 0px 10px 0px;
+            }
+          `}
+        </style>
+      </>
+    ));
+    return posts;
+  };
 
-// PostLink Component
-const PostLink = ({ post }) => (
-  <Link href="/p/[id" as={`/p/${post.id}`}>
-    <a>{post.title}</a>
-  </Link>
-);
+  // PostLink Component
+  const PostLink = ({ post }) => (
+    <>
+      <Link href="/p/[title]" as={`/p/${post.title}`}>
+        <a className="nav-link">{post.title}</a>
+      </Link>
+      <style jsx>
+        {`
+          .nav-link {
+            text-decoration: none;
+          }
+        `}
+      </style>
+    </>
+  );
 
-export default function Blog() {
   return (
     <Layout>
       <div className="layout">
+        {console.log(typeof addPosts())}
         <h1>Tech_Blog</h1>
-        <p>This is the blog homepage</p>
         <section>
-          <ul>
-            {getPosts().map(post => (
-              <li key={post.id}>
-                <PostLink key={post.id} post={post} />
-              </li>
-            ))}
-          </ul>
+          <ul>{addPosts()}</ul>
         </section>
       </div>
       <style jsx>
         {`
           h1 {
             font-size: 50px;
-            margin-bottom: 50px;
+            font-weight: 500;
+            margin-bottom: 30px;
           }
           .layout {
             padding-top: 50px;
-            padding-left: 100px;
+            padding-left: 120px;
+            line-height: 1.5;
+            background-color: rgb(239, 239, 239);
+          }
+          .nav-link {
+            text-decoration: none;
           }
         `}
       </style>
     </Layout>
   );
-}
+};

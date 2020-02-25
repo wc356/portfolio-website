@@ -34,7 +34,7 @@ const Nav = () => (
           letter-spacing: 5px;
         }
         .navlink:visited {
-          color: coral;
+          color: black;
         }
         .navlink:hover {
           opacity: 0.5;

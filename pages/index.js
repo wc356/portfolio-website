@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import { useEffect } from "react";
 
 // Render
-export default function LandingPage() {
+const LandingPage = () => {
   useEffect(() => {
     console.log("useEffect ran");
   });
@@ -21,4 +21,6 @@ export default function LandingPage() {
       <Footer />
     </Layout>
   );
-}
+};
+
+export default LandingPage;

@@ -21,11 +21,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/next/dist/pages/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/p/[id]": [
+    "/p/[title]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
