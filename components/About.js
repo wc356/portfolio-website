@@ -1,4 +1,4 @@
-import ProfilePic from "../images/profile_pic.png";
+import ProfilePic from "../public/images/profile_pic.png";
 
 const About = () => (
   <div className="main">

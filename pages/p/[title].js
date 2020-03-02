@@ -13,9 +13,9 @@ export default () => {
       if (post.title === title) {
         return (
           <>
-            {/* <div className="img">
-              <img src={require(post.picPath)} height="350" width="600" />
-            </div> */}
+            <div className="img">
+              <img src={post.picPath} height="350" width="600" />
+            </div>
             <p key={post.id}>{post.body}</p>
             <Link href="/blog">
               <a className="navlink">

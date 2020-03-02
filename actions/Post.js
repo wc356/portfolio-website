@@ -1,4 +1,4 @@
-import ExpensifyPic from "../images/expensify.png";
+import ExpensifyPic from "../public/images/expensify.png";
 import Link from "next/link";
 
 export const PostLink = ({ id = "PROJECT TITLE" }) => (
