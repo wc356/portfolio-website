@@ -1,3 +1,4 @@
+import theme from "../styles/theme";
 import Link from "next/link";
 
 const SocialLink = ({ title, link, viewbox, path }) => (
@@ -20,6 +21,7 @@ const SocialLink = ({ title, link, viewbox, path }) => (
         }
         svg {
           height: 20px;
+          fill: ${theme.colors.link};
         }
       `}
     </style>
@@ -54,10 +56,18 @@ const SocialLinks = () => (
         ul {
           display: flex;
           flex-direction: row;
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 7px;
           position: fixed;
+          padding: 9px;
           top: 20px;
           right: 30px;
           z-index: 1;
+        }
+        .blog {
+          color: ${theme.colors.link};
+          font-weight: 600;
+          text-decoration: none;
         }
       `}
     </style>

@@ -1,3 +1,4 @@
+import theme from "../styles/theme";
 import Link from "next/link";
 import SocialLinks from "./SocialLinks";
 
@@ -32,12 +33,13 @@ const Nav = () => (
           margin: 70px 0;
           transform: rotate(-90deg);
           letter-spacing: 5px;
+          color: ${theme.colors.link};
         }
         .navlink:visited {
-          color: black;
+          color: ${theme.colors.link};
         }
         .navlink:hover {
-          opacity: 0.5;
+          color: ${theme.colors.light};
         }
       `}
     </style>

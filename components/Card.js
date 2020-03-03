@@ -1,3 +1,4 @@
+import theme from "../styles/theme";
 import { PostLink, PostImg } from "../actions/Post";
 import { database } from "../data_storage/database";
 
@@ -12,17 +13,16 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
           {`
             ul {
               display: inline-block;
-              flex-direction: row;
-              flex-wrap: wrap;
             }
             li {
               display: inline-block;
               padding: 8px;
               margin-right: 10px;
               margin-bottom: 10px;
-              color: black;
-              border: 3px solid #65b2d8;
-              border-radius: 9px;
+              font-weight: 500;
+              color: ${theme.colors.dark};
+              background-color: ${theme.colors.light};
+              border-radius: 0 10px 0 10px;
             }
           `}
         </style>
@@ -56,13 +56,14 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
             height: 350px;
             overflow: hidden;
             width: 55%;
-            border: 1px solid gray;
             margin-left: 110px;
           }
           .card--desc {
+            background-color: ${theme.colors.dark};
             margin-left: 0;
             width: 45%;
             border: none;
+            border-radius: 0 0 50px 0;
             text-align: center;
           }
           .text-wrapper {
@@ -70,21 +71,22 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
             height: 100%;
           }
           .text {
+            color: white;
+            padding: 15px;
             position: relative;
             white-space: pre-line;
             height: 100%;
           }
-          .tech-wrapper {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            padding: 0 40px;
-            width: 100%;
-            margin: -10px 0;
-          }
           h1 {
             margin-bottom: 20px;
             margin-top: 10px;
+          }
+          .tech-wrapper {
+            display: block;
+            position: absolute;
+            padding: 0 40px;
+            width: 100%;
+            bottom: 20px;
           }
         `}
       </style>

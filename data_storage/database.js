@@ -13,7 +13,7 @@ export const database = {
   },
   Expensify: {
     quote: "Quickly Sort & Track your Expenses",
-    description: "Full-stack web application built with React",
+    description: "Full-stack web application built with React and Redux",
     technology: [
       "react",
       "redux",
@@ -68,6 +68,18 @@ export const blogContent = [
   {
     id: "reflections",
     title: "Current Reflections",
+    body: "TEXT",
+    picPath: "/images/the_office.jpg"
+  },
+  {
+    id: "GitHub Contribution Struggles",
+    title: "My Thoughts on GitHub Contributions",
+    body: "TEXT",
+    picPath: "/images/the_office.jpg"
+  },
+  {
+    id: "GitHub Contribution Struggles",
+    title: "My Thoughts on GitHub Contributions",
     body: "TEXT",
     picPath: "/images/the_office.jpg"
   },

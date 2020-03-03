@@ -1,3 +1,4 @@
+import theme from "../styles/theme";
 import ExpensifyPic from "../public/images/expensify.png";
 import Link from "next/link";
 
@@ -12,11 +13,10 @@ export const PostLink = ({ id = "PROJECT TITLE" }) => (
           font-size: 20px;
           font-weight: 600;
           margin-bottom: 20px;
-          text-decoration: none;
-          color: #55a5e7;
+          color: ${theme.colors.light};
         }
         a:visited {
-          color: #55a5e7;
+          color: ${theme.colors.light};
         }
       `}
     </style>

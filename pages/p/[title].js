@@ -18,9 +18,7 @@ export default () => {
             </div>
             <p key={post.id}>{post.body}</p>
             <Link href="/blog">
-              <a className="navlink">
-                <span>‹</span> b a c k
-              </a>
+              <a className="navlink">p r e v</a>
             </Link>
             <style jsx>
               {`
@@ -38,7 +36,7 @@ export default () => {
                   font-weight: 900;
                   text-decoration: none;
                   color: white;
-                  background-color: #8a2be2;
+                  background-color: dodgerblue;
                   border-radius: 10px;
                 }
                 .navlink:hover {

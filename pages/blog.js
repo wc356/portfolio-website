@@ -23,62 +23,17 @@ export default () => {
         <style jsx>
           {`
             .post {
-              display: flex-box;
-              background-color: white;
+              display: block;
+              height: 200px;
+              width: 200px;
+              background-color: dodgerblue;
+              border-radius: 10px;
               padding: 20px;
               margin-bottom: 10px;
-              box-shadow: LightGray 0px 0px 10px 0px;
-              border-radius: 10px;
-              min-width: 100px;
               word-break: break-word;
             }
           `}
         </style>
-        {/* <button onClick={handleClick}>
-          <h3>{post.title}</h3>
-          <p className="date">added Oct. 12 2019</p>
-        </button>
-        {active ? (
-          <style jsx>
-            {`
-              .post {
-                display: flex;
-              }
-              button {
-                display: block;
-                text-align: left;
-                width: 100%;
-                background-color: gray;
-                padding: 20px;
-                margin-bottom: 10px;
-                box-shadow: LightGray 0px 0px 10px 0px;
-                border-radius: 10px;
-                min-width: 100px;
-                word-break: break-word;
-              }
-            `}
-          </style>
-        ) : (
-          <style jsx>
-            {`
-              .post {
-                display: flex;
-              }
-              button {
-                display: block;
-                text-align: left;
-                width: 100%;
-                background-color: white;
-                padding: 20px;
-                margin-bottom: 10px;
-                box-shadow: LightGray 0px 0px 10px 0px;
-                border-radius: 10px;
-                min-width: 100px;
-                word-break: break-word;
-              }
-            `}
-          </style> */}
-        )}
       </li>
     ));
     return posts;
@@ -90,11 +45,12 @@ export default () => {
       <Link href="/p/[title]" as={`/p/${post.title}`}>
         <a>{post.title}</a>
       </Link>
-      <h3>{post.title}</h3>
       <p className="date">added Oct. 12 2019</p>
       <style jsx>
         {`
-          h3 {
+          a {
+            color: white;
+            text-decoration: none;
             font-size: 16px;
             font-weight: 600;
           }
@@ -103,7 +59,7 @@ export default () => {
           }
           .date {
             margin-top: 5px;
-            color: gray;
+            color: yellow;
           }
         `}
       </style>
@@ -113,13 +69,8 @@ export default () => {
   return (
     <Layout>
       <div className="layout">
-        <section className="card-wrapper">
-          <div className="card">
-            <ul>{addPosts()}</ul>
-          </div>
-          <div className="card card--right">
-            <div className="blog-content"></div>
-          </div>
+        <section>
+          <ul className="card">{addPosts()}</ul>
         </section>
       </div>
       <style jsx>
@@ -131,34 +82,17 @@ export default () => {
             margin-bottom: 20px;
           }
           .layout {
-            padding-top: 50px;
+            padding-top: 60px;
             padding-left: 120px;
             padding-right: 30px;
-            background-color: rgb(239, 239, 239);
             min-height: 100vh;
           }
-          .card-wrapper {
-            display: flex;
-          }
           .card {
-            display: block;
-            align-items: flex-start;
-            height: 100%;
-            width: 50%;
-            padding: 5px;
-          }
-          .card--right {
-            width: 50%;
-            min-width: 300px;
-          }
-          .blog-content {
-            display: block;
-            height: 630px;
-            width: 100%;
-            background-color: white;
-            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-right: 90px;
             border-radius: 10px;
-            box-shadow: LightGray 0px 0px 10px 0px;
           }
         `}
       </style>
