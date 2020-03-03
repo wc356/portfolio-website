@@ -19,9 +19,9 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
               padding: 8px;
               margin-right: 10px;
               margin-bottom: 10px;
-              font-weight: 500;
-              color: ${theme.colors.dark};
-              background-color: ${theme.colors.light};
+              font-weight: 400;
+              color: white;
+              background-color: ${theme.colors.dark};
               border-radius: 0 10px 0 10px;
             }
           `}
@@ -59,11 +59,11 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
             margin-left: 110px;
           }
           .card--desc {
-            background-color: ${theme.colors.dark};
+            border: ${theme.colors.border} 1px solid;
             margin-left: 0;
+            margin-right: 50px;
             width: 45%;
-            border: none;
-            border-radius: 0 0 50px 0;
+            border-radius: 0 0 25px 0;
             text-align: center;
           }
           .text-wrapper {
@@ -71,15 +71,16 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
             height: 100%;
           }
           .text {
-            color: white;
-            padding: 15px;
+            color: ${theme.colors.black};
+            padding: 25px 15px 15px 15px;
             position: relative;
             white-space: pre-line;
             height: 100%;
           }
           h1 {
-            margin-bottom: 20px;
-            margin-top: 10px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            margin-top: 25px;
           }
           .tech-wrapper {
             display: block;

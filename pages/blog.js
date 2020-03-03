@@ -1,10 +1,10 @@
 // import Link from "next/link";
+import theme from "../styles/theme";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { blogContent } from "../data_storage/database";
-import { PostLink } from "../actions/Post";
 
 export default () => {
   const router = useRouter();
@@ -26,7 +26,7 @@ export default () => {
               display: block;
               height: 200px;
               width: 200px;
-              background-color: dodgerblue;
+              border: ${theme.colors.gray} 1px solid;
               border-radius: 10px;
               padding: 20px;
               margin-bottom: 10px;
@@ -49,7 +49,7 @@ export default () => {
       <style jsx>
         {`
           a {
-            color: white;
+            color: ${theme.colors.black};
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
@@ -59,7 +59,7 @@ export default () => {
           }
           .date {
             margin-top: 5px;
-            color: yellow;
+            color: ${theme.colors.black};
           }
         `}
       </style>

@@ -25,7 +25,7 @@ const Layout = props => {
             font-family: Montserrat;
           }
           a {
-            transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+            transition: all 0.15s;
           }
           a:hover {
             transform: translateY(-3px);

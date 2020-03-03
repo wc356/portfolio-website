@@ -22,14 +22,13 @@ const Landing = () => (
           font-size: 80px;
           font-weight: 600;
           margin-bottom: 25px;
-          text-shadow: 15px 15px rgb(30, 255, 143, 0.5);
-          color: ${theme.colors.dark};
+          color: black;
         }
         p {
           font-size: 27px;
           font-weight: 500;
           letter-spacing: 2px;
-          color: ${theme.colors.dark};
+          color: ${theme.colors.black};
         }
       `}
     </style>

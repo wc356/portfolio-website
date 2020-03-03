@@ -1,3 +1,4 @@
+import theme from "../styles/theme";
 import ProfilePic from "../public/images/profile_pic.png";
 
 const About = () => (

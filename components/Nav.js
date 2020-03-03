@@ -27,6 +27,7 @@ const Nav = () => (
           z-index: 1;
         }
         .navlink {
+          display: block;
           font-size: 15px;
           font-weight: 900;
           text-decoration: none;
@@ -37,9 +38,6 @@ const Nav = () => (
         }
         .navlink:visited {
           color: ${theme.colors.link};
-        }
-        .navlink:hover {
-          color: ${theme.colors.light};
         }
       `}
     </style>

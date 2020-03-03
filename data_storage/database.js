@@ -1,48 +1,48 @@
 export const database = {
-  "Portfolio-Website": {
+  "Web-Portfolio": {
     quote: "Showcasing my works in progress!",
-    description: "Front-end website built with React and NextJS",
+    description: "Front-end website built with React and Next",
     technology: [
-      "react",
-      "nextJS",
+      "React.js",
+      "Next.js",
       "styled-jsx",
       "dynamic pages | routing",
-      "adobe XD | prototyping",
-      "git"
+      "Adobe XD | prototyping",
+      "Git"
     ]
   },
   Expensify: {
     quote: "Quickly Sort & Track your Expenses",
     description: "Full-stack web application built with React and Redux",
     technology: [
-      "react",
-      "redux",
+      "React.js",
+      "Redux",
       "react-router",
-      "webpack",
-      "babel",
-      "jest",
-      "enzyme",
-      "firebase",
-      "heroku",
-      "git",
-      "scss | sass",
+      "Webpack",
+      "Babel",
+      "Jest",
+      "Enzyme",
+      "Firebase",
+      "Heroku",
+      "Git",
+      "SCSS | SASS",
       "auth"
     ]
   },
   Specula: {
     quote: "Compare and Track Phone Specs",
     descripition: "Full-stack web application built with React",
-    technology: ["HTML", "css | sass", "adobe Indesign", "hosting", "git"]
+    technology: ["HTML", "CSS | SASS", "Adobe Indesign", "hosting", "Git"]
   },
   "React-Tetris": {
     quote: "This is where it all started.",
     description: "Original Tetris game built with React",
-    technology: ["create-react-app", "scss | sass", "git"]
+    technology: ["create-react-app", "SCSS | SASS", "Git"]
   },
   Indecision: {
     quote: "Get Things Done. Now.",
     description: "Front-end web application built with React",
-    technology: ["react", "babel", "scss | sass", "git", "webpack"]
+    technology: ["React.js", "Babel", "SCSS | SASS", "Git", "Webpack"]
   }
 };
 
