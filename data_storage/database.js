@@ -72,20 +72,14 @@ export const blogContent = [
     picPath: "/images/the_office.jpg"
   },
   {
-    id: "GitHub Contribution Struggles",
-    title: "My Thoughts on GitHub Contributions",
+    id: "self-discipline",
+    title: "Realizing Self-Discipline",
     body: "TEXT",
     picPath: "/images/the_office.jpg"
   },
   {
-    id: "GitHub Contribution Struggles",
-    title: "My Thoughts on GitHub Contributions",
-    body: "TEXT",
-    picPath: "/images/the_office.jpg"
-  },
-  {
-    id: "GitHub Contribution Struggles",
-    title: "My Thoughts on GitHub Contributions",
+    id: "persuasion",
+    title: "How I persuaded My Parents 🤷🏻‍♂️",
     body: "TEXT",
     picPath: "/images/the_office.jpg"
   }

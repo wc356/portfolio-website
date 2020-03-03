@@ -18,21 +18,18 @@ const Projects = () => {
   };
 
   return (
-    <section className="main">
-      <div>
-        <h1>Selected Projects</h1>
-      </div>
+    <section className="layout">
+      <h1 className="title">Selected Projects</h1>
       <ul>{makeCard()}</ul>
       <style jsx>
         {`
-          .main {
-            display: flex;
-            flex-direction: column;
+          .layout {
             text-align: center;
           }
-          h1 {
+          .title {
             font-size: 45px;
             margin-bottom: 50px;
+            font-weight: 400;
           }
         `}
       </style>

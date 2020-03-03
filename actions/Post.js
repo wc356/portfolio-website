@@ -33,7 +33,7 @@ export const PostImg = ({ id }) => (
       <div className="img--wrapper">
         <img src={ExpensifyPic} alt="picture of project Expensify" />
         <div className="overlay">
-          <p className="text">SHOW PROJECT</p>
+          <p className="text">See Project</p>
         </div>
       </div>
     </Link>
@@ -62,18 +62,19 @@ export const PostImg = ({ id }) => (
           width: 100%;
           opacity: 0;
           transition: 0.3s ease;
-          background-color: ${theme.colors.dark};
+          background-color: white;
         }
         .img--wrapper:hover .overlay {
           opacity: 0.6;
         }
         .text {
-          color: white;
+          color: ${theme.colors.link};
           font-size: 30px;
           font-weight: 500;
           position: absolute;
           top: 50%;
           left: 50%;
+          letter-spacing: 1px;
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
