@@ -25,8 +25,8 @@ const Contact = () => (
       {`
         .contact {
           display: flex;
-          margin-top: 25%;
-          margin-bottom: 20%;
+          margin-top: 20%;
+          margin-bottom: 10%;
           padding-left: 18%;
         }
         .title {
@@ -68,13 +68,18 @@ const Contact = () => (
           align-items: center;
           flex-direction: column;
           padding: 20px;
-          background-color: ${theme.colors["pink-link"]};
-          height: 20vh;
+          background-color: ${theme.colors["pink-l"]};
+          background-image: linear-gradient(
+            0deg,
+            ${theme.colors.dark} 0%,
+            ${theme.colors["pink-link"]} 74%,
+            white 100%
+          );
+          height: 25vh;
         }
         .footer-body {
-          color: ${theme.colors.dark};
-          font-weight: 500;
-          letter-spacing: 1px;
+          color: white;
+          font-size: 18px;
         }
       `}
     </style>
