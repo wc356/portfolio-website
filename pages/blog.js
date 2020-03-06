@@ -32,7 +32,7 @@ export default () => {
             }
             .card:hover {
               border: ${theme.colors.dark} 1px solid;
-              transform: translateY(-7px);
+              transform: translateY(-6px);
             }
             .title {
               color: ${theme.colors.black};

@@ -4,8 +4,8 @@ import Link from "next/link";
 const Landing = () => (
   <div className="main">
     <section>
-      <h1>WOO YOUNG CHOI</h1>
-      <p>UI/UX & Front-end Developer</p>
+      <h1 className="title">WOO YOUNG CHOI</h1>
+      <p className="description">UI/UX & Front-end Developer</p>
     </section>
     <style jsx>
       {`
@@ -17,14 +17,13 @@ const Landing = () => (
           min-height: 100vh;
           text-align: center;
         }
-        h1 {
+        .title {
           font-family: Futura;
-          font-size: 80px;
+          font-size: 75px;
           font-weight: 600;
           margin-bottom: 25px;
-          color: black;
         }
-        p {
+        .description {
           font-size: 27px;
           font-weight: 500;
           letter-spacing: 2px;

@@ -9,7 +9,7 @@ const Nav = () => (
         <a className="navlink">HOME</a>
       </Link>
       <Link href="/about">
-        <a className="navlink">ABOUT</a>
+        <a className="navlink navlink-B">ABOUT</a>
       </Link>
     </div>
     <SocialLinks className="social" />
@@ -23,21 +23,30 @@ const Nav = () => (
           margin-left: 15px;
           position: fixed;
           text-align: center;
-          top: 45vh;
+          top: 40vh;
           z-index: 1;
         }
         .navlink {
           display: block;
+          padding: 10px 0;
           font-size: 15px;
           font-weight: 900;
           text-decoration: none;
-          margin: 70px 0;
+          margin: 60px 0;
           transform: rotate(-90deg);
           letter-spacing: 5px;
           color: ${theme.colors.link};
         }
+        .navlink:hover {
+          transform: rotate(-90deg);
+          opacity: 1;
+          text-shadow: 13px 13px ${theme.colors["pink-link"]};
+        }
         .navlink:visited {
           color: ${theme.colors.link};
+        }
+        .navlink-B:hover {
+          text-shadow: -13px 13px ${theme.colors["pink-link"]};
         }
       `}
     </style>

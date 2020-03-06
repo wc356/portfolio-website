@@ -29,7 +29,6 @@ const Layout = props => {
           }
           a:hover {
             transform: translateY(-3px);
-            opacity: 0.5;
           }
           li {
             list-style: none;

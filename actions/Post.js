@@ -17,7 +17,7 @@ export const PostLink = ({ id = "PROJECT TITLE" }) => (
         }
         .title:hover {
           opacity: 1;
-          text-shadow: 4px 4px rgba(255, 153, 204, 0.7);
+          text-shadow: 6px 6px ${theme.colors["pink-link"]};
         }
         a:visited {
           color: ${theme.colors.dark};

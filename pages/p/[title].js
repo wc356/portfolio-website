@@ -16,7 +16,9 @@ export default () => {
             <div className="img">
               <img src={post.picPath} height="350" width="600" />
             </div>
-            <p key={post.id}>{post.body}</p>
+            <p className="body" key={post.id}>
+              {post.body}
+            </p>
             <Link href="/blog">
               <a className="navlink">p r e v</a>
             </Link>
@@ -25,7 +27,7 @@ export default () => {
                 .img {
                   display: block;
                 }
-                p {
+                .body {
                   white-space: pre-wrap;
                   overflow-wrap: break-word;
                   margin: 40px 0;

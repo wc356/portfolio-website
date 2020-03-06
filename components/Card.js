@@ -19,6 +19,7 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
             .tech {
               display: inline-block;
               background-color: ${theme.colors.dark};
+              box-shadow: 13px 13px rgba(255, 153, 204, 0.3);
               border-radius: 0 10px 0 10px;
               color: white;
               font-weight: 400;
@@ -53,25 +54,31 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
             display: flex;
             padding: 35px 0px;
           }
+          .cards-container::after {
+          }
           .card--img {
             display: block;
             border: 1px ${theme.colors.gray} solid;
             height: 350px;
-            width: 55%;
+            width: 50%;
             overflow: hidden;
             margin-left: 110px;
-            transition: all 0.2s;
+            transition: all 0.15s;
           }
           .card--img:hover {
+            transform: translateX(-10px) translateY(-10px);
+            box-shadow: 10px 10px ${theme.colors["pink-link"]};
             border: ${theme.colors.dark} 1px solid;
-            transform: translateY(-8px);
           }
           .card--desc {
             display: block;
             height: 350px;
-            width: 45%;
+            width: 40%;
             margin-right: 50px;
             text-align: center;
+            background-color: white;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
           }
           .text-wrapper {
             align-items: center;

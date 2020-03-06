@@ -1,6 +1,6 @@
 export const database = {
   "Web-Portfolio": {
-    quote: "Showcasing my works in progress!",
+    quote: `Static site with custom design & prototyping`,
     description: "Front-end website built with React and Next",
     technology: [
       "React.js",
@@ -40,7 +40,7 @@ export const database = {
     technology: ["create-react-app", "SCSS | SASS", "Git"]
   },
   Indecision: {
-    quote: "Get Things Done. Now.",
+    quote: "Get Things Done",
     description: "Front-end web application built with React",
     technology: ["React.js", "Babel", "SCSS | SASS", "Git", "Webpack"]
   }

@@ -1,12 +1,13 @@
 const theme = {
   colors: {
     link: "#561eff",
-    dark: "rgb(105, 90, 245)",
-    blue: "#1e90ff",
-    black: "rgb(68, 68, 68)",
-    gray: "rgb(216, 213, 247)",
-    light: "#1eff8f",
-    pink: "#FF99CC"
+    dark: "#695af5",
+    black: "#444444",
+    gray: "#d8d5f7",
+    green: "#1eff8f",
+    pink: "#FF99CC",
+    "pink-l": "#ffdeee",
+    "pink-link": "rgba(255, 153, 204, 0.5)"
   }
 };
 
