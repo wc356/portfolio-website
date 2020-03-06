@@ -3,12 +3,24 @@ import theme from "../styles/theme";
 const Contact = () => (
   <>
     <section className="contact">
-      <div>
+      <div className="card">
         <h1 className="title">Any questions or comments?</h1>
         <p className="body">Send your inquiries below</p>
-        <button className="btn">Let's talk!</button>
+        <a
+          className="btn"
+          href="mailto:wychoi356@gmail.com"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          Let's Talk!
+        </a>
       </div>
     </section>
+    <footer className="footer">
+      <div>
+        <p className="footer-body">Designed & Built by Woo Young Choi</p>
+      </div>
+    </footer>
     <style jsx>
       {`
         .contact {
@@ -32,9 +44,37 @@ const Contact = () => (
           color: ${theme.colors.black};
         }
         .btn {
+          display: block;
+          width: 15rem;
+          text-align: center;
           font-size: 15px;
-          padding: 10px;
+          font-weight: 600;
+          padding: 15px;
           margin-top: 50px;
+          border: none;
+          background-color: ${theme.colors.dark};
+          color: white;
+          border-radius: 25px;
+          letter-spacing: 1px;
+          text-decoration: none;
+        }
+        .btn:hover {
+          transform: scale(1.08);
+          background-color: pink;
+        }
+        .footer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 20px;
+          background-color: ${theme.colors["pink-link"]};
+          height: 20vh;
+        }
+        .footer-body {
+          color: ${theme.colors.dark};
+          font-weight: 500;
+          letter-spacing: 1px;
         }
       `}
     </style>

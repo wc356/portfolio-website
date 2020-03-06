@@ -29,6 +29,9 @@ const Landing = () => (
           letter-spacing: 2px;
           color: ${theme.colors.black};
         }
+        .description::after {
+          width: ;
+        }
       `}
     </style>
   </div>

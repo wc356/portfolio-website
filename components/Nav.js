@@ -40,13 +40,13 @@ const Nav = () => (
         .navlink:hover {
           transform: rotate(-90deg);
           opacity: 1;
-          text-shadow: 13px 13px ${theme.colors["pink-link"]};
+          text-shadow: 15px 15px ${theme.colors["pink-link"]};
         }
         .navlink:visited {
           color: ${theme.colors.link};
         }
         .navlink-B:hover {
-          text-shadow: -13px 13px ${theme.colors["pink-link"]};
+          text-shadow: -15px 15px ${theme.colors["pink-link"]};
         }
       `}
     </style>

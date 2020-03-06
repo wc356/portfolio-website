@@ -4,7 +4,7 @@ import Link from "next/link";
 const SocialLink = ({ title, link, viewbox, path }) => (
   <>
     <li>
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="nofollow noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox={viewbox}>
           <title>{title}</title>
           <path d={path} />
