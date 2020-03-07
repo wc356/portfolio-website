@@ -35,18 +35,17 @@ const Nav = () => (
           margin: 60px 0;
           transform: rotate(-90deg);
           letter-spacing: 5px;
-          color: ${theme.colors.link};
         }
         .navlink:hover {
           transform: rotate(-90deg);
           opacity: 1;
-          text-shadow: 15px 15px ${theme.colors["pink-link"]};
+          text-shadow: 15px 15px ${theme.colors.dark};
         }
         .navlink:visited {
-          color: ${theme.colors.link};
+          color: black;
         }
         .navlink-B:hover {
-          text-shadow: -15px 15px ${theme.colors["pink-link"]};
+          text-shadow: -15px 15px ${theme.colors.dark};
         }
       `}
     </style>

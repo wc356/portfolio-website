@@ -1,18 +1,18 @@
 import Card from "./Card";
-import { database } from "../data_storage/database";
+import projects from "../database/projects";
 
-// const values = Object.values(database);
-// const entries = Object.entries(database);
+// const values = Object.values(projects);
+// const entries = Object.entries(projects);
 
 const Projects = () => {
   const makeCard = () => {
-    const keys = Object.keys(database);
+    const keys = Object.keys(projects);
     return keys.map(item => (
       <Card
         id={item}
         key={item}
-        quote={database[item].quote}
-        description={database[item].description}
+        quote={projects[item].quote}
+        description={projects[item].description}
       />
     ));
   };

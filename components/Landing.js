@@ -22,6 +22,7 @@ const Landing = () => (
           font-size: 75px;
           font-weight: 600;
           margin-bottom: 25px;
+          animation: text-drop 0.75s 1;
         }
         .description {
           font-size: 27px;
@@ -29,8 +30,11 @@ const Landing = () => (
           letter-spacing: 2px;
           color: ${theme.colors.black};
         }
-        .description::after {
-          width: ;
+        @keyframes text-drop {
+          0% {
+            opacity: 0;
+            margin-bottom: -200px;
+          }
         }
       `}
     </style>

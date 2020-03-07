@@ -22,6 +22,10 @@ const SocialLink = ({ title, link, viewbox, path }) => (
         svg {
           height: 20px;
           fill: ${theme.colors.link};
+          transition: all 0.15s;
+        }
+        svg:hover {
+          fill: ${theme.colors.pink};
         }
       `}
     </style>
@@ -29,7 +33,7 @@ const SocialLink = ({ title, link, viewbox, path }) => (
 );
 
 const SocialLinks = () => (
-  <ul>
+  <ul className="navbar">
     <SocialLink
       title="GitHub"
       link="https://github.com/wc356"
@@ -53,7 +57,7 @@ const SocialLinks = () => (
     </Link>
     <style jsx>
       {`
-        ul {
+        .navbar {
           display: flex;
           flex-direction: row;
           background-color: rgba(255, 255, 255, 0.8);
@@ -68,6 +72,9 @@ const SocialLinks = () => (
           color: ${theme.colors.link};
           font-weight: 600;
           text-decoration: none;
+        }
+        .blog:hover {
+          color: ${theme.colors.pink};
         }
       `}
     </style>

@@ -1,12 +1,12 @@
 import theme from "../styles/theme";
 import { PostLink, PostImg } from "../actions/Post";
-import { database } from "../data_storage/database";
+import projects from "../database/projects";
 
 const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
-  const renderDatabase = () => {
+  const renderProjects = () => {
     return (
       <ul className="tech-list">
-        {database[id].technology.map(tech => (
+        {projects[id].technology.map(tech => (
           <li className="tech" key={tech}>
             {tech}
           </li>
@@ -44,7 +44,7 @@ const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
             <PostLink id={id} />
             <h1 className="quote">{quote}</h1>
             <p>{description}</p>
-            <div className="tech-wrapper">{renderDatabase()}</div>
+            <div className="tech-wrapper">{renderProjects()}</div>
           </div>
         </div>
       </div>

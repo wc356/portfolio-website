@@ -1,7 +1,6 @@
-// import Markdown from "react-markdown";
 import Layout from "../../components/Layout";
 import { useRouter } from "next/router";
-import { blogContent } from "../../data_storage/database";
+import blog from "../../database/blog";
 import Link from "next/link";
 
 export default () => {
@@ -9,7 +8,7 @@ export default () => {
 
   const handleBody = () => {
     const title = router.query.title;
-    const body = blogContent.map(post => {
+    const body = blog.map(post => {
       if (post.title === title) {
         return (
           <>

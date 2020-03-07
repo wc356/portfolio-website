@@ -6,7 +6,6 @@ const About = () => (
     <section className="img-wrapper">
       <div className="headshot">
         <img src={ProfilePic} alt="profile picture" />
-        <div className="box-shadow"></div>
       </div>
     </section>
     <section className="about-wrapper">
@@ -19,7 +18,7 @@ Web Developer based in New York, NY.
 
 He has 1 year of professional experience working as a
 designer in Alexandria, VA and is a certified LEED Green
-Associate. Woo currently resides in Cliffside Park, NJ,
+Associate. Woo currently resides in Bergen County, NJ
 where he devotes most of his time developing full-stack
 web applications and front-end websites using ReactJS
 as his preferred method.
@@ -38,30 +37,18 @@ as his preferred method.
         .img-wrapper {
           display: flex;
           justify-content: center;
+          text-align: center;
           width: 50%;
         }
         .headshot {
           display: block;
-          height: 400px;
-          min-width: 400px;
           overflow: hidden;
-          position: relative;
-          text-align: center;
+          width: 400px;
+          height: 100%;
         }
         img {
-          height: 100%;
-          max-width: 75%;
+          width: 80%;
           object-fit: cover;
-          object-position: 50% 50%;
-          width: 450px;
-        }
-        .box-shadow {
-          position: absolute;
-          z-index: 3;
-          margin-left: 100px;
-          height: 800px;
-          width: 850px;
-          box-shadow: 10px 10px rgba(255, 153, 204, 0.7);
         }
         .about-wrapper {
           display: flex;

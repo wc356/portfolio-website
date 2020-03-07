@@ -3,12 +3,12 @@ import theme from "../styles/theme";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import React, { useState } from "react";
-import { blogContent } from "../data_storage/database";
+import blog from "../database/blog";
 
 export default () => {
   // Add Post
   const addPosts = () => {
-    const posts = blogContent.map(post => (
+    const posts = blog.map(post => (
       <>
         <Link href="/p/[title]" as={`/p/${post.title}`}>
           <li className="card" key={post.id}>
