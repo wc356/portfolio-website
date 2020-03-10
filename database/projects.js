@@ -1,5 +1,6 @@
-export default {
-  "Web-Portfolio": {
+export default [
+  {
+    project: "Web-Portfolio",
     quote: `Static site with custom design & prototyping`,
     description: "Front-end website built with React and Next",
     technology: [
@@ -9,9 +10,12 @@ export default {
       "dynamic pages | routing",
       "Adobe XD | prototyping",
       "Git"
-    ]
+    ],
+    picPath: "/images/expensify.png",
+    body: "This project"
   },
-  Expensify: {
+  {
+    project: "Expensify",
     quote: "Quickly Sort & Track your Expenses",
     description: "Full-stack web application built with React and Redux",
     technology: [
@@ -29,19 +33,22 @@ export default {
       "auth"
     ]
   },
-  Specula: {
+  {
+    project: "Specula",
     quote: "Compare and Track Phone Specs",
     descripition: "Full-stack web application built with React",
     technology: ["HTML", "CSS | SASS", "Adobe Indesign", "hosting", "Git"]
   },
-  "React-Tetris": {
+  {
+    project: "React-Tetris",
     quote: "This is where it all started.",
     description: "Original Tetris game built with React",
     technology: ["create-react-app", "SCSS | SASS", "Git"]
   },
-  Indecision: {
+  {
+    project: "Indecision",
     quote: "Get Things Done",
     description: "Front-end web application built with React",
     technology: ["React.js", "Babel", "SCSS | SASS", "Git", "Webpack"]
   }
-};
+];

@@ -12,9 +12,7 @@ export default [
   {
     id: "loops",
     title: "Looping through objects",
-    body: `
-        Why are loops so hard 🤦🏻‍♂️.
-        `,
+    body: "Why are loops so hard 🤦🏻‍♂️.",
     picPath: "/images/the_office.jpg"
   },
   {

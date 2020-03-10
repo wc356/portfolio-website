@@ -9,7 +9,7 @@ const Projects = () => {
     const keys = Object.keys(projects);
     return keys.map(item => (
       <Card
-        id={item}
+        project={projects[item].project}
         key={item}
         quote={projects[item].quote}
         description={projects[item].description}

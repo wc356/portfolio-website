@@ -1,47 +1,56 @@
 import theme from "../styles/theme";
-import { PostLink, PostImg } from "../actions/Post";
+import { PostProjLink, PostProjImg } from "../actions/projects/PostProj";
 import projects from "../database/projects";
 
-const Card = ({ id, quote = "QUOTE", description = "DESCRIPTION HERE" }) => {
+const Card = ({
+  project,
+  quote = "QUOTE",
+  description = "DESCRIPTION HERE"
+}) => {
   const renderProjects = () => {
-    return (
-      <ul className="tech-list">
-        {projects[id].technology.map(tech => (
-          <li className="tech" key={tech}>
-            {tech}
-          </li>
-        ))}
-        <style jsx>
-          {`
-            .tech-list {
-              display: inline-block;
-            }
-            .tech {
-              display: inline-block;
-              background-color: ${theme.colors.dark};
-              box-shadow: 13px 13px rgba(255, 153, 204, 0.3);
-              border-radius: 0 10px 0 10px;
-              color: white;
-              font-weight: 400;
-              margin-right: 10px;
-              margin-bottom: 10px;
-              padding: 8px;
-            }
-          `}
-        </style>
-      </ul>
-    );
+    const techTree = projects.map(proj => {
+      if (proj.project === project) {
+        return (
+          <ul className="tech-list">
+            {proj.technology.map(tech => (
+              <li className="tech" key={tech}>
+                {tech}
+              </li>
+            ))}
+            <style jsx>
+              {`
+                .tech-list {
+                  display: inline-block;
+                }
+                .tech {
+                  display: inline-block;
+                  background-color: ${theme.colors.dark};
+                  box-shadow: 13px 13px rgba(255, 153, 204, 0.3);
+                  border-radius: 0 10px 0 10px;
+                  color: white;
+                  font-weight: 400;
+                  margin-right: 10px;
+                  margin-bottom: 10px;
+                  padding: 8px;
+                }
+              `}
+            </style>
+          </ul>
+        );
+      }
+    });
+    return techTree;
   };
 
   return (
     <li className="cards-container">
       <div className="card--img">
-        <PostImg id={id} />
+        <PostProjImg project={project} />
       </div>
       <div className="card--desc">
         <div className="text-wrapper">
           <div className="text">
-            <PostLink id={id} />
+            <PostProjLink project={project} />
             <h1 className="quote">{quote}</h1>
             <p>{description}</p>
             <div className="tech-wrapper">{renderProjects()}</div>

@@ -2,11 +2,10 @@
 import theme from "../styles/theme";
 import Link from "next/link";
 import Layout from "../components/Layout";
-import React, { useState } from "react";
+import React from "react";
 import blog from "../database/blog";
 
 export default () => {
-  // Add Post
   const addPosts = () => {
     const posts = blog.map(post => (
       <>

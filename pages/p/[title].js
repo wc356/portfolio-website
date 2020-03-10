@@ -1,13 +1,13 @@
 import Layout from "../../components/Layout";
-import { useRouter } from "next/router";
 import blog from "../../database/blog";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 export default () => {
   const router = useRouter();
+  const title = router.query.title;
 
   const handleBody = () => {
-    const title = router.query.title;
     const body = blog.map(post => {
       if (post.title === title) {
         return (
@@ -64,7 +64,7 @@ export default () => {
     <Layout>
       <div className="layout">
         <div className="body">
-          <h1>{router.query.title}</h1>
+          <h1>{title}</h1>
           {handleBody()}
         </div>
       </div>
