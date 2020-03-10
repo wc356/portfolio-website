@@ -2,6 +2,7 @@ import Layout from "../../components/Layout";
 import projects from "../../database/projects";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
 
 export default () => {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default () => {
     const body = projects.map(proj => {
       if (proj.project === title) {
         return (
-          <>
+          <div key={uuidv4()}>
             <div className="img">
               <img src={proj.picPath} height="350" width="600" />
             </div>
@@ -51,7 +52,7 @@ export default () => {
                 }
               `}
             </style>
-          </>
+          </div>
         );
       }
     });

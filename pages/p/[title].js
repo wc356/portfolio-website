@@ -2,6 +2,7 @@ import Layout from "../../components/Layout";
 import blog from "../../database/blog";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
 
 export default () => {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default () => {
     const body = blog.map(post => {
       if (post.title === title) {
         return (
-          <>
+          <div key={uuidv4()}>
             <div className="img">
               <img src={post.picPath} height="350" width="600" />
             </div>
@@ -53,7 +54,7 @@ export default () => {
                 }
               `}
             </style>
-          </>
+          </div>
         );
       }
     });

@@ -1,6 +1,7 @@
 import theme from "../styles/theme";
 import { PostProjLink, PostProjImg } from "../actions/projects/PostProj";
 import projects from "../database/projects";
+import { v4 as uuidv4 } from "uuid";
 
 const Card = ({
   project,
@@ -11,9 +12,9 @@ const Card = ({
     const techTree = projects.map(proj => {
       if (proj.project === project) {
         return (
-          <ul className="tech-list">
+          <ul className="tech-list" key={uuidv4()}>
             {proj.technology.map(tech => (
-              <li className="tech" key={tech}>
+              <li className="tech" key={uuidv4()}>
                 {tech}
               </li>
             ))}

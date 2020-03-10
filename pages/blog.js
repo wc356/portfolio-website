@@ -4,11 +4,12 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import React from "react";
 import blog from "../database/blog";
+import { v4 as uuidv4 } from "uuid";
 
 export default () => {
   const addPosts = () => {
     const posts = blog.map(post => (
-      <>
+      <div key={uuidv4()}>
         <Link href="/p/[title]" as={`/p/${post.title}`}>
           <li className="card" key={post.id}>
             <h1 className="title">{post.title}</h1>
@@ -47,7 +48,7 @@ export default () => {
             }
           `}
         </style>
-      </>
+      </div>
     ));
     return posts;
   };
