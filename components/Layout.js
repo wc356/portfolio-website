@@ -5,12 +5,10 @@ const Layout = props => {
     <div>
       <Nav />
       <div className="layout">{props.children}</div>
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
-      </style>
       <style jsx global>
         {`
+          @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap");
+
           *,
           *::before,
           *::after {

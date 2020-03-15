@@ -63,7 +63,7 @@ export default () => {
     <Layout>
       <div className="layout">
         <div className="body">
-          <h1>{title}</h1>
+          <h1 className="title">{title}</h1>
           {handleBody()}
         </div>
       </div>
@@ -85,6 +85,9 @@ export default () => {
           height: 100%;
           border-radius: 10px;
           box-shadow: LightGray 0px 0px 10px 0px;
+        }
+        .title {
+          display: block;
         }
       `}</style>
     </Layout>

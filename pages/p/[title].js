@@ -3,6 +3,7 @@ import blog from "../../database/blog";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
+import theme from "../../styles/theme";
 
 export default () => {
   const router = useRouter();
@@ -12,18 +13,26 @@ export default () => {
     const body = blog.map(post => {
       if (post.title === title) {
         return (
-          <div key={uuidv4()}>
+          <div className="body" key={uuidv4()}>
             <div className="img">
               <img src={post.picPath} height="350" width="600" />
             </div>
             <p className="body" key={post.id}>
               {post.body}
             </p>
-            <Link href="/blog">
-              <a className="navlink">p r e v</a>
-            </Link>
+            <div className="align-left">
+              <Link href="/blog">
+                <a className="navlink">BACK</a>
+              </Link>
+            </div>
+
             <style jsx>
               {`
+                .body {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                }
                 .img {
                   display: block;
                 }
@@ -32,17 +41,26 @@ export default () => {
                   overflow-wrap: break-word;
                   margin: 40px 0;
                 }
+                .align-left {
+                  display: flex;
+                  text-align: center;
+                  flex-direction: column;
+                  width: 30%;
+                }
                 .navlink {
+                  display: block;
+                  letter-spacing: 1px;
                   padding: 10px;
                   font-size: 15px;
                   font-weight: 900;
                   text-decoration: none;
                   color: white;
-                  background-color: dodgerblue;
+                  background-color: ${theme.colors.dark};
                   border-radius: 10px;
                 }
                 .navlink:hover {
-                  opacity: 0.5;
+                  background-color: ${theme.colors.pink};
+                  transform: scale(1.08);
                 }
                 .navlink:visited {
                   color: white;
