@@ -22,6 +22,7 @@ const Contact = () => (
         <p className="footer-body">Designed & Built by Woo Young Choi</p>
       </div>
     </footer>
+
     <style jsx>
       {`
         .contact {

@@ -11,6 +11,7 @@ const SocialLink = ({ title, link, viewbox, path }) => (
         </svg>
       </a>
     </li>
+
     <style jsx>
       {`
         li {
@@ -55,6 +56,7 @@ const SocialLinks = () => (
     <Link href="/blog">
       <a className="blog">Blog</a>
     </Link>
+
     <style jsx>
       {`
         .navbar {

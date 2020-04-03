@@ -5,26 +5,29 @@ import SocialLinks from "./SocialLinks";
 const Nav = () => (
   <>
     <div className="wrapper">
-      <Link href="/">
-        <a className="navlink">HOME</a>
-      </Link>
-      <Link href="/about">
-        <a className="navlink navlink-B">ABOUT</a>
-      </Link>
+      <div className="flex">
+        <Link href="/">
+          <a className="navlink">HOME</a>
+        </Link>
+        <Link href="/about">
+          <a className="navlink navlink-B">ABOUT</a>
+        </Link>
+      </div>
     </div>
     <SocialLinks className="social" />
+
     <style jsx>
       {`
         .wrapper {
+          display: block;
+          position: fixed;
+          top: 30vh;
+          margin-left: 15px;
+          z-index: 1;
+        }
+        .flex {
           display: flex;
           flex-direction: column;
-          height: 100px;
-          justify-content: center;
-          margin-left: 15px;
-          position: fixed;
-          text-align: center;
-          top: 40vh;
-          z-index: 1;
         }
         .navlink {
           display: block;
@@ -35,6 +38,10 @@ const Nav = () => (
           margin: 60px 0;
           transform: rotate(-90deg);
           letter-spacing: 5px;
+          text-align: center;
+          background-color: rgba(255, 255, 255, 0.5);
+          padding: 5px;
+          border-radius: 5px;
         }
         .navlink:hover {
           transform: rotate(-90deg);

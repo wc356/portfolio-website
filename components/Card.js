@@ -58,13 +58,12 @@ const Card = ({
           </div>
         </div>
       </div>
+
       <style jsx>
         {`
           .cards-container {
             display: flex;
             padding: 35px 0px;
-          }
-          .cards-container::after {
           }
           .card--img {
             display: block;

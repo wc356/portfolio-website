@@ -18,9 +18,10 @@ const Projects = () => {
   };
 
   return (
-    <section className="layout">
+    <section id="projects" className="layout">
       <h1 className="title">Selected Projects</h1>
       <ul>{makeCard()}</ul>
+
       <style jsx>
         {`
           .layout {

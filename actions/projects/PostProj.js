@@ -7,6 +7,7 @@ export const PostProjLink = ({ project = "PROJECT TITLE" }) => (
     <Link href="/proj/[project]" as={`/proj/${project}`}>
       <a className="title">{project}</a>
     </Link>
+
     <style jsx>
       {`
         .title {
@@ -37,6 +38,7 @@ export const PostProjImg = ({ project }) => (
         </div>
       </div>
     </Link>
+
     <style jsx>
       {`
         .img--wrapper {

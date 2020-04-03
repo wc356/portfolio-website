@@ -1,10 +1,11 @@
 // import Link from "next/link";
-import theme from "../styles/theme";
-import Link from "next/link";
-import Layout from "../components/Layout";
 import React from "react";
-import blog from "../database/blog";
+import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
+
+import Layout from "../components/Layout";
+import theme from "../styles/theme";
+import blog from "../database/blog";
 
 export default () => {
   const addPosts = () => {
@@ -16,6 +17,7 @@ export default () => {
             <p className="date">added Oct. 12 2019</p>
           </li>
         </Link>
+
         <style jsx>
           {`
             .card {
@@ -61,6 +63,7 @@ export default () => {
           <ul className="cards">{addPosts()}</ul>
         </section>
       </div>
+
       <style jsx>
         {`
           h1 {

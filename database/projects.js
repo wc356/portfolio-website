@@ -11,11 +11,36 @@ export default [
       "Adobe XD | prototyping",
       "Git"
     ],
-    body:
-      "With a plethora of educational resources available online and offline, self-taught developers have never had so much opportunity to jump into the tech field.\
-    \n\nPersonally, my most current struggle has been—accepting sub-optimal solutions. I find that the more fluent I become in coding, the urge to want to optimize my projects overwhelm me. For example, I decided to scrap my sub-optimal, yet, finished code and spent extra 3 days to implement a loop structure over a JSON object. I decided that this loop format would better scale, and would be favorable for maintaining code base for myself.\
-    \n\nWhile this may be a great practice/habit for those that code as their day job, as someone who needs to wrap up projects and finish a portfolio for job applications, this only means delaying the deadline further 🤦🏻‍♂️\
-    \n\nAnd having experienced this occurence in a previous job as a designer, I could very well see a similar occurence happening as a software developer trying to weigh the priorities of—'optimized performance' versus 'deadline'.",
+    body: [
+      {
+        OVERVIEW:
+          "The website consists of two main parts—the portfolio page and the blog. The portfolio page is then broken down into five parts—landing, about me, selected projects, other projects, and contact. GitHub, LinkedIn, CodePen and the blog is located in the navigation bar located in the top right corner."
+      },
+      {
+        APPROACH: [
+          "Design & Sketch",
+          "Prototype with AdobeXD",
+          "Implementation",
+          "Styling",
+          "Hosting"
+        ]
+      },
+      {
+        CHALLENGES: [
+          "Learning a new Framework—NextJS",
+          "Dynamic Routing, SSR, CSR, and Hydration",
+          "Storing, managing and rendering data objects",
+          "UI/UX"
+        ]
+      },
+      {
+        REFLECTIONS: [
+          "I would take more time to study and outline my goals clearly to determine a better-suited tool for my needs. In retrospect, I would have been better off using GatsbyJS for this project as my purposes did not take much(if any) of the advantages NextJS's SSR offers. In choosing SSR, I was hard-stuck on hydration issues where the SSR did not match the CSR in the version of NextJS I have been working with (9.2.1)",
+          "In the next phase of the project, I would consider making a CMS, as it would allow for better management and organization of content over time, and allows for better scaling as well.",
+          "Bootstrapping would have been a great framework to implement and save time."
+        ]
+      }
+    ],
     picPath: "/images/expensify.png"
   },
   {
@@ -35,24 +60,144 @@ export default [
       "Git",
       "SCSS | SASS",
       "auth"
+    ],
+    body: [
+      {
+        OVERVIEW:
+          "The website consists of two main parts—the portfolio page and the blog. The portfolio page is then broken down into five parts—landing, about me, selected projects, other projects, and contact. GitHub, LinkedIn, CodePen and the blog is located in the navigation bar located in the top right corner."
+      },
+      {
+        APPROACH: [
+          "Design & Sketch",
+          "Prototype with AdobeXD",
+          "Implementation",
+          "Styling",
+          "Hosting"
+        ]
+      },
+      {
+        CHALLENGES: [
+          "Learning a new Framework—NextJS",
+          "Dynamic Routing, SSR, CSR, and Hydration",
+          "Storing, managing and rendering data objects",
+          "UI/UX"
+        ]
+      },
+      {
+        REFLECTIONS: [
+          "I would take more time to study and outline my goals clearly to determine a better-suited tool for my needs. In retrospect, I would have been better off using GatsbyJS for this project as my purposes did not take much(if any) of the advantages NextJS's SSR offers. In choosing SSR, I was hard-stuck on hydration issues where the SSR did not match the CSR in the version of NextJS I have been working with (9.2.1)",
+          "In the next phase of the project, I would consider making a CMS, as it would allow for better management and organization of content over time, and allows for better scaling as well.",
+          "Bootstrapping would have been a great framework to implement and save time."
+        ]
+      }
     ]
   },
   {
     project: "Specula",
     quote: "Compare and Track Phone Specs",
     descripition: "Full-stack web application built with React",
-    technology: ["HTML", "CSS | SASS", "Adobe Indesign", "hosting", "Git"]
+    technology: ["HTML", "CSS | SASS", "Adobe Indesign", "hosting", "Git"],
+    body: [
+      {
+        OVERVIEW:
+          "The website consists of two main parts—the portfolio page and the blog. The portfolio page is then broken down into five parts—landing, about me, selected projects, other projects, and contact. GitHub, LinkedIn, CodePen and the blog is located in the navigation bar located in the top right corner."
+      },
+      {
+        APPROACH: [
+          "Design & Sketch",
+          "Prototype with AdobeXD",
+          "Implementation",
+          "Styling",
+          "Hosting"
+        ]
+      },
+      {
+        CHALLENGES: [
+          "Learning a new Framework—NextJS",
+          "Dynamic Routing, SSR, CSR, and Hydration",
+          "Storing, managing and rendering data objects",
+          "UI/UX"
+        ]
+      },
+      {
+        REFLECTIONS: [
+          "I would take more time to study and outline my goals clearly to determine a better-suited tool for my needs. In retrospect, I would have been better off using GatsbyJS for this project as my purposes did not take much(if any) of the advantages NextJS's SSR offers. In choosing SSR, I was hard-stuck on hydration issues where the SSR did not match the CSR in the version of NextJS I have been working with (9.2.1)",
+          "In the next phase of the project, I would consider making a CMS, as it would allow for better management and organization of content over time, and allows for better scaling as well.",
+          "Bootstrapping would have been a great framework to implement and save time."
+        ]
+      }
+    ]
   },
   {
     project: "React-Tetris",
     quote: "This is where it all started.",
     description: "Original Tetris game built with React",
-    technology: ["create-react-app", "SCSS | SASS", "Git"]
+    technology: ["create-react-app", "SCSS | SASS", "Git"],
+    body: [
+      {
+        OVERVIEW:
+          "The website consists of two main parts—the portfolio page and the blog. The portfolio page is then broken down into five parts—landing, about me, selected projects, other projects, and contact. GitHub, LinkedIn, CodePen and the blog is located in the navigation bar located in the top right corner."
+      },
+      {
+        APPROACH: [
+          "Design & Sketch",
+          "Prototype with AdobeXD",
+          "Implementation",
+          "Styling",
+          "Hosting"
+        ]
+      },
+      {
+        CHALLENGES: [
+          "Learning a new Framework—NextJS",
+          "Dynamic Routing, SSR, CSR, and Hydration",
+          "Storing, managing and rendering data objects",
+          "UI/UX"
+        ]
+      },
+      {
+        REFLECTIONS: [
+          "I would take more time to study and outline my goals clearly to determine a better-suited tool for my needs. In retrospect, I would have been better off using GatsbyJS for this project as my purposes did not take much(if any) of the advantages NextJS's SSR offers. In choosing SSR, I was hard-stuck on hydration issues where the SSR did not match the CSR in the version of NextJS I have been working with (9.2.1)",
+          "In the next phase of the project, I would consider making a CMS, as it would allow for better management and organization of content over time, and allows for better scaling as well.",
+          "Bootstrapping would have been a great framework to implement and save time."
+        ]
+      }
+    ]
   },
   {
     project: "Indecision",
     quote: "Get Things Done",
     description: "Front-end web application built with React",
-    technology: ["React.js", "Babel", "SCSS | SASS", "Git", "Webpack"]
+    technology: ["React.js", "Babel", "SCSS | SASS", "Git", "Webpack"],
+    body: [
+      {
+        OVERVIEW:
+          "The website consists of two main parts—the portfolio page and the blog. The portfolio page is then broken down into five parts—landing, about me, selected projects, other projects, and contact. GitHub, LinkedIn, CodePen and the blog is located in the navigation bar located in the top right corner."
+      },
+      {
+        APPROACH: [
+          "Design & Sketch",
+          "Prototype with AdobeXD",
+          "Implementation",
+          "Styling",
+          "Hosting"
+        ]
+      },
+      {
+        CHALLENGES: [
+          "Learning a new Framework—NextJS",
+          "Dynamic Routing, SSR, CSR, and Hydration",
+          "Storing, managing and rendering data objects",
+          "UI/UX"
+        ]
+      },
+      {
+        REFLECTIONS: [
+          "I would take more time to study and outline my goals clearly to determine a better-suited tool for my needs. In retrospect, I would have been better off using GatsbyJS for this project as my purposes did not take much(if any) of the advantages NextJS's SSR offers. In choosing SSR, I was hard-stuck on hydration issues where the SSR did not match the CSR in the version of NextJS I have been working with (9.2.1)",
+          "In the next phase of the project, I would consider making a CMS, as it would allow for better management and organization of content over time, and allows for better scaling as well.",
+          "Bootstrapping would have been a great framework to implement and save time."
+        ]
+      }
+    ]
   }
 ];

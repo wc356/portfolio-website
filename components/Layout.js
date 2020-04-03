@@ -17,9 +17,11 @@ const Layout = props => {
             padding: 0;
           }
           h1,
+          h3,
           p,
           a,
-          li {
+          li,
+          button {
             font-family: Montserrat;
           }
           a {
