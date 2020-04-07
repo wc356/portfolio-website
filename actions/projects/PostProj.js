@@ -41,7 +41,7 @@ export const PostProjImg = ({ project }) => (
           }
         })}
         <div className="overlay">
-          <p className="text">See Project</p>
+          <p className="text">About Project</p>
         </div>
       </div>
     </Link>
@@ -72,7 +72,7 @@ export const PostProjImg = ({ project }) => (
           left: 0;
           right: 0;
           opacity: 0;
-          transition: 0.3s ease;
+          transition: 0.15s ease;
           background-color: white;
         }
         .text {

@@ -3,6 +3,7 @@ export const projects = [
     project: "Web-Portfolio",
     quote: `Dynamic site with custom design & prototyping`,
     description: "Front-end website built with React and Next",
+    link: "",
     technology: [
       "ReactJS",
       "NextJS",
@@ -52,6 +53,7 @@ export const projects = [
     project: "Expensify",
     quote: "Quickly Sort & Track your Expenses",
     description: "Full-stack web application built with React and Redux",
+    link: "//github.com/wc356/react-expensify",
     technology: [
       "ReactJS",
       "Redux",
@@ -109,7 +111,8 @@ export const projects = [
   {
     project: "Specula",
     quote: "Compare and Track Phone Specs",
-    descripition: "Full-stack web application built with React",
+    description: "Full-stack web application built with React",
+    link: "//github.com/wc356/specula-v2",
     technology: [
       "ReactJS",
       "NextJS",
@@ -166,6 +169,7 @@ export const projects = [
     project: "React-Tetris",
     quote: "This is where it all started.",
     description: "Original Tetris game built with React",
+    link: "//github.com/wc356/React-tetris",
     technology: ["ReactJS", "create-react-app", "SCSS | SASS", "Git"],
     body: [
       {
@@ -206,6 +210,7 @@ export const projects = [
     project: "Indecision",
     quote: "Get Things Done",
     description: "Front-end web application built with React",
+    link: "react-indecision",
     technology: ["ReactJS", "Babel", "SCSS | SASS", "Git", "Webpack"],
     body: [
       {

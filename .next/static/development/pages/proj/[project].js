@@ -319,6 +319,7 @@ var projects = [{
   project: "Web-Portfolio",
   quote: "Dynamic site with custom design & prototyping",
   description: "Front-end website built with React and Next",
+  link: "",
   technology: ["ReactJS", "NextJS", "styled-jsx", "dynamic pages | routing", "Adobe XD | prototyping", "Git"],
   body: [{
     OVERVIEW: "The website consists of two main parts—the portfolio page and the blog. The portfolio page is then broken down into five parts—landing, about me, selected projects, other projects, and contact. GitHub, LinkedIn, CodePen and the blog is located in the navigation bar located in the top right corner."
@@ -344,6 +345,7 @@ var projects = [{
   project: "Expensify",
   quote: "Quickly Sort & Track your Expenses",
   description: "Full-stack web application built with React and Redux",
+  link: "//github.com/wc356/react-expensify",
   technology: ["ReactJS", "Redux", "react-router", "Webpack", "Babel", "Jest", "Enzyme", "Firebase", "Heroku", "Git", "SCSS | SASS", "auth"],
   body: [{
     OVERVIEW: "The project largely consists of four main parts—the login page, dashboard, add expense page, and lastly the edit expense page."
@@ -368,7 +370,8 @@ var projects = [{
 }, {
   project: "Specula",
   quote: "Compare and Track Phone Specs",
-  descripition: "Full-stack web application built with React",
+  description: "Full-stack web application built with React",
+  link: "//github.com/wc356/specula-v2",
   technology: ["ReactJS", "NextJS", "HTML", "CSS | SASS", "Adobe Indesign", "hosting", "Git"],
   body: [{
     OVERVIEW: "The website consists of two main parts—the phones dashboard page and add phone page. In the dashboard page, one can view a list of phones with their specifications—release date, price, brand, etc. By using the drop-down menu, one can sort the phones in order of price, release date, or brand. The add phone page allows the user to create their own phone and set the specifications to see how a new phone would compare to the existing line-up."
@@ -397,6 +400,7 @@ var projects = [{
   project: "React-Tetris",
   quote: "This is where it all started.",
   description: "Original Tetris game built with React",
+  link: "//github.com/wc356/React-tetris",
   technology: ["ReactJS", "create-react-app", "SCSS | SASS", "Git"],
   body: [{
     OVERVIEW: "The project consists of a single dashboard page where one can play Tetris. Each cell was made with an array filled with default values, which were then compared to the player's tetromino value to check for collisions. Custom hooks were implemented to set player's default position, set game status, set interval, and to update the stage when leveled up."
@@ -419,6 +423,7 @@ var projects = [{
   project: "Indecision",
   quote: "Get Things Done",
   description: "Front-end web application built with React",
+  link: "react-indecision",
   technology: ["ReactJS", "Babel", "SCSS | SASS", "Git", "Webpack"],
   body: [{
     OVERVIEW: "The project is a simple and intuitive web application that randomly allows the user to get started on any task of his or her entries of tasks. The dashbboard page shows the list of entered tasks, and the input at the bottom allows user to add an option."
@@ -6847,7 +6852,7 @@ var theme = {
 
 /***/ }),
 
-/***/ 5:
+/***/ 2:
 /*!*************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fproj%2F%5Bproject%5D&absolutePagePath=%2FUsers%2FWooChoi%2FDesktop%2FReact.js%2Fblog-woo%2Fpages%2Fproj%2F%5Bproject%5D.js ***!
   \*************************************************************************************************************************************************************************/
@@ -6870,5 +6875,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[project].js.map
