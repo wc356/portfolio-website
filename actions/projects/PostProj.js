@@ -1,6 +1,6 @@
 import theme from "../../styles/theme";
 import Link from "next/link";
-import ExpensifyPic from "../../public/images/expensify.png";
+import { projects } from "../../database/projects";
 
 export const PostProjLink = ({ project = "PROJECT TITLE" }) => (
   <>
@@ -28,11 +28,18 @@ export const PostProjLink = ({ project = "PROJECT TITLE" }) => (
   </>
 );
 
+// Loop over each ProjectObject in Database
+// if ProjectObject.project === this.prop.project, then grab——project.pictures[0].path;
+
 export const PostProjImg = ({ project }) => (
   <>
     <Link href="/proj/[project]" as={`/proj/${project}`}>
       <div className="img--wrapper">
-        <img src={ExpensifyPic} alt="picture of project Expensify" />
+        {projects.map((obj) => {
+          if (obj.project === project) {
+            return <img src={obj.cover} alt={`picture of ${obj.project}`} />;
+          }
+        })}
         <div className="overlay">
           <p className="text">See Project</p>
         </div>
@@ -46,11 +53,15 @@ export const PostProjImg = ({ project }) => (
           position: relative;
           align-items: center;
           text-align: center;
+          box-shadow: 1px 1px 5px gray;
+          border-radius: 5px;
+        }
+        .img--wrapper:hover .overlay {
+          opacity: 0.8;
+          box-shadow: 10px 10px ${theme.colors["pink-link"]};
+          border-radius: 5px;
         }
         img {
-          width: 100%;
-          object-fit: cover;
-          height: 348px;
           object-position: 50% 50%;
         }
         .overlay {
@@ -60,14 +71,9 @@ export const PostProjImg = ({ project }) => (
           bottom: 0;
           left: 0;
           right: 0;
-          height: 100%;
-          width: 100%;
           opacity: 0;
           transition: 0.3s ease;
           background-color: white;
-        }
-        .img--wrapper:hover .overlay {
-          opacity: 0.6;
         }
         .text {
           color: ${theme.colors.link};

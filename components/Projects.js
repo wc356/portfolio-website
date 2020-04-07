@@ -1,5 +1,5 @@
 import Card from "./Card";
-import projects from "../database/projects";
+import { projects } from "../database/projects";
 
 // const values = Object.values(projects);
 // const entries = Object.entries(projects);
@@ -7,7 +7,7 @@ import projects from "../database/projects";
 const Projects = () => {
   const makeCard = () => {
     const keys = Object.keys(projects);
-    return keys.map(item => (
+    return keys.map((item) => (
       <Card
         project={projects[item].project}
         key={item}
@@ -16,7 +16,6 @@ const Projects = () => {
       />
     ));
   };
-
   return (
     <section id="projects" className="layout">
       <h1 className="title">Selected Projects</h1>

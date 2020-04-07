@@ -9,7 +9,7 @@ import blog from "../database/blog";
 
 export default () => {
   const addPosts = () => {
-    const posts = blog.map(post => (
+    const posts = blog.map((post) => (
       <div key={uuidv4()}>
         <Link href="/p/[title]" as={`/p/${post.title}`}>
           <li className="card" key={post.id}>
@@ -84,6 +84,19 @@ export default () => {
             flex-wrap: wrap;
             margin-right: 90px;
             border-radius: 10px;
+          }
+          .navlink {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 900;
+            text-decoration: none;
+            color: white;
+            background-color: ${theme.colors.link};
+            border-radius: 10px;
+            letter-spacing: 2px;
+            margin-top: 20px;
           }
         `}
       </style>

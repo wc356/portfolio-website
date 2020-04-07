@@ -48,7 +48,6 @@ as his preferred method.
         }
         img {
           width: 80%;
-          object-fit: cover;
         }
         .about-wrapper {
           display: flex;

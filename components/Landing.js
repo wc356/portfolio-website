@@ -1,5 +1,4 @@
 import theme from "../styles/theme";
-import Link from "next/link";
 
 const Landing = () => (
   <div className="main">

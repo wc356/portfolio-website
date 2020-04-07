@@ -1,6 +1,6 @@
 import Nav from "./Nav";
 
-const Layout = props => {
+const Layout = (props) => {
   return (
     <div>
       <Nav />
@@ -33,6 +33,9 @@ const Layout = props => {
           }
           li {
             list-style: none;
+          }
+          img {
+            object-fit: cover;
           }
         `}
       </style>

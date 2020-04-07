@@ -13,7 +13,7 @@ const Contact = () => (
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
-          Let's Talk!
+          Let's Talk 💬
         </a>
       </div>
     </section>
