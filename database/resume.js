@@ -2,9 +2,9 @@ export default {
   name: "Woo Alex Choi",
   contact: {
     links: [
-      "wychoi356@gmail.com",
-      "linkedin.com/in/woo-young",
-      "github.com/wc356",
+      ["wychoi356@gmail.com", "mailto:wychoi356@gmail.com"],
+      ["linkedin.com/in/woo-young", "//www.linkedin.com/in/woo-young/"],
+      ["github.com/wc356", "//github.com/wc356"],
     ],
     notLinks: ["201 820 7277"],
   },

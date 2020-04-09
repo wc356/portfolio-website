@@ -12,19 +12,16 @@ const Card = ({
     const techTree = projects.map((proj) => {
       if (proj.project === project) {
         return (
-          <ul className="tech-list" key={uuidv4()}>
+          <ul key={uuidv4()}>
             {proj.technology.map((tech) => (
-              <li className="tech" key={uuidv4()}>
-                {tech}
-              </li>
+              <li key={uuidv4()}>{tech}</li>
             ))}
-
             <style jsx>
               {`
-                .tech-list {
+                ul {
                   display: inline-block;
                 }
-                .tech {
+                li {
                   display: inline-block;
                   background-color: ${theme.colors.black};
                   box-shadow: 13px 13px ${theme.colors.gray};
@@ -81,9 +78,19 @@ const Card = ({
           </div>
         </div>
       </div>
-
       <style jsx>
         {`
+          a {
+            display: inline-block;
+          }
+          svg {
+            height: 30px;
+            fill: ${theme.colors.link};
+            transition: all 0.15s;
+          }
+          svg:hover {
+            fill: ${theme.colors.pink};
+          }
           .cards-container {
             display: flex;
             padding: 35px 0px;
@@ -108,6 +115,7 @@ const Card = ({
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             width: 40%;
+            min-width: 500px;
           }
           .link-github {
             margin-top: 12px;
@@ -135,17 +143,6 @@ const Card = ({
             padding: 0 40px;
             width: 100%;
             bottom: 0px;
-          }
-          a {
-            display: inline-block;
-          }
-          svg {
-            height: 30px;
-            fill: ${theme.colors.link};
-            transition: all 0.15s;
-          }
-          svg:hover {
-            fill: ${theme.colors.pink};
           }
         `}
       </style>

@@ -17,7 +17,7 @@ const Landing = () => (
           text-align: center;
         }
         .title {
-          font-family: Futura;
+          font-family: Futura, Montserrat;
           font-size: 75px;
           font-weight: 600;
           margin-bottom: 25px;

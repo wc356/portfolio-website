@@ -188,7 +188,13 @@ const Resume = () => {
                 <ul>
                   {values[1].links.map((link) => (
                     <li key={uuidv4()} className="hover">
-                      <a href={link}>{link}</a>
+                      <a
+                        href={link[1]}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                      >
+                        {link[0]}
+                      </a>
                     </li>
                   ))}
                   {values[1].notLinks.map((notLink) => (
