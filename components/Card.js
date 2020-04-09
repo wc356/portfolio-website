@@ -58,7 +58,7 @@ const Card = ({
             {projects.map((proj) => {
               if (proj.project === project) {
                 return (
-                  <div className="link-github">
+                  <div key={uuidv4()} className="link-github">
                     <a
                       href={proj.link}
                       target="_blank"

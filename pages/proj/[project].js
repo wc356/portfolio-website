@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
 
@@ -16,6 +16,17 @@ export default () => {
         return (
           <div key={uuidv4()}>
             <div className="body">
+              <div className="link-wrapper">
+                <a
+                  className="link-github"
+                  href={proj.link}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <h3>See GitHub</h3>
+                </a>
+              </div>
+
               <section className="overview">
                 <h1>{Object.keys(proj.body[0])} 🗒</h1>
                 <p className="indent">{Object.values(proj.body[0])}</p>
@@ -54,6 +65,9 @@ export default () => {
 
             <style jsx>
               {`
+                a {
+                  text-decoration: none;
+                }
                 h1 {
                   font-size: 25px;
                 }
@@ -68,7 +82,6 @@ export default () => {
                   padding: 10px;
                   font-size: 15px;
                   font-weight: 900;
-                  text-decoration: none;
                   color: white;
                   background-color: ${theme.colors.link};
                   border-radius: 10px;
@@ -97,6 +110,25 @@ export default () => {
                 section {
                   margin-bottom: 30px;
                 }
+                .link-wrapper {
+                  display: flex;
+                  justify-content: center;
+                  margin-bottom: 25px;
+                }
+                .link-github {
+                  display: block;
+                  text-align: center;
+                  padding: 10px;
+                  background-color: ${theme.colors.link};
+                  border-radius: 10px;
+                  color: white;
+                  font-weight: 500;
+                  width: 200px;
+                }
+                .link-github:hover {
+                  background-color: ${theme.colors.gray};
+                  color: ${theme.colors.link};
+                }
               `}
             </style>
           </div>
@@ -115,12 +147,12 @@ export default () => {
             {projects.map((proj) => {
               if (proj.project === title) {
                 return (
-                  <>
+                  <div key={uuidv4()}>
                     <div className="scroll-carousel">
                       <div className="imgs">
                         {proj.pictures.map((pic) => {
                           return (
-                            <div className="flex">
+                            <div key={uuidv4()} className="flex">
                               <img
                                 key={pic.path}
                                 src={pic.path}
@@ -134,7 +166,7 @@ export default () => {
                         })}
                       </div>
                     </div>
-                  </>
+                  </div>
                 );
               }
             })}

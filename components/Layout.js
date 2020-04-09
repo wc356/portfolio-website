@@ -31,7 +31,7 @@ const Layout = (props) => {
           a:hover {
             transform: translateY(-3px);
           }
-          li {
+          ul {
             list-style: none;
           }
           img {

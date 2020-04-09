@@ -10,7 +10,7 @@ export default () => {
   const title = router.query.title;
 
   const handleBody = () => {
-    const body = blog.map(post => {
+    const body = blog.map((post) => {
       if (post.title === title) {
         return (
           <div className="body" key={uuidv4()}>
@@ -92,16 +92,24 @@ export default () => {
           font-size: 34px;
           font-weight: 600;
           padding: 10px;
+          text-align: center;
         }
         .layout {
-          padding: 50px 225px;
-          line-height: 1.5;
+          padding: 50px 210px;
+          line-height: 1.8;
           background-color: rgb(239, 239, 239);
           min-height: 100vh;
+          background-image: linear-gradient(
+            0deg,
+            ${theme.colors.dark} 0%,
+            ${theme.colors["pink-link"]} 80%,
+            white 100%
+          );
         }
         .body {
           background: white;
-          padding: 60px;
+          color: ${theme.colors.black};
+          padding: 60px 100px;
           height: 100%;
           border-radius: 10px;
           box-shadow: LightGray 0px 0px 10px 0px;

@@ -3,7 +3,7 @@ export const projects = [
     project: "Web-Portfolio",
     quote: `Dynamic site with custom design & prototyping`,
     description: "Front-end website built with React and Next",
-    link: "",
+    link: "//github.com/wc356/portfolio-website",
     technology: [
       "ReactJS",
       "NextJS",
@@ -210,7 +210,7 @@ export const projects = [
     project: "Indecision",
     quote: "Get Things Done",
     description: "Front-end web application built with React",
-    link: "react-indecision",
+    link: "//github.com/wc356/react-indecision",
     technology: ["ReactJS", "Babel", "SCSS | SASS", "Git", "Webpack"],
     body: [
       {

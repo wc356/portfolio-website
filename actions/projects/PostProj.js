@@ -1,6 +1,8 @@
+import React from "react";
 import theme from "../../styles/theme";
 import Link from "next/link";
 import { projects } from "../../database/projects";
+import { v4 as uuidv4 } from "uuid";
 
 export const PostProjLink = ({ project = "PROJECT TITLE" }) => (
   <>
@@ -37,7 +39,13 @@ export const PostProjImg = ({ project }) => (
       <div className="img--wrapper">
         {projects.map((obj) => {
           if (obj.project === project) {
-            return <img src={obj.cover} alt={`picture of ${obj.project}`} />;
+            return (
+              <img
+                key={uuidv4()}
+                src={obj.cover}
+                alt={`picture of ${obj.project}`}
+              />
+            );
           }
         })}
         <div className="overlay">

@@ -9,8 +9,8 @@ const Nav = () => (
         <Link href="/">
           <a className="navlink">HOME</a>
         </Link>
-        <Link href="/about">
-          <a className="navlink navlink-B">ABOUT</a>
+        <Link href="/resume">
+          <a className="navlink navlink-B">RESUME</a>
         </Link>
       </div>
     </div>
@@ -42,6 +42,7 @@ const Nav = () => (
           background-color: rgba(255, 255, 255, 0.5);
           padding: 5px;
           border-radius: 5px;
+          color: black;
         }
         .navlink:hover {
           transform: rotate(-90deg);

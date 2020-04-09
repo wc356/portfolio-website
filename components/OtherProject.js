@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import theme from "../styles/theme";
 
 import { otherProjects } from "../database/projects";
@@ -22,7 +23,9 @@ const OtherProject = ({ project }) => {
                 setLink(proj.link);
               }, [link]);
               return proj.description.map((item) => (
-                <li className="list-item">{item}</li>
+                <li key={uuidv4()} className="list-item">
+                  {item}
+                </li>
               ));
             }
           })}

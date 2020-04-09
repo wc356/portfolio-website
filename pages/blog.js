@@ -14,7 +14,7 @@ export default () => {
         <Link href="/p/[title]" as={`/p/${post.title}`}>
           <li className="card" key={post.id}>
             <h1 className="title">{post.title}</h1>
-            <p className="date">added Oct. 12 2019</p>
+            <p className="date">{post.date}</p>
           </li>
         </Link>
 
@@ -31,6 +31,7 @@ export default () => {
               margin-bottom: 10px;
               word-break: break-word;
               transition: all 0.15s;
+              background: white;
             }
             .card:hover {
               border: ${theme.colors.dark} 1px solid;
@@ -77,6 +78,12 @@ export default () => {
             padding-left: 120px;
             padding-right: 30px;
             min-height: 100vh;
+            background-image: linear-gradient(
+              0deg,
+              ${theme.colors.dark} 0%,
+              ${theme.colors["pink-link"]} 80%,
+              white 100%
+            );
           }
           .cards {
             display: flex;
