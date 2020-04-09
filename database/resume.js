@@ -1,5 +1,5 @@
 export default {
-  name: "Woo Alex Choi",
+  name: "Woo Young Choi",
   contact: {
     links: [
       ["wychoi356@gmail.com", "mailto:wychoi356@gmail.com"],

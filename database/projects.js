@@ -153,7 +153,7 @@ export const projects = [
     ],
     pictures: [
       {
-        path: "/images/01_specula.jpg",
+        path: "/images/01_specula.png",
         caption: "Adobe Indesign | visual study",
       },
       { path: "/images/01_specula.gif", caption: "Dashboard & SortBy" },

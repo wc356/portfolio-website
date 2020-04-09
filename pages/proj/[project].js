@@ -154,7 +154,7 @@ export default () => {
                           return (
                             <div key={uuidv4()} className="flex">
                               <img
-                                key={pic.path}
+                                key={uuidv4()}
                                 src={pic.path}
                                 className="img"
                                 height="375"

@@ -471,7 +471,7 @@ const projects = [{
     REFLECTIONS: ["I would consider using Bootstrap to lessen the time needed for styling basic objects, and to quickly develop a responsive design.", "Would like to refactor the styling files to be more efficient—with a components library to be made and imported and reused repeatedly instead of having to rewrite repetitive code."]
   }],
   pictures: [{
-    path: "/images/01_specula.jpg",
+    path: "/images/01_specula.png",
     caption: "Adobe Indesign | visual study"
   }, {
     path: "/images/01_specula.gif",
