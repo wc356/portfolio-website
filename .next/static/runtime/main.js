@@ -505,7 +505,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/WooChoi/Desktop/React.js/blog-woo/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/WooChoi/Desktop/React.js/web-portfolio/.next");
       return error;
     }
   };
