@@ -106,6 +106,9 @@ const Card = ({
                   padding: 0.4rem;
                   border-radius: 0.5rem;
                 }
+                .btn:hover {
+                  background-color: ${theme.colors.pink};
+                }
               `}
             </style>
           </div>
