@@ -153,6 +153,7 @@ const Card = ({
               text-align: center;
               height: 100%;
               width: 37.5rem;
+              min-width: 25rem;
             }
             .text {
               position: relative;

@@ -118,6 +118,7 @@ export default () => {
           height: 100%;
           border-radius: 10px;
           box-shadow: LightGray 0px 0px 10px 0px;
+          min-width: 30rem;
         }
       `}</style>
     </Layout>

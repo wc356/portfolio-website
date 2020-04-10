@@ -39,9 +39,10 @@ const OtherProject = ({ project }) => {
           }
           .card {
             display: block;
-            width: 180px;
+            width: 11.25rem;
+            min-width: 11.25rem;
             height: 250px;
-            padding: 18px;
+            padding: 1.125rem;
             border: solid 1px ${theme.colors.gray};
             margin-right: 15px;
             margin-bottom: 15px;
