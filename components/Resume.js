@@ -4,7 +4,6 @@ import resume from "../database/resume";
 
 const Resume = () => {
   const values = Object.values(resume);
-  console.log(values);
 
   const renderExperience = (expType) => {
     const renderifLocationExist = (exp) =>
