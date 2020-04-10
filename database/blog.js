@@ -13,4 +13,18 @@ export default [
     \n\n Another method that has been helping me tremendously is talking to myself while coding 🗣. This forces me to organize my logic at a low-level so that the goals are clearly defined. With the basic logic at hand by talking, I would write out my goals as comments, not worrying about the grammar and syntax while defining my intentions first. After, I would implement those defined goals into code, and by this time, I would have saved a lot of headache, time and stress 😎",
     picPath: "/images/zachgalifianakis.gif",
   },
+  {
+    id: "covid19-remote",
+    date: "April 9, 2020",
+    title: "🦠 COVID-19 👨🏻‍💻 Working Remote 🏡 Lifestyle Change",
+    body:
+      "For me, quarantine is nothing new. Eversince quiting my full-time job as a Designer and moving out of my apartment in Washington D.C. area, I've fully dedicated myself to CODING, and CODING ONLY 👨🏻‍💻🧙🏻‍♂️.\
+    \n\nThat meant stayng back at my parent's place, for however long my career transition would take, and having to deal with living with others again 🙃. And eversince I've been back to my home state of New Jersey, SO MUCH has changed.\
+    \n\nOne of those changes is fairly obvious—the coronavirus 🦠😷.\
+    \n\nI remember at first, when the news of the virus hit the media, I was less worried and did not think much of the situation—afterall, there were similar cases with ebola, swine flu, zika virus, SARS 🦠—and I assumed this was just another one of those events.\
+    \n\nAlso, by the time of the coronavirus breakout, I was around 6 months well into my isolated lifestyle, having very little social interaction with the outside world, other than the occasional gym 💪 and weekend dates 💗. I had been very isolated from the world of events, because I was focused on dedicating my attention and time to adjusting my mindset to programming 🧠🥴.\
+    \n\nWhen I realized the virus was getting more serious than I had first previously thought, I decided to completely shelter myself from the outside world and stopped going to the gym and outside on the weekends 😵😵.\
+    \n\n Another method that has been helping me tremendously is talking to myself while coding 🗣. This forces me to organize my logic at a low-level so that the goals are clearly defined. With the basic logic at hand by talking, I would write out my goals as comments, not worrying about the grammar and syntax while defining my intentions first. After, I would implement those defined goals into code, and by this time, I would have saved a lot of headache, time and stress 😎",
+    picPath: "/images/zachgalifianakis.gif",
+  },
 ];

@@ -13,7 +13,7 @@ export default () => {
     const body = blog.map((post) => {
       if (post.title === title) {
         return (
-          <div className="body" key={uuidv4()}>
+          <div className="container" key={uuidv4()}>
             <div className="img-wrapper">
               <img src={post.picPath} height="350" width="600" />
             </div>
@@ -32,7 +32,7 @@ export default () => {
                   height: auto;
                   width: 100%;
                 }
-                .body {
+                .container {
                   display: flex;
                   flex-direction: column;
                   align-items: center;
@@ -96,7 +96,7 @@ export default () => {
         h1 {
           font-size: 34px;
           font-weight: 600;
-          padding: 10px;
+          margin-bottom: 40px;
           text-align: center;
         }
         .layout {
@@ -118,7 +118,6 @@ export default () => {
           height: 100%;
           border-radius: 10px;
           box-shadow: LightGray 0px 0px 10px 0px;
-          white-space: nowrap;
         }
       `}</style>
     </Layout>

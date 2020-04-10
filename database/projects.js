@@ -3,7 +3,9 @@ export const projects = [
     project: "Web-Portfolio",
     quote: `Dynamic site with custom design & prototyping`,
     description: "Front-end website built with React and Next",
-    link: "//github.com/wc356/portfolio-website",
+    links: [
+      { text: "See Github", src: "//github.com/wc356/portfolio-website" },
+    ],
     technology: [
       "ReactJS",
       "NextJS",
@@ -54,7 +56,10 @@ export const projects = [
     project: "Expensify",
     quote: "Quickly Sort & Track your Expenses",
     description: "Full-stack web application built with React and Redux",
-    link: "//github.com/wc356/react-expensify",
+    links: [
+      { text: "See Github", src: "//github.com/wc356/react-expensify" },
+      { text: "Try Demo", src: "//react-expensify-woo.herokuapp.com/" },
+    ],
     technology: [
       "ReactJS",
       "Redux",
@@ -113,7 +118,10 @@ export const projects = [
     project: "Specula",
     quote: "Compare and Track Phone Specs",
     description: "Full-stack web application built with React",
-    link: "//github.com/wc356/specula-v2",
+    links: [
+      { text: "See Github", src: "//github.com/wc356/specula-v2" },
+      { text: "Try Demo", src: "//specula.now.sh" },
+    ],
     technology: [
       "ReactJS",
       "NextJS",
@@ -170,7 +178,10 @@ export const projects = [
     project: "React-Tetris",
     quote: "This is where it all started.",
     description: "Original Tetris game built with React",
-    link: "//github.com/wc356/React-tetris",
+    links: [
+      { text: "See Github", src: "//github.com/wc356/React-tetris" },
+      { text: "Try Demo", src: "//react-tetris-two.now.sh" },
+    ],
     technology: ["ReactJS", "create-react-app", "SCSS | SASS", "Git"],
     body: [
       {
@@ -211,7 +222,10 @@ export const projects = [
     project: "Indecision",
     quote: "Get Things Done",
     description: "Front-end web application built with React",
-    link: "//github.com/wc356/react-indecision",
+    links: [
+      { text: "See Github", src: "//github.com/wc356/react-indecision" },
+      { text: "Try Demo", src: "//react-indecision.now.sh" },
+    ],
     technology: ["ReactJS", "Babel", "SCSS | SASS", "Git", "Webpack"],
     body: [
       {

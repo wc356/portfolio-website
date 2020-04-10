@@ -17,16 +17,18 @@ export default () => {
           <div key={uuidv4()}>
             <div className="body">
               <div className="link-wrapper">
-                <a
-                  className="link-github"
-                  href={proj.link}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  <h3>See GitHub</h3>
-                </a>
+                {proj.links.map((link) => (
+                  <a
+                    key={uuidv4()}
+                    className="link"
+                    href={link.src}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <h3>{link.text}</h3>
+                  </a>
+                ))}
               </div>
-
               <section className="overview">
                 <h1>{Object.keys(proj.body[0])} 🗒</h1>
                 <p className="indent">{Object.values(proj.body[0])}</p>
@@ -73,6 +75,9 @@ export default () => {
                 h1 {
                   font-size: 25px;
                 }
+                p {
+                  padding: 10px;
+                }
                 .body {
                   white-space: pre-wrap;
                   overflow-wrap: break-word;
@@ -101,23 +106,23 @@ export default () => {
                   font-weight: 400;
                   margin-right: 5px;
                 }
-                li {
-                  list-style: initial;
+                ul,
+                ol {
                   margin-left: 20px;
+                  padding: 10px 0;
+                }
+                ul {
+                  list-style-type: disc;
                 }
                 .indent {
-                  padding: 10px;
                   padding-left: 30px;
-                }
-                section {
-                  margin-bottom: 30px;
                 }
                 .link-wrapper {
                   display: flex;
                   justify-content: center;
                   margin-bottom: 25px;
                 }
-                .link-github {
+                .link {
                   display: block;
                   text-align: center;
                   padding: 10px;
@@ -127,7 +132,7 @@ export default () => {
                   font-weight: 500;
                   width: 200px;
                 }
-                .link-github:hover {
+                .link:hover {
                   background-color: ${theme.colors.gray};
                   color: ${theme.colors.link};
                 }
@@ -179,7 +184,7 @@ export default () => {
 
       <style jsx>{`
         .layout {
-          line-height: 1.5;
+          line-height: 1.7;
           min-height: 100vh;
         }
         .scroll-carousel {
