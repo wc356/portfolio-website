@@ -9,7 +9,6 @@ export const PostProjLink = ({ project = "PROJECT TITLE" }) => (
     <Link href="/proj/[project]" as={`/proj/${project}`}>
       <a className="title">{project}</a>
     </Link>
-
     <style jsx>
       {`
         .title {
@@ -29,9 +28,6 @@ export const PostProjLink = ({ project = "PROJECT TITLE" }) => (
     </style>
   </>
 );
-
-// Loop over each ProjectObject in Database
-// if ProjectObject.project === this.prop.project, then grab——project.pictures[0].path;
 
 export const PostProjImg = ({ project }) => (
   <>
@@ -53,7 +49,6 @@ export const PostProjImg = ({ project }) => (
         </div>
       </div>
     </Link>
-
     <style jsx>
       {`
         .img--wrapper {

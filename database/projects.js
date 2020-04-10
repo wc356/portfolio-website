@@ -174,7 +174,7 @@ export const projects = [
   },
   {
     project: "React-Tetris",
-    quote: "This is where it all started.",
+    quote: "The Classic Tetris Game",
     description: "Original Tetris game built with React",
     links: [
       { text: "GitHub", src: "//github.com/wc356/React-tetris" },

@@ -26,7 +26,7 @@ const Card = ({
                 li {
                   display: inline-block;
                   background-color: ${theme.colors.black};
-                  box-shadow: 13px 13px ${theme.colors.gray};
+                  box-shadow: 9px 9px ${theme.colors.gray};
                   border-radius: 0 10px 0 10px;
                   color: white;
                   font-weight: 400;
@@ -152,7 +152,7 @@ const Card = ({
               flex-direction: column;
               text-align: center;
               height: 100%;
-              min-width: 500px;
+              width: 37.5rem;
             }
             .text {
               position: relative;

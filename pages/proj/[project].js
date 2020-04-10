@@ -30,11 +30,11 @@ export default () => {
             </div>
             <div className="body">
               <section className="overview">
-                <h1>{Object.keys(proj.body[0])} 🗒</h1>
+                <h1>🗒 {Object.keys(proj.body[0])} 🗒</h1>
                 <p className="indent">{Object.values(proj.body[0])}</p>
               </section>
               <section className="approach">
-                <h1>{Object.keys(proj.body[1])} 💬</h1>
+                <h1>💬 {Object.keys(proj.body[1])} 💬</h1>
                 <ol className="indent">
                   {proj.body[1]["APPROACH"].map((approach) => (
                     <li key={approach}>{approach}</li>
@@ -42,7 +42,7 @@ export default () => {
                 </ol>
               </section>
               <section className="challenges">
-                <h1>{Object.keys(proj.body[2])} ⚔️</h1>
+                <h1>⚔️ {Object.keys(proj.body[2])} ⚔️</h1>
                 <ul className="indent">
                   {proj.body[2]["CHALLENGES"].map((challenge) => (
                     <li key={challenge}>{challenge}</li>
@@ -50,7 +50,7 @@ export default () => {
                 </ul>
               </section>
               <section className="reflections">
-                <h1>{Object.keys(proj.body[3])} 💭</h1>
+                <h1>💭 {Object.keys(proj.body[3])} 💭</h1>
                 {proj.body[3]["REFLECTIONS"].map((reflection) => (
                   <p key={uuidv4()} className="indent">
                     {reflection}
