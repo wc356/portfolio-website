@@ -1,8 +1,6 @@
+import React from "react";
 import Card from "./Card";
 import { projects } from "../database/projects";
-
-// const values = Object.values(projects);
-// const entries = Object.entries(projects);
 
 const Projects = () => {
   const makeCard = () => {
@@ -19,8 +17,7 @@ const Projects = () => {
   return (
     <section id="projects" className="layout">
       <h1 className="title">Selected Projects</h1>
-      <ul>{makeCard()}</ul>
-
+      {makeCard()}
       <style jsx>
         {`
           .layout {

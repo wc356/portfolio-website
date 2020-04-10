@@ -1,5 +1,5 @@
+import React from "react";
 import theme from "../styles/theme";
-import { useState } from "react";
 
 const Contact = () => (
   <>

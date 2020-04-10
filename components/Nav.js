@@ -1,3 +1,4 @@
+import React from "react";
 import theme from "../styles/theme";
 import Link from "next/link";
 import SocialLinks from "./SocialLinks";
@@ -15,14 +16,12 @@ const Nav = () => (
       </div>
     </div>
     <SocialLinks className="social" />
-
     <style jsx>
       {`
         .wrapper {
           display: block;
           position: fixed;
           top: 30vh;
-          margin-left: 15px;
           z-index: 1;
         }
         .flex {

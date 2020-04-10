@@ -15,20 +15,20 @@ export default () => {
       if (proj.project === title) {
         return (
           <div key={uuidv4()}>
+            <div className="link-wrapper">
+              {proj.links.map((link) => (
+                <a
+                  key={uuidv4()}
+                  className="link"
+                  href={link.src}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <h3>{link.text}</h3>
+                </a>
+              ))}
+            </div>
             <div className="body">
-              <div className="link-wrapper">
-                {proj.links.map((link) => (
-                  <a
-                    key={uuidv4()}
-                    className="link"
-                    href={link.src}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <h3>{link.text}</h3>
-                  </a>
-                ))}
-              </div>
               <section className="overview">
                 <h1>{Object.keys(proj.body[0])} 🗒</h1>
                 <p className="indent">{Object.values(proj.body[0])}</p>
@@ -119,22 +119,23 @@ export default () => {
                 }
                 .link-wrapper {
                   display: flex;
-                  justify-content: center;
+                  justify-content: space-around;
                   margin-bottom: 25px;
+                  padding: 15px;
                 }
                 .link {
                   display: block;
                   text-align: center;
                   padding: 10px;
                   background-color: ${theme.colors.link};
-                  border-radius: 10px;
+                  border-radius: 2rem;
                   color: white;
                   font-weight: 500;
-                  width: 200px;
+                  width: 10rem;
                 }
                 .link:hover {
-                  background-color: ${theme.colors.gray};
-                  color: ${theme.colors.link};
+                  transform: scale(1.08);
+                  background-color: pink;
                 }
               `}
             </style>
