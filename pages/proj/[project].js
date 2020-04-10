@@ -24,7 +24,7 @@ export default () => {
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  <h3>{link.text}</h3>
+                  <p>{link.text}</p>
                 </a>
               ))}
             </div>
