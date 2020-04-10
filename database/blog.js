@@ -25,6 +25,6 @@ export default [
     \n\nAlso, by the time of the coronavirus breakout, I was around 6 months well into my isolated lifestyle, having very little social interaction with the outside world, other than the occasional gym 💪 and weekend dates 💗. I had been very isolated from the world of events, because I was focused on dedicating my attention and time to adjusting my mindset to programming 🧠🥴.\
     \n\nWhen I realized the virus was getting more serious than I had first previously thought, I decided to completely shelter myself from the outside world and stopped going to the gym and outside on the weekends 😵😵.\
     \n\nBut having gotten used to this—quarantine, isolation lifestyle, I realized that working remotely is definitely a viable option (for me at least). I am able to focus on just coding, not not having to worry about what to eat, remember to get gas on the way to work, or deal with the hassle of public-transportation and being on time 💁🏻‍♂️.",
-    picPath: "/images/zachgalifianakis.gif",
+    picPath: "/images/leave-me-alone.gif",
   },
 ];
