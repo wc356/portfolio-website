@@ -9,10 +9,6 @@ import Contact from "../components/Contact";
 
 // Render
 const LandingPage = () => {
-  useEffect(() => {
-    console.log("useEffect ran");
-  });
-
   return (
     <Layout>
       <Landing />
