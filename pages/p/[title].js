@@ -14,7 +14,7 @@ export default () => {
       if (post.title === title) {
         return (
           <div className="body" key={uuidv4()}>
-            <div className="img">
+            <div className="img-wrapper">
               <img src={post.picPath} height="350" width="600" />
             </div>
             <p className="body" key={post.id}>
@@ -28,13 +28,18 @@ export default () => {
 
             <style jsx>
               {`
+                img {
+                  height: auto;
+                  width: 100%;
+                }
                 .body {
                   display: flex;
                   flex-direction: column;
                   align-items: center;
                 }
-                .img {
-                  display: block;
+                .img-wrapper {
+                  object-fit: cover;
+                  max-width: 100%;
                 }
                 .body {
                   white-space: pre-wrap;
@@ -113,6 +118,7 @@ export default () => {
           height: 100%;
           border-radius: 10px;
           box-shadow: LightGray 0px 0px 10px 0px;
+          white-space: nowrap;
         }
       `}</style>
     </Layout>

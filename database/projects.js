@@ -36,9 +36,10 @@ export const projects = [
       },
       {
         REFLECTIONS: [
-          "I would take more time to study and outline my goals clearly to determine a better-suited tool for my needs. In retrospect, I would have been better off using GatsbyJS for this project as my purposes did not take much(if any) of the advantages NextJS's SSR offers. In choosing SSR, I was hard-stuck on hydration issues where the SSR did not match the CSR in the version of NextJS I have been working with (9.3.4)",
+          "I would take more time to study and outline my goals clearly to determine a better-suited tool for my needs. In retrospect, I would have been better off using GatsbyJS for this project as my purposes did not take much(if any) of the advantages NextJS's SSR offers. In choosing SSR, I was hard-stuck on hydration issues where the SSR did not match the CSR in the version of NextJS I have been working with (9.3.4). However, I am THOROUGHLY enjoying the sheer convenience in NextJS and Zeit's deployment system with automatic integration of Git repository. Using NextJS allowed me to be hassle-free in deployment and test out the production of my website on different platforms and devices.",
           "In the next phase of the project, I would consider making a CMS, as it would allow for better management and organization of content over time, and allows for better scaling as well.",
-          "Bootstrapping would have been a great framework to implement and save time.",
+          "Bootstrapping would have been a great framework to implement and save time. However, I do think that not relying on such a framework like Bootstrap allowed the project to be light-weight and prevent any bloating.",
+          "Through this project, I realized how important it is to plan ahead, and think about how to implement the overall structure—CSS, database, HOC—into an easy to manipulate and scalable network. For example, I would try and use 'em' and 'rem' units for the fonts, padding and margins to support scalability, accessibility, and responsive design. Use of such relative units would allow for modular components, even though they might also bring some complexity to the code. Another point I wish I had implemented is using a central index data point for easy manipulation/alteration of data.",
         ],
       },
     ],

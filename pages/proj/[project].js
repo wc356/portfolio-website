@@ -49,9 +49,11 @@ export default () => {
               </section>
               <section className="reflections">
                 <h1>{Object.keys(proj.body[3])} 💭</h1>
-                <p className="indent">{proj.body[3]["REFLECTIONS"][0]}</p>
-                <p className="indent">{proj.body[3]["REFLECTIONS"][1]}</p>
-                <p className="indent">{proj.body[3]["REFLECTIONS"][2]}</p>
+                {proj.body[3]["REFLECTIONS"].map((reflection) => (
+                  <p key={uuidv4()} className="indent">
+                    {reflection}
+                  </p>
+                ))}
               </section>
               <a
                 onClick={() => {
