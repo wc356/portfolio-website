@@ -13,7 +13,6 @@ const Landing = () => (
           justify-content: center;
           min-height: 100vh;
           text-align: center;
-          background-color: yellow;
         }
         .title {
           font-family: Futura, Montserrat;

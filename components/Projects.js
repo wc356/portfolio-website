@@ -22,7 +22,6 @@ const Projects = () => {
         {`
           .projects {
             text-align: center;
-            background-color: green;
           }
           .title {
             font-size: 45px;

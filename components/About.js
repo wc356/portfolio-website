@@ -33,7 +33,6 @@ as his preferred method.
           align-items: center;
           justify-content: space-between;
           padding: 300px 100px;
-          background-color: yellow;
         }
         .img-wrapper {
           display: flex;
