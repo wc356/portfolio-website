@@ -32,6 +32,12 @@ const OtherProjects = () => (
           flex-wrap: wrap;
           padding: 0 200px;
         }
+        @media screen and (max-width: 1024px) {
+          .projects--wrapper {
+            padding: 0;
+            justify-content: center;
+          }
+        }
       `}
     </style>
   </div>

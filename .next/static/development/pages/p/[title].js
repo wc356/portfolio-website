@@ -14,12 +14,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _utils_analytics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/analytics */ "./utils/analytics.js");
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
+/* harmony import */ var react_meta_tags__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-meta-tags */ "./node_modules/react-meta-tags/lib/index.js");
+/* harmony import */ var react_meta_tags__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_meta_tags__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
 var _this = undefined,
     _jsxFileName = "/Users/WooChoi/Desktop/React.js/web-portfolio/components/Layout.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -38,28 +41,53 @@ var Layout = function Layout(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 5
     }
-  }, __jsx(_Nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 7
-    }
-  }), __jsx("div", {
-    className: "jsx-1228749320" + " " + "layout",
+  }, __jsx(react_meta_tags__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18,
       columnNumber: 7
     }
+  }, __jsx("title", {
+    className: "jsx-1228749320",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 9
+    }
+  }, "Woo Young Choi Portfolio \uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDCBB"), __jsx("meta", {
+    name: "viewport",
+    content: "width=device-width, initial-scale=1.0",
+    className: "jsx-1228749320",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 9
+    }
+  })), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 7
+    }
+  }), __jsx("div", {
+    className: "jsx-1228749320",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 7
+    }
   }, props.children), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "1228749320",
     __self: _this
-  }, "@import url(\"https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap\");*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}h1,h3,p,a,li,button{font-family:Montserrat;}a{-webkit-transition:all 0.15s;transition:all 0.15s;-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;}a:hover{-webkit-transform:translateY(-3px);-ms-transform:translateY(-3px);transform:translateY(-3px);}ul{list-style:none;}img{object-fit:cover;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb29DaG9pL0Rlc2t0b3AvUmVhY3QuanMvd2ViLXBvcnRmb2xpby9jb21wb25lbnRzL0xheW91dC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFtQlMsQUFFcUcsQUFLbEUsQUFVQyxBQUdGLEFBSU0sQUFHWCxBQUdDLGdCQUZuQixDQUdBLEtBdkJXLENBVVgsUUFUWSxVQUNaLFNBV2dDLDJDQUloQyx5QkFIQSIsImZpbGUiOiIvVXNlcnMvV29vQ2hvaS9EZXNrdG9wL1JlYWN0LmpzL3dlYi1wb3J0Zm9saW8vY29tcG9uZW50cy9MYXlvdXQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlRWZmZWN0IH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgeyBpbml0R0EsIGxvZ1BhZ2VWaWV3IH0gZnJvbSBcIi4uL3V0aWxzL2FuYWx5dGljc1wiO1xuXG5pbXBvcnQgTmF2IGZyb20gXCIuL05hdlwiO1xuXG5jb25zdCBMYXlvdXQgPSAocHJvcHMpID0+IHtcbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBpZiAoIXdpbmRvdy5HQV9JTklUSUFMSVpFRCkge1xuICAgICAgaW5pdEdBKCk7XG4gICAgICB3aW5kb3cuR0FfSU5JVElBTElaRUQgPSB0cnVlO1xuICAgIH1cbiAgICBsb2dQYWdlVmlldygpO1xuICB9LCBbXSk7XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2PlxuICAgICAgPE5hdiAvPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJsYXlvdXRcIj57cHJvcHMuY2hpbGRyZW59PC9kaXY+XG4gICAgICA8c3R5bGUganN4IGdsb2JhbD5cbiAgICAgICAge2BcbiAgICAgICAgICBAaW1wb3J0IHVybChcImh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Nb250c2VycmF0OjQwMCw1MDAsNjAwJmRpc3BsYXk9c3dhcFwiKTtcblxuICAgICAgICAgICosXG4gICAgICAgICAgKjo6YmVmb3JlLFxuICAgICAgICAgICo6OmFmdGVyIHtcbiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgIH1cbiAgICAgICAgICBoMSxcbiAgICAgICAgICBoMyxcbiAgICAgICAgICBwLFxuICAgICAgICAgIGEsXG4gICAgICAgICAgbGksXG4gICAgICAgICAgYnV0dG9uIHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBNb250c2VycmF0O1xuICAgICAgICAgIH1cbiAgICAgICAgICBhIHtcbiAgICAgICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjE1cztcbiAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbi1za2lwLWluazogYXV0bztcbiAgICAgICAgICB9XG4gICAgICAgICAgYTpob3ZlciB7XG4gICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTNweCk7XG4gICAgICAgICAgfVxuICAgICAgICAgIHVsIHtcbiAgICAgICAgICAgIGxpc3Qtc3R5bGU6IG5vbmU7XG4gICAgICAgICAgfVxuICAgICAgICAgIGltZyB7XG4gICAgICAgICAgICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgICB9XG4gICAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuICAgIDwvZGl2PlxuICApO1xufTtcblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0O1xuIl19 */\n/*@ sourceURL=/Users/WooChoi/Desktop/React.js/web-portfolio/components/Layout.js */"));
+  }, "@import url(\"https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap\");*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}h1,h3,p,a,li,button{font-family:Montserrat;}a{-webkit-transition:all 0.15s;transition:all 0.15s;-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;}a:hover{-webkit-transform:translateY(-3px);-ms-transform:translateY(-3px);transform:translateY(-3px);}ul{list-style:none;}img{object-fit:cover;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb29DaG9pL0Rlc2t0b3AvUmVhY3QuanMvd2ViLXBvcnRmb2xpby9jb21wb25lbnRzL0xheW91dC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF3QlMsQUFFcUcsQUFLbEUsQUFVQyxBQUdGLEFBSU0sQUFHWCxBQUdDLGdCQUZuQixDQUdBLEtBdkJXLENBVVgsUUFUWSxVQUNaLFNBV2dDLDJDQUloQyx5QkFIQSIsImZpbGUiOiIvVXNlcnMvV29vQ2hvaS9EZXNrdG9wL1JlYWN0LmpzL3dlYi1wb3J0Zm9saW8vY29tcG9uZW50cy9MYXlvdXQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlRWZmZWN0IH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgeyBpbml0R0EsIGxvZ1BhZ2VWaWV3IH0gZnJvbSBcIi4uL3V0aWxzL2FuYWx5dGljc1wiO1xuaW1wb3J0IE1ldGFUYWdzIGZyb20gXCJyZWFjdC1tZXRhLXRhZ3NcIjtcblxuaW1wb3J0IE5hdiBmcm9tIFwiLi9OYXZcIjtcblxuY29uc3QgTGF5b3V0ID0gKHByb3BzKSA9PiB7XG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgaWYgKCF3aW5kb3cuR0FfSU5JVElBTElaRUQpIHtcbiAgICAgIGluaXRHQSgpO1xuICAgICAgd2luZG93LkdBX0lOSVRJQUxJWkVEID0gdHJ1ZTtcbiAgICB9XG4gICAgbG9nUGFnZVZpZXcoKTtcbiAgfSwgW10pO1xuXG4gIHJldHVybiAoXG4gICAgPGRpdj5cbiAgICAgIDxNZXRhVGFncz5cbiAgICAgICAgPHRpdGxlPldvbyBZb3VuZyBDaG9pIFBvcnRmb2xpbyDwn5Go8J+Pu+KAjfCfkrs8L3RpdGxlPlxuICAgICAgICA8bWV0YSBuYW1lPVwidmlld3BvcnRcIiBjb250ZW50PVwid2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMFwiIC8+XG4gICAgICA8L01ldGFUYWdzPlxuICAgICAgPE5hdiAvPlxuICAgICAgPGRpdj57cHJvcHMuY2hpbGRyZW59PC9kaXY+XG4gICAgICA8c3R5bGUganN4IGdsb2JhbD5cbiAgICAgICAge2BcbiAgICAgICAgICBAaW1wb3J0IHVybChcImh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Nb250c2VycmF0OjQwMCw1MDAsNjAwJmRpc3BsYXk9c3dhcFwiKTtcblxuICAgICAgICAgICosXG4gICAgICAgICAgKjo6YmVmb3JlLFxuICAgICAgICAgICo6OmFmdGVyIHtcbiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgIH1cbiAgICAgICAgICBoMSxcbiAgICAgICAgICBoMyxcbiAgICAgICAgICBwLFxuICAgICAgICAgIGEsXG4gICAgICAgICAgbGksXG4gICAgICAgICAgYnV0dG9uIHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBNb250c2VycmF0O1xuICAgICAgICAgIH1cbiAgICAgICAgICBhIHtcbiAgICAgICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjE1cztcbiAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbi1za2lwLWluazogYXV0bztcbiAgICAgICAgICB9XG4gICAgICAgICAgYTpob3ZlciB7XG4gICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTNweCk7XG4gICAgICAgICAgfVxuICAgICAgICAgIHVsIHtcbiAgICAgICAgICAgIGxpc3Qtc3R5bGU6IG5vbmU7XG4gICAgICAgICAgfVxuICAgICAgICAgIGltZyB7XG4gICAgICAgICAgICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgICB9XG4gICAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuICAgIDwvZGl2PlxuICApO1xufTtcblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0O1xuIl19 */\n/*@ sourceURL=/Users/WooChoi/Desktop/React.js/web-portfolio/components/Layout.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -4028,6 +4056,17 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ }),
 
+/***/ "./node_modules/react-dom/index.js":
+/*!***********************************************************************************************!*\
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_2adc2403d89adc16ead0 ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/react-dom/index.js");
+
+/***/ }),
+
 /***/ "./node_modules/react-ga/dist/esm/components/OutboundLink.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/react-ga/dist/esm/components/OutboundLink.js ***!
@@ -5347,6 +5386,536 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/react-meta-tags/lib/index.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-meta-tags/lib/index.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "MetaTagsContext", {
+  enumerable: true,
+  get: function get() {
+    return _meta_tags_context.default;
+  }
+});
+Object.defineProperty(exports, "MetaTags", {
+  enumerable: true,
+  get: function get() {
+    return _meta_tags.default;
+  }
+});
+Object.defineProperty(exports, "ReactTitle", {
+  enumerable: true,
+  get: function get() {
+    return _react_title.default;
+  }
+});
+exports.default = void 0;
+
+var _meta_tags_context = _interopRequireDefault(__webpack_require__(/*! ./meta_tags_context */ "./node_modules/react-meta-tags/lib/meta_tags_context.js"));
+
+var _meta_tags = _interopRequireDefault(__webpack_require__(/*! ./meta_tags */ "./node_modules/react-meta-tags/lib/meta_tags.js"));
+
+var _react_title = _interopRequireDefault(__webpack_require__(/*! ./react_title */ "./node_modules/react-meta-tags/lib/react_title.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = _meta_tags.default;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/react-meta-tags/lib/meta_tags.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-meta-tags/lib/meta_tags.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _reactDom = _interopRequireDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-meta-tags/lib/utils.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/** An wrapper component to wrap element which need to shifted to head **/
+var MetaTags =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(MetaTags, _Component);
+
+  function MetaTags() {
+    _classCallCheck(this, MetaTags);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(MetaTags).apply(this, arguments));
+  }
+
+  _createClass(MetaTags, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.temporaryElement = document.createElement('div');
+      this.handleChildrens();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(oldProps) {
+      if (oldProps.children !== this.props.children) {
+        this.handleChildrens();
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this.temporaryElement) {
+        _reactDom.default.unmountComponentAtNode(this.temporaryElement);
+      }
+    }
+  }, {
+    key: "extractChildren",
+    value: function extractChildren() {
+      var extract = this.context.extract;
+      var children = this.props.children;
+
+      if (!children) {
+        return;
+      }
+
+      if (extract) {
+        extract(children);
+      }
+    }
+  }, {
+    key: "handleChildrens",
+    value: function handleChildrens() {
+      var _this = this;
+
+      var children = this.props.children;
+
+      if (this.context.extract || !children) {
+        return;
+      }
+
+      var headComponent = _react.default.createElement("div", {
+        className: "react-head-temp"
+      }, children);
+
+      _reactDom.default.render(headComponent, this.temporaryElement, function () {
+        var childStr = _this.temporaryElement.innerHTML; //if html is not changed return
+
+        if (_this.lastChildStr === childStr) {
+          return;
+        }
+
+        _this.lastChildStr = childStr;
+
+        var tempHead = _this.temporaryElement.querySelector('.react-head-temp'); // .react-head-temp might not exist when triggered from async action
+
+
+        if (tempHead === null) {
+          return;
+        }
+
+        var childNodes = Array.prototype.slice.call(tempHead.children);
+        var head = document.head;
+        var headHtml = head.innerHTML; //filter children remove if children has not been changed
+
+        childNodes = childNodes.filter(function (child) {
+          return headHtml.indexOf(child.outerHTML) === -1;
+        }); //create clone of childNodes
+
+        childNodes = childNodes.map(function (child) {
+          return child.cloneNode(true);
+        }); //remove duplicate title and meta from head
+
+        childNodes.forEach(function (child) {
+          var tag = child.tagName.toLowerCase();
+
+          if (tag === 'title') {
+            var title = (0, _utils.getDuplicateTitle)();
+            if (title) (0, _utils.removeChild)(head, title);
+          } else if (tag === 'meta') {
+            var meta = (0, _utils.getDuplicateMeta)(child);
+            if (meta) (0, _utils.removeChild)(head, meta);
+          } else if (tag === 'link' && child.rel === 'canonical') {
+            var link = (0, _utils.getDuplicateCanonical)(child);
+            if (link) (0, _utils.removeChild)(head, link);
+          }
+        });
+        (0, _utils.appendChild)(document.head, childNodes);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      this.extractChildren();
+      return null;
+    }
+  }]);
+
+  return MetaTags;
+}(_react.Component);
+
+_defineProperty(MetaTags, "contextTypes", {
+  extract: _propTypes.default.func
+});
+
+var _default = MetaTags;
+exports.default = _default;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-meta-tags/lib/meta_tags_context.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/react-meta-tags/lib/meta_tags_context.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/** context class which passes extract fuunction to MetaTags Component **/
+var MetaTagsContext =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(MetaTagsContext, _Component);
+
+  function MetaTagsContext() {
+    _classCallCheck(this, MetaTagsContext);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(MetaTagsContext).apply(this, arguments));
+  }
+
+  _createClass(MetaTagsContext, [{
+    key: "getChildContext",
+    value: function getChildContext() {
+      return {
+        extract: this.props.extract
+      };
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react.Children.only(this.props.children);
+    }
+  }]);
+
+  return MetaTagsContext;
+}(_react.Component);
+
+_defineProperty(MetaTagsContext, "childContextTypes", {
+  extract: _propTypes.default.func
+});
+
+var _default = MetaTagsContext;
+exports.default = _default;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-meta-tags/lib/react_title.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-meta-tags/lib/react_title.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _meta_tags = _interopRequireDefault(__webpack_require__(/*! ./meta_tags */ "./node_modules/react-meta-tags/lib/meta_tags.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var ReactTitle =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ReactTitle, _Component);
+
+  function ReactTitle() {
+    _classCallCheck(this, ReactTitle);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ReactTitle).apply(this, arguments));
+  }
+
+  _createClass(ReactTitle, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_meta_tags.default, null, _react.default.createElement("title", null, this.props.title));
+    }
+  }]);
+
+  return ReactTitle;
+}(_react.Component);
+
+_defineProperty(ReactTitle, "propTypes", {
+  title: _propTypes.default.string
+});
+
+var _default = ReactTitle;
+exports.default = _default;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-meta-tags/lib/utils.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-meta-tags/lib/utils.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.filterAndArrangeTags = filterAndArrangeTags;
+exports.getDuplicateTitle = getDuplicateTitle;
+exports.getDuplicateCanonical = getDuplicateCanonical;
+exports.getDuplicateMeta = getDuplicateMeta;
+exports.appendChild = appendChild;
+exports.removeChild = removeChild;
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var camelCaseProps = ['itemProp'];
+var uniqueIdentifiersI = ['property', 'name', 'itemprop'];
+var uniqueIdentifiers = uniqueIdentifiersI.concat(camelCaseProps); //case sensitive props is defined in case anyone defined the lowercase prop
+
+var uniqueIdentifiersAll = uniqueIdentifiers.concat(['id']);
+/**
+  Note:
+  1. In server side we will add meta tags and title at last after fitering
+  2. In client we will match and replace meta tagString
+  3. For now we will not support link and other tags properly, they can be added but we will not check for uniqueness and will not decide placement
+**/
+
+function filterOutMetaWithId(metas) {
+  metas = Array.prototype.slice.call(metas || []);
+  return metas.filter(function (meta) {
+    return !meta.id;
+  });
+}
+
+function filterAndArrangeTags(headElms) {
+  var title = null,
+      canonicalLink = null;
+  var metas = [],
+      rest = [];
+  headElms.forEach(function (elm) {
+    var type = elm.type,
+        props = elm.props;
+
+    if (type === 'title') {
+      title = elm;
+    } else if (type === 'link' && props.rel === 'canonical') {
+      canonicalLink = elm;
+    } else if (type === 'meta') {
+      metas.push(elm);
+    } else {
+      rest.push(elm);
+    }
+  });
+  return [title].concat(_toConsumableArray(removeDuplicateMetas(metas)), [canonicalLink], rest);
+}
+
+function removeDuplicateMetas(metas) {
+  var addedMeta = {}; //initialize all the identifiers with empty array
+
+  uniqueIdentifiersAll.forEach(function (identifier) {
+    addedMeta[identifier] = [];
+  });
+  var filteredMetas = [];
+
+  var _loop = function _loop(i) {
+    var meta = metas[i];
+    var id = meta.props.id;
+    var addMeta = false; //if has id and element with id is not present than always add meta
+
+    if (id) {
+      addMeta = !addedMeta.id[id]; //for any other unique identifier check if meta already available with same identifier which doesn't have id
+    } else {
+      addMeta = uniqueIdentifiers.filter(function (identifier) {
+        var identifierValue = meta.props[identifier];
+        var existing = addedMeta[identifier][identifierValue];
+        return existing && !existing.props.id;
+      }).length === 0;
+    }
+
+    if (addMeta) {
+      filteredMetas.unshift(meta); //add meta as added 
+
+      uniqueIdentifiersAll.forEach(function (identifier) {
+        var identifierValue = meta.props[identifier];
+        if (identifierValue) addedMeta[identifier][identifierValue] = meta;
+      });
+    }
+  };
+
+  for (var i = metas.length - 1; i >= 0; i--) {
+    _loop(i);
+  }
+
+  return filteredMetas;
+}
+
+function getDuplicateTitle() {
+  return document.head.querySelectorAll('title');
+}
+
+function getDuplicateCanonical() {
+  return document.head.querySelectorAll('link[rel="canonical"]');
+}
+
+function getDuplicateMeta(meta) {
+  var head = document.head;
+  var id = meta.id; //if has id and element with id is not present than return the element
+
+  if (id) {
+    return id && head.querySelector("#".concat(id));
+  } //for any other unique identifier check if metas already available with same identifier which doesn't have id
+
+
+  return uniqueIdentifiersI.reduce(function (duplicates, identifier) {
+    var identifierValue = meta.getAttribute(identifier);
+    return identifierValue ? duplicates.concat(filterOutMetaWithId(head.querySelectorAll("[".concat(identifier, " = \"").concat(identifierValue, "\"]")))) : duplicates;
+  }, []);
+} //function to append childrens on a parent
+
+
+function appendChild(parent, childrens) {
+  if (childrens.length === undefined) childrens = [childrens];
+  var docFrag = document.createDocumentFragment(); //we used for loop instead of forEach because childrens can be array like object
+
+  for (var i = 0, ln = childrens.length; i < ln; i++) {
+    docFrag.appendChild(childrens[i]);
+  }
+
+  parent.appendChild(docFrag);
+}
+
+function removeChild(parent, childrens) {
+  if (childrens.length === undefined) childrens = [childrens];
+
+  for (var i = 0, ln = childrens.length; i < ln; i++) {
+    parent.removeChild(childrens[i]);
+  }
+}
 
 /***/ }),
 

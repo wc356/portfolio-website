@@ -15,13 +15,14 @@ const Projects = () => {
     ));
   };
   return (
-    <section id="projects" className="layout">
+    <section className="projects">
       <h1 className="title">Selected Projects</h1>
       {makeCard()}
       <style jsx>
         {`
-          .layout {
+          .projects {
             text-align: center;
+            background-color: green;
           }
           .title {
             font-size: 45px;

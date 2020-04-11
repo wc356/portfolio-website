@@ -91,6 +91,12 @@ export const PostProjImg = ({ project }) => (
           transform: translate(-50%, -50%);
           text-align: center;
         }
+        @media screen and (max-width: 1024px) {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
       `}
     </style>
   </>

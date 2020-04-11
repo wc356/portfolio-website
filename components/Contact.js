@@ -4,29 +4,27 @@ import theme from "../styles/theme";
 const Contact = () => (
   <>
     <section className="contact">
-      <div className="card">
-        <h1 className="title">Any questions or comments?</h1>
-        <p className="body">Send your inquiries below</p>
-        <a
-          className="btn"
-          href="mailto:wychoi356@gmail.com"
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          Let's Talk 💬
-        </a>
-      </div>
+      <h1 className="title">Any questions or comments?</h1>
+      <p className="body">Send your inquiries below</p>
+      <a
+        className="btn"
+        href="mailto:wychoi356@gmail.com"
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+      >
+        Let's Talk 💬
+      </a>
     </section>
     <footer className="footer">
       <div>
         <p className="footer-body">Designed & Built by Woo Young Choi</p>
       </div>
     </footer>
-
     <style jsx>
       {`
         .contact {
           display: flex;
+          flex-direction: column;
           margin-top: 20%;
           margin-bottom: 10%;
           padding-left: 18%;
@@ -34,7 +32,7 @@ const Contact = () => (
         .title {
           color: ${theme.colors["link"]};
           font-size: 30px;
-          margin-bottom: 5px;
+          padding: 5px;
           text-shadow: -1px -1px ${theme.colors["pink-l"]},
             -2px -2px ${theme.colors["pink-l"]},
             -3px -3px ${theme.colors["pink-l"]},
@@ -83,6 +81,16 @@ const Contact = () => (
         .footer-body {
           color: white;
           font-size: 18px;
+        }
+        @media screen and (max-width: 1024px) {
+          .contact {
+            align-items: center;
+            margin: 0;
+            padding: 12rem 0;
+          }
+          .title {
+            text-align: center;
+          }
         }
       `}
     </style>

@@ -82,6 +82,16 @@ export default () => {
             justify-content: flex-start;
             flex-wrap: wrap;
           }
+          @media screen and (max-width: 600px) {
+            .layout {
+              display: flex;
+              padding: 5rem;
+              justify-content: center;
+            }
+            .cards {
+              flex-direction: column;
+            }
+          }
         `}
       </style>
     </Layout>

@@ -29,10 +29,11 @@ as his preferred method.
     <style jsx>
       {`
         .main {
-          align-items: center;
           display: flex;
+          align-items: center;
           justify-content: space-between;
-          margin: 300px 100px;
+          padding: 300px 100px;
+          background-color: yellow;
         }
         .img-wrapper {
           display: flex;
@@ -65,6 +66,22 @@ as his preferred method.
           font-size: 16px;
           line-height: 35px;
           white-space: pre;
+        }
+        @media screen and (max-width: 1024px) {
+          .main {
+            flex-direction: column;
+            padding: 10rem 0;
+          }
+          .about {
+            padding: 1rem 0;
+          }
+          .title {
+            padding: 1.5rem 0;
+          }
+          .body {
+            white-space: normal;
+            padding: 1.5rem 0;
+          }
         }
       `}
     </style>

@@ -35,10 +35,6 @@
     "/p/[title]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/resume": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

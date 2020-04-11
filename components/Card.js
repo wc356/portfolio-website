@@ -118,70 +118,83 @@ const Card = ({
     });
 
   return (
-    <ul>
-      <li className="cards-container">
-        <section className="card--img">
-          <PostProjImg project={project} />
+    <div className="cards-container">
+      <section className="card--img">
+        <PostProjImg project={project} />
+      </section>
+      <section className="card--text">
+        <section className="text">
+          <PostProjLink project={project} />
+          <h1 className="quote">{quote}</h1>
+          <p className="description">{description}</p>
+          {renderLinks()}
         </section>
-        <section className="card--text">
-          <section className="text">
-            <PostProjLink project={project} />
-            <h1 className="quote">{quote}</h1>
-            <p className="description">{description}</p>
-            {renderLinks()}
-          </section>
-          <section className="tech-wrapper">{renderProject()}</section>
-        </section>
-        <style jsx>
-          {`
+        <section className="tech-wrapper">{renderProject()}</section>
+      </section>
+      <style jsx>
+        {`
+          .cards-container {
+            display: flex;
+            padding: 35px 0px;
+            padding-left: 100px;
+            justify-content: space-around;
+            align-items: center;
+          }
+          .card--img {
+            display: block;
+            transition: all 0.15s;
+          }
+          .card--img:hover {
+            transform: translateX(-10px) translateY(-10px);
+          }
+          .card--text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            height: 100%;
+            width: 37.5rem;
+            min-width: 25rem;
+          }
+          .text {
+            position: relative;
+            white-space: pre-line;
+            height: 100%;
+            color: ${theme.colors.black};
+            padding: 0 15px 15px 15px;
+          }
+          .quote {
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+          }
+          .description {
+            padding: 0.3rem;
+          }
+          .tech-wrapper {
+            display: block;
+            padding: 0 40px;
+            width: 100%;
+            bottom: 0px;
+          }
+          @media screen and (max-width: 1024px) {
             .cards-container {
-              display: flex;
-              padding: 35px 0px;
-              padding-left: 100px;
-              justify-content: space-around;
-              align-items: center;
+              flex-direction: column;
+              padding: 0;
+              background-color: pink;
             }
             .card--img {
-              display: block;
-              transition: all 0.15s;
-            }
-            .card--img:hover {
-              transform: translateX(-10px) translateY(-10px);
+              width: 80%;
             }
             .card--text {
-              display: flex;
-              flex-direction: column;
-              text-align: center;
-              height: 100%;
-              width: 37.5rem;
-              min-width: 25rem;
-            }
-            .text {
-              position: relative;
-              white-space: pre-line;
-              height: 100%;
-              color: ${theme.colors.black};
-              padding: 0 15px 15px 15px;
-            }
-            .quote {
-              font-size: 30px;
-              font-weight: 400;
-              margin-bottom: 0.5rem;
-              margin-top: 1.5rem;
-            }
-            .description {
-              padding: 0.3rem;
-            }
-            .tech-wrapper {
-              display: block;
-              padding: 0 40px;
               width: 100%;
-              bottom: 0px;
+              min-width: 0;
+              padding: 5rem 0;
             }
-          `}
-        </style>
-      </li>
-    </ul>
+          }
+        `}
+      </style>
+    </div>
   );
 };
 

@@ -2,19 +2,18 @@ import theme from "../styles/theme";
 
 const Landing = () => (
   <div className="main">
-    <section>
-      <h1 className="title">WOO YOUNG CHOI</h1>
-      <p className="description">UI/UX & Front-end Developer</p>
-    </section>
+    <h1 className="title">WOO YOUNG CHOI</h1>
+    <p className="description">UI/UX & Front-end Developer</p>
     <style jsx>
       {`
         .main {
-          align-items: center;
           display: flex;
+          align-items: center;
           flex-direction: column;
           justify-content: center;
           min-height: 100vh;
           text-align: center;
+          background-color: yellow;
         }
         .title {
           font-family: Futura, Montserrat;
@@ -33,6 +32,11 @@ const Landing = () => (
           0% {
             opacity: 0;
             margin-bottom: -200px;
+          }
+        }
+        @media screen and (max-width: 1024px) {
+          .main {
+            flex-direction: column;
           }
         }
       `}

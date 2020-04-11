@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { initGA, logPageView } from "../utils/analytics";
+import MetaTags from "react-meta-tags";
 
 import Nav from "./Nav";
 
@@ -14,8 +15,12 @@ const Layout = (props) => {
 
   return (
     <div>
+      <MetaTags>
+        <title>Woo Young Choi Portfolio 👨🏻‍💻</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </MetaTags>
       <Nav />
-      <div className="layout">{props.children}</div>
+      <div>{props.children}</div>
       <style jsx global>
         {`
           @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap");
