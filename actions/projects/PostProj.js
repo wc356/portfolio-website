@@ -15,14 +15,14 @@ export const PostProjLink = ({ project = "PROJECT TITLE" }) => (
           font-size: 25px;
           font-weight: 600;
           text-decoration: none;
-          color: ${theme.colors.dark};
+          color: ${theme.colors.link};
         }
         .title:hover {
           opacity: 1;
           text-shadow: 6px 6px ${theme.colors["pink-link"]};
         }
         a:visited {
-          color: ${theme.colors.dark};
+          color: ${theme.colors.link};
         }
       `}
     </style>

@@ -2,8 +2,9 @@ export default {
   name: "Woo Young Choi",
   contact: {
     links: [
+      ["wooyoungchoi.dev", "//wooyoungchoi.dev"],
       ["wychoi356@gmail.com", "mailto:wychoi356@gmail.com"],
-      ["linkedin.com/in/woo-young", "//www.linkedin.com/in/woo-young/"],
+      ["linkedin.com/in/woo-young", "//linkedin.com/in/woo-young/"],
       ["github.com/wc356", "//github.com/wc356"],
     ],
     notLinks: ["201 820 7277"],
@@ -111,4 +112,5 @@ export default {
     border: "#d8d5f7",
     shadow: "#d8d5f7",
   },
+  download: ["Download Resume", "/images/Choi_resume.pdf"],
 };

@@ -59,6 +59,7 @@ const Contact = () => (
           border-radius: 25px;
           letter-spacing: 1px;
           text-decoration: none;
+          box-shadow: ${theme.colors.dark} 0px 0px 10px 0px;
         }
         .btn:hover {
           transform: scale(1.08);

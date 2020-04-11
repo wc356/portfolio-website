@@ -1,7 +1,5 @@
-// import Link from "next/link";
 import React from "react";
 import Link from "next/link";
-import { v4 as uuidv4 } from "uuid";
 
 import Layout from "../components/Layout";
 import theme from "../styles/theme";
@@ -9,9 +7,16 @@ import blog from "../database/blog";
 
 export default () => {
   const addPosts = () => {
-    const posts = blog.map((post) => (
-      <Link href="/p/[title]" as={`/p/${post.title}`}>
-        <li className="card" key={post.id}>
+    const mapReverse = (arr, fn) => {
+      return arr.reduceRight((result, el) => {
+        result.push(fn(el));
+        return result;
+      }, []);
+    };
+
+    return mapReverse(blog, (post) => (
+      <Link key={post.id} href="/p/[title]" as={`/p/${post.title}`}>
+        <li className="card">
           <h1 className="title">{post.title}</h1>
           <p className="date">{post.date}</p>
           <style jsx>
@@ -28,6 +33,7 @@ export default () => {
                 word-break: break-word;
                 transition: all 0.15s;
                 background: white;
+                box-shadow: white 0 0 0.5rem 0;
               }
               .card:hover {
                 border: ${theme.colors.dark} 1px solid;
@@ -50,10 +56,8 @@ export default () => {
         </li>
       </Link>
     ));
-    return posts;
   };
 
-  // Layout
   return (
     <Layout>
       <div className="layout">

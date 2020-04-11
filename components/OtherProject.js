@@ -31,7 +31,6 @@ const OtherProject = ({ project }) => {
           })}
         </ul>
       </div>
-
       <style jsx>
         {`
           a {
@@ -43,12 +42,12 @@ const OtherProject = ({ project }) => {
             min-width: 11.25rem;
             height: 250px;
             padding: 1.125rem;
-            border: solid 1px ${theme.colors.gray};
             margin-right: 15px;
             margin-bottom: 15px;
-            border-radius: 5px;
+            border-radius: 0 1rem 0 1rem;
             background-color: ${theme.colors.dark};
             color: white;
+            box-shadow: ${theme.colors.dark} 0 0 10px 0;
           }
           .card:hover {
             color: ${theme.colors.dark};

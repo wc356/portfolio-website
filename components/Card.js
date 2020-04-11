@@ -26,7 +26,7 @@ const Card = ({
                 li {
                   display: inline-block;
                   background-color: ${theme.colors.black};
-                  box-shadow: 9px 9px ${theme.colors.gray};
+
                   border-radius: 0 10px 0 10px;
                   color: white;
                   font-weight: 400;
@@ -105,6 +105,7 @@ const Card = ({
                   text-decoration: none;
                   padding: 0.4rem;
                   border-radius: 0.5rem;
+                  box-shadow: ${theme.colors.link} 0 0 0.5rem 0;
                 }
                 .btn:hover {
                   background-color: ${theme.colors.pink};

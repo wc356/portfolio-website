@@ -140,7 +140,6 @@ const Resume = () => {
           ))}
         </ul>
       </div>
-
       <style jsx>
         {`
           .highlight {
@@ -168,78 +167,85 @@ const Resume = () => {
   );
 
   return (
-    <div className="background">
-      <div className="page">
-        <div className="bottom-layout">
-          <section className="MAIN left-column">
-            <div className="name">
-              <h1>{values[0]}</h1>
-            </div>
-            <div className="professional-exp">
-              {renderExperience("professional")}
-            </div>
-            <div className="project-exp">{renderExperience("project")}</div>
-            <div className="education">{renderEducation()}</div>
-          </section>
-          <section className=" SPECS right-column">
-            <div className="contact">
-              <div className="contact-isLink">
+    <>
+      <div className="background">
+        <div>
+          <a className="btn-download" href={values[10][1]} target="_blank">
+            {values[10][0]}
+          </a>
+        </div>
+        <div className="page">
+          <div className="bottom-layout">
+            <section className="MAIN left-column">
+              <div className="name">
+                <h1>{values[0]}</h1>
+              </div>
+              <div className="professional-exp">
+                {renderExperience("professional")}
+              </div>
+              <div className="project-exp">{renderExperience("project")}</div>
+              <div className="education">{renderEducation()}</div>
+            </section>
+            <section className=" SPECS right-column">
+              <div className="contact">
+                <div className="contact-isLink">
+                  <ul>
+                    {values[1].links.map((link) => (
+                      <li key={uuidv4()} className="hover">
+                        <a
+                          href={link[1]}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                        >
+                          {link[0]}
+                        </a>
+                      </li>
+                    ))}
+                    {values[1].notLinks.map((notLink) => (
+                      <p key={uuidv4()}>{notLink}</p>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="technology subsection">
+                <h3 className="title">TECHNOLOGY</h3>
                 <ul>
-                  {values[1].links.map((link) => (
-                    <li key={uuidv4()} className="hover">
-                      <a
-                        href={link[1]}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                      >
-                        {link[0]}
-                      </a>
-                    </li>
-                  ))}
-                  {values[1].notLinks.map((notLink) => (
-                    <p key={uuidv4()}>{notLink}</p>
+                  {values[4].map((tech) => (
+                    <li key={uuidv4()}>{tech}</li>
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="technology subsection">
-              <h3 className="title">TECHNOLOGY</h3>
-              <ul>
-                {values[4].map((tech) => (
-                  <li key={uuidv4()}>{tech}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="honors subsection">
-              <h3 className="title">HONORS</h3>
-              <p>{values[5].title}</p>
-              <p>{values[5].description}</p>
-            </div>
-            <div className="languages subsection">
-              <h3 className="title">LANGUAGES</h3>
-              <ul>
-                {values[6].map((lang) => (
-                  <li key={uuidv4()}>{lang}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="interests subsection">
-              <h3 className="title">INTERESTS</h3>
-              <ul>
-                {values[7].map((int) => (
-                  <li key={uuidv4()}>{int}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="hobbies subsection">
-              <h3 className="title">HOBBIES</h3>
-              <ul>
-                {values[8].map((hobby) => (
-                  <li key={uuidv4()}>{hobby}</li>
-                ))}
-              </ul>
-            </div>
-          </section>
+              <div className="honors subsection">
+                <h3 className="title">HONORS</h3>
+                <p>{values[5].title}</p>
+                <p>{values[5].description}</p>
+              </div>
+              <div className="languages subsection">
+                <h3 className="title">LANGUAGES</h3>
+                <ul>
+                  {values[6].map((lang) => (
+                    <li key={uuidv4()}>{lang}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="interests subsection">
+                <h3 className="title">INTERESTS</h3>
+                <ul>
+                  {values[7].map((int) => (
+                    <li key={uuidv4()}>{int}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="hobbies subsection">
+                <h3 className="title">HOBBIES</h3>
+                <ul>
+                  {values[8].map((hobby) => (
+                    <li key={uuidv4()}>{hobby}</li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
       <style jsx>
@@ -263,13 +269,28 @@ const Resume = () => {
             display: flex;
             justify-content: center;
           }
+          .btn-download {
+            display: block;
+            position: fixed;
+            left: 5rem;
+            color: white;
+            background-color: ${values[9].highlight};
+            padding: .5rem;
+            border-radius: 0 .7rem 0 .7rem;
+            box-shadow: ${values[9].highlight} 0 0 10px 0;
+          }
+          .btn-download:hover {
+            background-color: pink;
+          }
           .page {
             display: flex;
+            zoom: 0.85;
+            -moz-transform: scale(0.85);
             flex-direction: column;
             border-top: 7px solid ${values[9].highlight};
             border-bottom: 7px solid ${values[9].highlight};
             padding: 70px;
-            width: 990px;
+            width: 1000px;
             line-height: 1.8;
             border-left: 1px solid ${values[9].border};
             box-shadow 10px 10px 10px ${values[9].shadow};
@@ -320,7 +341,7 @@ const Resume = () => {
           }
         `}
       </style>
-    </div>
+    </>
   );
 };
 

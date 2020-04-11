@@ -9,8 +9,8 @@ export default () => {
   const router = useRouter();
   const title = router.query.title;
 
-  const handleBody = () => {
-    const body = blog.map((post) => {
+  const handleBody = () =>
+    blog.map((post) => {
       if (post.title === title) {
         return (
           <div className="container" key={uuidv4()}>
@@ -20,12 +20,6 @@ export default () => {
             <p className="body" key={post.id}>
               {post.body}
             </p>
-            <div className="align-left">
-              <Link href="/blog">
-                <a className="navlink">BACK</a>
-              </Link>
-            </div>
-
             <style jsx>
               {`
                 img {
@@ -46,30 +40,6 @@ export default () => {
                   overflow-wrap: break-word;
                   margin: 40px 0;
                 }
-                .align-left {
-                  display: flex;
-                  text-align: center;
-                  flex-direction: column;
-                  width: 30%;
-                }
-                .navlink {
-                  display: block;
-                  letter-spacing: 1px;
-                  padding: 10px;
-                  font-size: 15px;
-                  font-weight: 900;
-                  text-decoration: none;
-                  color: white;
-                  background-color: ${theme.colors.dark};
-                  border-radius: 10px;
-                }
-                .navlink:hover {
-                  background-color: ${theme.colors.pink};
-                  transform: scale(1.08);
-                }
-                .navlink:visited {
-                  color: white;
-                }
                 span {
                   font-size: 30px;
                   font-weight: 400;
@@ -81,12 +51,15 @@ export default () => {
         );
       }
     });
-    return body;
-  };
 
   return (
     <Layout>
-      <div className="layout">
+      <div className="background">
+        <div>
+          <Link href="/blog">
+            <a className="btn">BACK</a>
+          </Link>
+        </div>
         <div className="body">
           <h1>{title}</h1>
           {handleBody()}
@@ -99,7 +72,7 @@ export default () => {
           margin-bottom: 40px;
           text-align: center;
         }
-        .layout {
+        .background {
           padding: 50px 210px;
           line-height: 1.8;
           background-color: rgb(239, 239, 239);
@@ -119,6 +92,28 @@ export default () => {
           border-radius: 10px;
           box-shadow: LightGray 0px 0px 10px 0px;
           min-width: 30rem;
+        }
+        .btn {
+          display: block;
+          position: fixed;
+          left: 10rem;
+          top: 10rem;
+          border-radius: 0 1.5rem 0 1.5rem;
+          letter-spacing: 1px;
+          padding: 1rem;
+          font-size: 15px;
+          font-weight: 900;
+          text-decoration: none;
+          color: white;
+          background-color: ${theme.colors.dark};
+          box-shadow: ${theme.colors.dark} 0px 0px 10px 0px;
+        }
+        .btn:hover {
+          background-color: ${theme.colors.pink};
+          transform: scale(1.08);
+        }
+        .btn:visited {
+          color: white;
         }
       `}</style>
     </Layout>
