@@ -181,7 +181,6 @@ const Card = ({
             .cards-container {
               flex-direction: column;
               padding: 0;
-              background-color: pink;
             }
             .card--img {
               width: 80%;
