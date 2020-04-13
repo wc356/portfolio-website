@@ -97,6 +97,7 @@ export default {
     "npm | yarn",
     "Adobe XD | Photoshop | Indesign | Illustrator",
     "AutoCAD",
+    "responsive design",
   ],
   honors: {
     title: "Cornell CALS Dean's List - 4 Semesters",
@@ -104,7 +105,12 @@ export default {
   },
   languages: ["English - Fluent", "Korean - Native"],
   interests: ["Full-stack Development", "UI/UX & Design"],
-  hobbies: ["Learning new coding language", "Side Projects", "Reading"],
+  hobbies: [
+    "New coding languages",
+    "Side Projects",
+    "Reading",
+    "Playing Guitar",
+  ],
   colors: {
     highlight: "#561eff",
     title: "black",

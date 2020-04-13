@@ -17,6 +17,16 @@ const Layout = (props) => {
     <div>
       <MetaTags>
         <title>Woo Young Choi Portfolio 👨🏻‍💻</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Woo Young Choi" />
+        <meta
+          name="description"
+          content="👨🏻‍💻 Woo Young Choi Front-end Developer Portfolio ☕️"
+        />
+        <meta
+          name="keywords"
+          content="JavaScript, HTML, CSS, SASS, SCSS, XML, React, ReactJS, Next, NextJS, software engineer, developer, software developer, front-end developer, front-end, full-stack engineer, web portfolio, developer portfolio"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </MetaTags>
       <Nav />
