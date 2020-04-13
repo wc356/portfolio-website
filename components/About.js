@@ -13,15 +13,15 @@ const About = () => (
         <h1 className="title">Think, design, code.</h1>
         <p className="body">
           {`
-Woo Young Choi is an upcoming UI/UX Designer & Front-End
-Web Developer based in New York, NY.
+Woo Young Choi is a Front-End Web Developer & UI/UX designer
+based in New York, NY.
 
-He has 1 year of professional experience working as a
-designer in Alexandria, VA and is a certified LEED Green
-Associate. Woo currently resides in Bergen County, NJ
-where he devotes most of his time developing full-stack
-web applications and front-end websites using ReactJS
-as his preferred method.
+After graduating from Cornell University, he spent 1 year
+working as a professional designer in Alexandria, VA and
+is a certified LEED Green Associate. Woo currently resides
+in Bergen County, NJ where he devotes most of his time
+developing front-end and full-stack web applications, using
+ReactJS as his preferred framework.
           `}
         </p>
       </div>

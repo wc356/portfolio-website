@@ -37,7 +37,7 @@ export default {
         location: "",
         subTitle: "",
         description: [
-          "ReactJS, NextJS, styled-jsx, dynamic pages | routing, SCSS | SASS, Adobe XD | prototyping, Git",
+          "ReactJS, NextJS, styled-jsx, responsive-design, dynamic pages | routing, SCSS | SASS, Adobe XD | prototyping, Git",
           "Front-end dynamic website with dynamically rendered content to serve as a personal website",
         ],
         link: ["see Github", "//github.com/wc356/portfolio-website"],

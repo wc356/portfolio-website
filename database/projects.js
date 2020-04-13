@@ -8,6 +8,7 @@ export const projects = [
       "ReactJS",
       "NextJS",
       "styled-jsx",
+      "responsive-design",
       "dynamic pages | routing",
       "Adobe XD | prototyping",
       "Git",
