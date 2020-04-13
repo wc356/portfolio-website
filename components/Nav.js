@@ -54,6 +54,11 @@ const Nav = () => (
         .navlink-B:hover {
           text-shadow: -15px 15px ${theme.colors.dark};
         }
+        @media print {
+          .wrapper {
+            display: none;
+          }
+        }
       `}
     </style>
   </>

@@ -56,7 +56,6 @@ const SocialLinks = () => (
     <Link href="/blog">
       <a className="blog">Blog</a>
     </Link>
-
     <style jsx>
       {`
         .navbar {
@@ -77,6 +76,11 @@ const SocialLinks = () => (
         }
         .blog:hover {
           color: ${theme.colors.pink};
+        }
+        @media print {
+          .navbar {
+            display: none;
+          }
         }
       `}
     </style>

@@ -50,7 +50,7 @@ const Resume = () => {
                   }
                   a::after {
                     position: absolute;
-                    height: 3px;
+                    height: 2px;
                     width: 100%;
                     margin: 0 auto;
                     left: 0;
@@ -71,6 +71,16 @@ const Resume = () => {
                   }
                   a:visited {
                     color: black;
+                  }
+                  @media print {
+                    a[href]::before {
+                      display: inline-block;
+                      color: gray;
+                      font-size: 15px;
+                      font-weight: 500;
+                      content: "(" attr(href) ")";
+                      white-space: nowrap;
+                    }
                   }
                 `}
               </style>
@@ -177,7 +187,7 @@ const Resume = () => {
             </a>
           </div>
           <div className="page-content">
-            <section className="MAIN left-column">
+            <section className="left-column">
               <div className="name">
                 <h1>{values[0]}</h1>
               </div>
@@ -187,9 +197,9 @@ const Resume = () => {
               <div className="project-exp">{renderExperience("project")}</div>
               <div className="education">{renderEducation()}</div>
             </section>
-            <section className=" SPECS right-column">
+            <section className="right-column">
               <div className="contact">
-                <div className="contact-isLink">
+                <div>
                   <ul>
                     {values[1].links.map((link) => (
                       <li key={uuidv4()} className="hover">
@@ -305,32 +315,32 @@ const Resume = () => {
             line-height: 1.8;
             border-left: 1px solid ${values[9].border};
             box-shadow 10px 10px 10px ${values[9].shadow};
+            height: 100%;
           }
           .name {
             display: block;
             font-size: 2.6rem;
+            padding-top: 1rem;
             white-space: nowrap;
           }
           .professional-exp {
-            padding-top: 53px;
+            padding-top: 4rem;
           }
           .page-content {
             display: flex;
             height: 100%;
           }
-          .MAIN {
+          .left-column {
             display: flex;
+            min-height: 100%;
             flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            flex: 3;
+            justify-content: space-evenly;
           }
-          .SPECS {
+          .right-column {
             display: flex;
+            min-height: 100%;
             flex-direction: column;
             justify-content: space-between;
-            height: 100%;
-            flex: 1;
           }
           .contact {
             font-size: 14px;
@@ -377,6 +387,25 @@ const Resume = () => {
           @media only screen and (max-width: 376px) {
             .name {
               font-size: 1.65rem;
+            }
+          }
+          @media print {
+            .btn-wrapper {
+              display: none;
+            }
+            .background {
+              padding: 0;
+            }
+            .page {
+              border-left: none;
+              box-shadow: none;
+              line-height: 1.5;
+            }
+            .professional-exp {
+              padding-top: 48px;
+            }
+            .subsection {
+              padding: 10px;
             }
           }
         `}
