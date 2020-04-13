@@ -28,6 +28,10 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/p/[title]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/proj/[project]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

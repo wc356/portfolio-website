@@ -66,7 +66,6 @@ export default () => {
                 BACK
               </a>
             </div>
-
             <style jsx>
               {`
                 a {
@@ -262,6 +261,9 @@ export default () => {
           .content {
             padding: 1.5rem;
             display: flex;
+          }
+          .scroll-carousel {
+            zoom: 0.7;
           }
         }
       `}</style>

@@ -33,7 +33,7 @@ const Landing = () => (
             margin-bottom: -200px;
           }
         }
-        @media screen and (max-width: 1024px) {
+        @media only screen and (max-width: 1024px) {
           .main {
             flex-direction: column;
           }
