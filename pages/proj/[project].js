@@ -30,11 +30,11 @@ export default () => {
             </div>
             <div className="body">
               <section className="overview">
-                <h1>🗒 {Object.keys(proj.body[0])} 🗒</h1>
+                <h1 className="subtitle">🗒 {Object.keys(proj.body[0])} 🗒</h1>
                 <p className="indent">{Object.values(proj.body[0])}</p>
               </section>
               <section className="approach">
-                <h1>💬 {Object.keys(proj.body[1])} 💬</h1>
+                <h1 className="subtitle">💬 {Object.keys(proj.body[1])} 💬</h1>
                 <ol className="indent">
                   {proj.body[1]["APPROACH"].map((approach) => (
                     <li key={approach}>{approach}</li>
@@ -42,7 +42,7 @@ export default () => {
                 </ol>
               </section>
               <section className="challenges">
-                <h1>⚔️ {Object.keys(proj.body[2])} ⚔️</h1>
+                <h1 className="subtitle">⚔️ {Object.keys(proj.body[2])} ⚔️</h1>
                 <ul className="indent">
                   {proj.body[2]["CHALLENGES"].map((challenge) => (
                     <li key={challenge}>{challenge}</li>
@@ -50,7 +50,7 @@ export default () => {
                 </ul>
               </section>
               <section className="reflections">
-                <h1>💭 {Object.keys(proj.body[3])} 💭</h1>
+                <h1 className="subtitle">💭 {Object.keys(proj.body[3])} 💭</h1>
                 {proj.body[3]["REFLECTIONS"].map((reflection) => (
                   <p key={uuidv4()} className="indent">
                     {reflection}
@@ -126,16 +126,31 @@ export default () => {
                 .link {
                   display: block;
                   text-align: center;
+                  white-space: nowrap;
                   padding: 10px;
                   background-color: ${theme.colors.link};
                   border-radius: 2rem;
                   color: white;
                   font-weight: 500;
-                  width: 10rem;
+                  width: 9rem;
                 }
                 .link:hover {
                   transform: scale(1.08);
                   background-color: pink;
+                }
+                section {
+                  padding: 0.5rem 0;
+                }
+                @media only screen and (max-width: 700px) {
+                  .indent {
+                    padding-left: 0;
+                  }
+                  .link-wrapper {
+                    padding: 0;
+                  }
+                  .subtitle {
+                    text-align: center;
+                  }
                 }
               `}
             </style>
@@ -182,11 +197,26 @@ export default () => {
           </div>
         </div>
       </div>
-
       <style jsx>{`
         .layout {
           line-height: 1.7;
           min-height: 100vh;
+        }
+        .body-wrap {
+          padding: 80px 150px;
+          height: 100%;
+          box-shadow: LightGray 0px 0px 10px 0px;
+          background-color: ${theme.colors["pink-l"]};
+          background-image: linear-gradient(
+            0deg,
+            ${theme.colors.dark} 0%,
+            ${theme.colors["pink-link"]} 80%,
+            white 100%
+          );
+        }
+        .body {
+          background: white;
+          border-radius: 15px;
         }
         .scroll-carousel {
           overflow: scroll;
@@ -219,24 +249,20 @@ export default () => {
           font-weight: 500;
           padding: 50px;
         }
-        .body-wrap {
-          padding: 80px 150px;
-          height: 100%;
-          box-shadow: LightGray 0px 0px 10px 0px;
-          background-color: ${theme.colors["pink-l"]};
-          background-image: linear-gradient(
-            0deg,
-            ${theme.colors.dark} 0%,
-            ${theme.colors["pink-link"]} 80%,
-            white 100%
-          );
-        }
-        .body {
-          background: white;
-          border-radius: 15px;
-        }
         .content {
-          padding: 60px;
+          padding: 3.75rem;
+        }
+        @media only screen and (max-width: 700px) {
+          .body-wrap {
+            padding: 0;
+          }
+          .body {
+            border-radius: 0;
+          }
+          .content {
+            padding: 1.5rem;
+            display: flex;
+          }
         }
       `}</style>
     </Layout>
