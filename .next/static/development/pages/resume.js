@@ -976,7 +976,7 @@ __webpack_require__.r(__webpack_exports__);
       link: ["see Github", "//github.com/wc356/react-indecision"]
     }]
   },
-  technology: ["HTML/CSS/SASS", "JavaScript ES6", "Python", "ReactJS | Hooks | Context", "React Native", "Redux", "Bootstrap", "Visual Studio", "Git", "npm | yarn", "Adobe XD | Photoshop | Indesign | Illustrator", "AutoCAD", "responsive design"],
+  technology: ["HTML/CSS/SASS", "JavaScript ES6", "Python", "ReactJS | Hooks | Context API", "React Native", "Redux", "Bootstrap", "Visual Studio", "Git", "npm | yarn", "Adobe XD | Photoshop | Indesign | Illustrator", "AutoCAD", "responsive design"],
   honors: {
     title: "Cornell CALS Dean's List - 4 Semesters",
     description: "Fall 2016, Spring 2016, Fall 2017, Spring 2018"

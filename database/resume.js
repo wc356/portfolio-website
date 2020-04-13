@@ -88,7 +88,7 @@ export default {
     "HTML/CSS/SASS",
     "JavaScript ES6",
     "Python",
-    "ReactJS | Hooks | Context",
+    "ReactJS | Hooks | Context API",
     "React Native",
     "Redux",
     "Bootstrap",
