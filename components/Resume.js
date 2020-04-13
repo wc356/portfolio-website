@@ -376,7 +376,7 @@ const Resume = () => {
           }
           @media only screen and (max-width: 376px) {
             .name {
-              font-size: 1.95rem;
+              font-size: 1.65rem;
             }
           }
         `}
