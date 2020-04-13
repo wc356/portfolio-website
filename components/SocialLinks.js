@@ -65,7 +65,7 @@ const SocialLinks = () => (
           background-color: rgba(255, 255, 255, 0.8);
           border-radius: 7px;
           position: fixed;
-          padding: 9px;
+          padding: 8px;
           top: 20px;
           right: 30px;
           z-index: 1;

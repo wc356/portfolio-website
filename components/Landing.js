@@ -37,6 +37,9 @@ const Landing = () => (
           .main {
             flex-direction: column;
           }
+          .description {
+            font-size: 1.5em;
+          }
         }
       `}
     </style>

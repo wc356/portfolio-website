@@ -26,7 +26,6 @@ const Card = ({
                 li {
                   display: inline-block;
                   background-color: ${theme.colors.black};
-
                   border-radius: 0 10px 0 10px;
                   color: white;
                   font-weight: 400;

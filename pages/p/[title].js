@@ -1,8 +1,10 @@
-import Layout from "../../components/Layout";
-import blog from "../../database/blog";
+import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
+
+import Layout from "../../components/Layout";
+import blog from "../../database/blog";
 import theme from "../../styles/theme";
 
 export default () => {
@@ -40,10 +42,14 @@ export default () => {
                   overflow-wrap: break-word;
                   margin: 40px 0;
                 }
-                span {
-                  font-size: 30px;
-                  font-weight: 400;
-                  margin-right: 5px;
+                @media screen and (max-width: 1024px) {
+                  .background {
+                    padding: 0;
+                  }
+                  .body {
+                    padding: 0;
+                    margin: 2rem 0;
+                  }
                 }
               `}
             </style>
@@ -91,7 +97,7 @@ export default () => {
           height: 100%;
           border-radius: 10px;
           box-shadow: LightGray 0px 0px 10px 0px;
-          min-width: 30rem;
+          min-width: 10rem;
         }
         .btn {
           display: block;
@@ -114,6 +120,23 @@ export default () => {
         }
         .btn:visited {
           color: white;
+        }
+        @media only screen and (max-width: 992px) {
+          h1 {
+            font-size: 1.5rem;
+          }
+          .background {
+            padding: 2em;
+          }
+          .body {
+            padding: 3em;
+            min-width: 0;
+          }
+          .btn {
+            left: 0.5em;
+            padding: 0.5rem;
+            border-radius: 0 1em 0 1em;
+          }
         }
       `}</style>
     </Layout>

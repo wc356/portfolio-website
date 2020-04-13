@@ -1,5 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
+
 import resume from "../database/resume";
 
 const Resume = () => {
@@ -49,7 +50,7 @@ const Resume = () => {
                   }
                   a::after {
                     position: absolute;
-                    height: 2px;
+                    height: 3px;
                     width: 100%;
                     margin: 0 auto;
                     left: 0;
@@ -169,13 +170,13 @@ const Resume = () => {
   return (
     <>
       <div className="background">
-        <div>
-          <a className="btn-download" href={values[10][1]} target="_blank">
-            {values[10][0]}
-          </a>
-        </div>
         <div className="page">
-          <div className="bottom-layout">
+          <div className="btn-wrapper">
+            <a className="btn-download" href={values[10][1]} target="_blank">
+              {values[10][0]}
+            </a>
+          </div>
+          <div className="page-content">
             <section className="MAIN left-column">
               <div className="name">
                 <h1>{values[0]}</h1>
@@ -267,12 +268,21 @@ const Resume = () => {
           }
           .background {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 6rem;
+          }
+          .btn-wrapper {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 4rem;
           }
           .btn-download {
-            display: block;
-            position: fixed;
-            left: 5rem;
+            display: inline-block;
+            position: relative;
+            left: -10rem;
+            white-space: nowrap;
             color: white;
             background-color: ${values[9].highlight};
             padding: .5rem;
@@ -284,26 +294,27 @@ const Resume = () => {
           }
           .page {
             display: flex;
-            zoom: 0.85;
+            zoom: 0.75;
             -moz-transform: scale(0.85);
             flex-direction: column;
             border-top: 7px solid ${values[9].highlight};
             border-bottom: 7px solid ${values[9].highlight};
-            padding: 70px;
-            width: 1000px;
+            padding: 4.3rem;
+            padding-top: 1.53rem;
+            max-width: 1000px;
             line-height: 1.8;
             border-left: 1px solid ${values[9].border};
             box-shadow 10px 10px 10px ${values[9].shadow};
           }
           .name {
             display: block;
-            font-size: 43px;
+            font-size: 2.6rem;
             white-space: nowrap;
           }
           .professional-exp {
             padding-top: 53px;
           }
-          .bottom-layout {
+          .page-content {
             display: flex;
             height: 100%;
           }
@@ -338,6 +349,35 @@ const Resume = () => {
           }
           .title {
             margin-bottom: 10px;
+          }
+          @media only screen and (max-width: 900px) {
+            .background {
+              padding: 0;
+            }
+            .page {
+              padding: 1.2rem;
+            }
+            .page-content {
+              flex-direction: column;
+            }
+            .btn-wrapper {
+              display: flex;
+              justify-content: flex-end;
+            }
+            .btn-download {
+              position: static;
+            }
+            .name {
+              padding: 2rem 0;
+            }
+            .professional-exp {
+              padding: 0;
+            }
+          }
+          @media only screen and (max-width: 376px) {
+            .name {
+              font-size: 1.95rem;
+            }
           }
         `}
       </style>

@@ -112,5 +112,5 @@ export default {
     border: "#d8d5f7",
     shadow: "#d8d5f7",
   },
-  download: ["Download Resume", "/images/Choi_resume.pdf"],
+  download: ["Download", "/images/Choi_resume.pdf"],
 };
