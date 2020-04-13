@@ -18,8 +18,8 @@ based in New York, NY.
 
 After graduating from Cornell University, he spent 1 year
 working as a professional designer in Alexandria, VA and
-is a certified LEED Green Associate. Woo currently resides
-in Bergen County, NJ where he devotes most of his time
+earned his certification—LEED Green Associate. Woo currently
+resides in Bergen County, NJ where he devotes most of his time
 developing front-end and full-stack web applications, using
 ReactJS as his preferred framework.
           `}
