@@ -27,4 +27,17 @@ export default [
     \n\nBut having gotten used to this—quarantine, isolation lifestyle, I realized that working remotely is definitely a viable option (for me at least). I am able to focus on just coding, not not having to worry about what to eat, remember to get gas on the way to work, or deal with the hassle of public-transportation and being on time 💁🏻‍♂️.",
     picPath: "/images/leave-me-alone.gif",
   },
+  {
+    id: "learning-vim",
+    date: "April 15, 2020",
+    title: "Learning... vim 😱",
+    body:
+      "💁🏻‍♂️ A friend of mine introduced me to vim a few months ago and suggested it as a good skill to learn for a long run. He told me that it would really pay off later on for my productivity and save me lots of time writing code 🦾. Now, during this point in time, I was still deep into learning the fundamentals of React, Redux and JavaScript at the time, so I decided not to add in onto my to-do list 📝.\
+    \n\nHowever, now that I have learned the fundamentals of React and JavaScript to an extent, I have decided to undertake the challenge of learning vim 🦿🦿. In my short, but still enlightening research, I learned that a lot of coders consider it 'hard and complicated' to learn and that it is not everyone's cup of tea 🍵. However, knowing that mastering vim will still save me a lot of time, and combined with the factor that I like taking on challenges, I was ready to start learning 🤓.\
+    \n\nI went on my Terminal, and typed in 'vimtutor'. And the rest is history...😅🤭\
+    \n\nObviously, I had trouble getting used to the 'hjkl' keys as my default cursor move methods were so adapted to the arrow keys my whole life. But I decided to listen to the Reddit senpais and NEVER 😤 go back to relying on the arrow keys no matter how much I wanted to. From that point on, I installed the vim extension for VSCode and the vim add-on on PyCharm as well.\
+    \n\nIt's only been a few days for me using vim, and I have barely begun to scratch the surface of the text editor program, but it is exciting to be able to learn something that I know will pay off in the end 🤩\
+    \n\nI will post updates to my progress with vim, and struggles as well in the near future 🏃🏻‍♂️.",
+    picPath: "/images/vim-meme.jpg",
+  },
 ];

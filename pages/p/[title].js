@@ -17,7 +17,7 @@ export default () => {
         return (
           <div className="container" key={uuidv4()}>
             <div className="img-wrapper">
-              <img src={post.picPath} height="350" width="600" />
+              <img src={post.picPath} />
             </div>
             <p className="body" key={post.id}>
               {post.body}
