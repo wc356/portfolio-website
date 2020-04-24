@@ -7,6 +7,7 @@ export const projects = [
     technology: [
       "ReactJS",
       "NextJS",
+      "JavaScript",
       "styled-jsx",
       "responsive-design",
       "dynamic pages | routing",
@@ -62,6 +63,7 @@ export const projects = [
     technology: [
       "ReactJS",
       "Redux",
+      "JavaScript",
       "react-router",
       "Webpack",
       "Babel",
@@ -124,6 +126,7 @@ export const projects = [
     technology: [
       "ReactJS",
       "NextJS",
+      "JavaScript",
       "HTML",
       "CSS | SASS",
       "Adobe Indesign",
@@ -181,7 +184,13 @@ export const projects = [
       { text: "GitHub", src: "//github.com/wc356/React-tetris" },
       { text: "Try Demo", src: "//react-tetris-two.now.sh" },
     ],
-    technology: ["ReactJS", "create-react-app", "SCSS | SASS", "Git"],
+    technology: [
+      "ReactJS",
+      "JavaScript",
+      "create-react-app",
+      "SCSS | SASS",
+      "Git",
+    ],
     body: [
       {
         OVERVIEW:
@@ -225,7 +234,14 @@ export const projects = [
       { text: "GitHub", src: "//github.com/wc356/react-indecision" },
       { text: "Try Demo", src: "//react-indecision.now.sh" },
     ],
-    technology: ["ReactJS", "Babel", "SCSS | SASS", "Git", "Webpack"],
+    technology: [
+      "ReactJS",
+      "JavaScript",
+      "Babel",
+      "SCSS | SASS",
+      "Git",
+      "Webpack",
+    ],
     body: [
       {
         OVERVIEW:
@@ -259,7 +275,7 @@ export const otherProjects = [
   {
     project: "Ravenous 🍟",
     link: "//github.com/wc356/react-ravenous",
-    description: ["JavaScript", "ReactJS", "SASS", "HTML"],
+    description: ["ReactJS", "JavaScript", "SASS", "HTML"],
   },
   {
     project: "To Do List ✅",

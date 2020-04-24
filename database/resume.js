@@ -37,7 +37,7 @@ export default {
         location: "",
         subTitle: "",
         description: [
-          "ReactJS, NextJS, styled-jsx, responsive-design, dynamic pages | routing, SCSS | SASS, Adobe XD | prototyping, Git",
+          "ReactJS, NextJS, JavaScript, styled-jsx, responsive-design, dynamic pages | routing, SCSS | SASS, Adobe XD | prototyping, Git",
           "Front-end dynamic website with dynamically rendered content to serve as a personal website",
         ],
         link: ["see Github", "//github.com/wc356/portfolio-website"],
@@ -47,7 +47,7 @@ export default {
         location: "",
         subTitle: "",
         description: [
-          "ReactJS, Redux, react-router, webpack, Babel, Jest, Enzyme, Firebase, Heroku, SCSS | SASS, authorization, Git",
+          "ReactJS, Redux, JavaScript, react-router, webpack, Babel, Jest, Enzyme, Firebase, Heroku, SCSS | SASS, authorization, Git",
           "Full-stack web application for storing and managing expenses—sort by date range, amount and filter through keywords",
         ],
         link: ["see Github", "//github.com/wc356/react-expensify"],
@@ -57,7 +57,7 @@ export default {
         location: "",
         subTitle: "",
         description: [
-          "ReactJS, NextJS, styled-jsx, Context API, SSR/CSR Dynamic Pages and Routing, React Hooks, Local Storage, Git",
+          "ReactJS, NextJS, JavaScript styled-jsx, Context API, SSR/CSR Dynamic Pages and Routing, React Hooks, Local Storage, Git",
           "Front-end web application for quickly comparing cellular phones—sort by release date, price, brand and filter using keywords",
         ],
         link: ["see Github", "//github.com/wc356/specula-v2"],
@@ -67,7 +67,7 @@ export default {
         location: "",
         subTitle: "",
         description: [
-          "ReactJS, SCSS | SASS, Git, Custom Hooks",
+          "ReactJS, JavaScript, SCSS | SASS, Git, Custom Hooks",
           "Front-end Original Tetris game",
         ],
         link: ["see Github", "//github.com/wc356/React-tetris"],
@@ -77,8 +77,8 @@ export default {
         location: "",
         subTitle: "",
         description: [
-          "ReactJS, SCSS | SASS, Git, Babel, Webpack",
-          "Front-end web application that randomly allows the user to get started on any task of his or her entries of tasks",
+          "ReactJS, JavaScript, SCSS | SASS, Git, Babel, Webpack",
+          "Front-end web application that chooses your next task",
         ],
         link: ["see Github", "//github.com/wc356/react-indecision"],
       },
@@ -87,10 +87,11 @@ export default {
   technology: [
     "HTML/CSS/SASS",
     "JavaScript ES6",
-    "Python",
+    "Python 3",
     "ReactJS | Hooks | Context API",
     "React Native",
     "Redux",
+    "MongoDB",
     "Bootstrap",
     "Visual Studio",
     "Git",
