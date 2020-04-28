@@ -93,6 +93,28 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "../next-server/lib/router-context":
+/*!**************************************************************!*\
+  !*** external "next/dist/next-server/lib/router-context.js" ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/dist/next-server/lib/router-context.js");
+
+/***/ }),
+
+/***/ "../next-server/lib/utils":
+/*!*****************************************************!*\
+  !*** external "next/dist/next-server/lib/utils.js" ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/dist/next-server/lib/utils.js");
+
+/***/ }),
+
 /***/ "./actions/projects/PostProj.js":
 /*!**************************************!*\
   !*** ./actions/projects/PostProj.js ***!
@@ -1506,9 +1528,11 @@ var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
 
 var _url = __webpack_require__(/*! url */ "url");
 
-var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "../next-server/lib/utils");
 
 var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
+
+var _router2 = __webpack_require__(/*! ../next-server/lib/router/router */ "./node_modules/next/dist/next-server/lib/router/router.js");
 
 function isLocal(href) {
   var url = (0, _url.parse)(href, false, true);
@@ -1601,8 +1625,8 @@ class Link extends _react.Component {
 
     this.formatUrls = memoizedFormatUrl((href, asHref) => {
       return {
-        href: formatUrl(href),
-        as: asHref ? formatUrl(asHref) : asHref
+        href: (0, _router2.addBasePath)(formatUrl(href)),
+        as: asHref ? (0, _router2.addBasePath)(formatUrl(asHref)) : asHref
       };
     });
 
@@ -1837,7 +1861,7 @@ var _router2 = _interopRequireWildcard(__webpack_require__(/*! ../next-server/li
 exports.Router = _router2.default;
 exports.NextRouter = _router2.NextRouter;
 
-var _routerContext = __webpack_require__(/*! ../next-server/lib/router-context */ "./node_modules/next/dist/next-server/lib/router-context.js");
+var _routerContext = __webpack_require__(/*! ../next-server/lib/router-context */ "../next-server/lib/router-context");
 
 var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/client/with-router.js"));
 
@@ -1857,7 +1881,7 @@ var singletonRouter = {
 
 }; // Create public properties and methods of the router in the singletonRouter
 
-var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components', 'isFallback'];
+var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components', 'isFallback', 'basePath'];
 var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
 var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
@@ -2068,34 +2092,6 @@ exports.default = mitt;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router-context.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router-context.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  result["default"] = mod;
-  return result;
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-const React = __importStar(__webpack_require__(/*! react */ "react"));
-
-exports.RouterContext = React.createContext(null);
-
-/***/ }),
-
 /***/ "./node_modules/next/dist/next-server/lib/router/router.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/next/dist/next-server/lib/router/router.js ***!
@@ -2128,11 +2124,19 @@ const route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node
 
 const route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
 
+const basePath =  false || '';
+
 function addBasePath(path) {
-  // variable is always a string
-  const p = "";
-  return path.indexOf(p) !== 0 ? p + path : path;
+  return path.indexOf(basePath) !== 0 ? basePath + path : path;
 }
+
+exports.addBasePath = addBasePath;
+
+function delBasePath(path) {
+  return path.indexOf(basePath) === 0 ? path.substr(basePath.length) || '/' : path;
+}
+
+exports.delBasePath = delBasePath;
 
 function toRoute(path) {
   return path.replace(/\/$/, '') || '/';
@@ -2145,8 +2149,8 @@ function fetchNextData(pathname, query, isServerRender, cb) {
 
   function getResponse() {
     return fetch(utils_1.formatWithValidation({
-      // @ts-ignore __NEXT_DATA__
-      pathname: `/_next/data/${__NEXT_DATA__.buildId}${pathname}.json`,
+      pathname: addBasePath( // @ts-ignore __NEXT_DATA__
+      `/_next/data/${__NEXT_DATA__.buildId}${delBasePath(pathname)}.json`),
       query
     }), {
       // Cookies are required to be present for Next.js' SSG "Preview Mode".
@@ -2296,6 +2300,7 @@ class Router {
 
     this.asPath = // @ts-ignore this is temporarily global (attached to window)
     is_dynamic_1.isDynamicRoute(pathname) && __NEXT_DATA__.autoExport ? pathname : as;
+    this.basePath = basePath;
     this.sub = subscription;
     this.clc = null;
     this._wrapApp = wrapApp; // make sure to ignore extra popState in safari on navigating
@@ -2386,8 +2391,10 @@ class Router {
       // we'll format them into the string version here.
 
 
-      const url = typeof _url === 'object' ? utils_1.formatWithValidation(_url) : _url;
-      let as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
+      let url = typeof _url === 'object' ? utils_1.formatWithValidation(_url) : _url;
+      let as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as;
+      url = addBasePath(url);
+      as = addBasePath(as); // Add the ending slash to the paths. So, we can serve the
       // "<page>/index.html" directly for the SSR page.
 
       if (false) {}
@@ -2401,7 +2408,7 @@ class Router {
       if (!options._h && this.onlyAHashChange(as)) {
         this.asPath = as;
         Router.events.emit('hashChangeStart', as);
-        this.changeState(method, url, addBasePath(as), options);
+        this.changeState(method, url, as, options);
         this.scrollToHash(as);
         Router.events.emit('hashChangeComplete', as);
         return resolve(true);
@@ -2470,7 +2477,7 @@ class Router {
         }
 
         Router.events.emit('beforeHistoryChange', as);
-        this.changeState(method, url, addBasePath(as), options);
+        this.changeState(method, url, as, options);
 
         if (true) {
           const appComp = this.components['/_app'].Component;
@@ -2596,7 +2603,7 @@ class Router {
       if (true) {
         const {
           isValidElementType
-        } = __webpack_require__(/*! react-is */ "react-is");
+        } = __webpack_require__(/*! react-is */ "./node_modules/next/node_modules/react-is/index.js");
 
         if (!isValidElementType(Component)) {
           throw new Error(`The default export is not a React Component in page: "${pathname}"`);
@@ -2711,7 +2718,8 @@ class Router {
         return;
       }
 
-      Promise.all([this.pageLoader.prefetchData(url, asPath), this.pageLoader[options.priority ? 'loadPage' : 'prefetch'](toRoute(pathname))]).then(() => resolve(), reject);
+      const route = delBasePath(toRoute(pathname));
+      Promise.all([this.pageLoader.prefetchData(url, delBasePath(asPath)), this.pageLoader[options.priority ? 'loadPage' : 'prefetch'](route)]).then(() => resolve(), reject);
     });
   }
 
@@ -2722,6 +2730,7 @@ class Router {
       cancelled = true;
     };
 
+    route = delBasePath(route);
     const componentResult = await this.pageLoader.loadPage(route);
 
     if (cancelled) {
@@ -2847,7 +2856,16 @@ function getRouteMatcher(routeRegex) {
       return false;
     }
 
-    const decode = decodeURIComponent;
+    const decode = param => {
+      try {
+        return decodeURIComponent(param);
+      } catch (_) {
+        const err = new Error('failed to decode param');
+        err.code = 'DECODE_FAILED';
+        throw err;
+      }
+    };
+
     const params = {};
     Object.keys(groups).forEach(slugName => {
       const g = groups[slugName];
@@ -2877,11 +2895,16 @@ exports.getRouteMatcher = getRouteMatcher;
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+}); // this isn't importing the escape-string-regex module
+// to reduce bytes
+
+function escapeRegex(str) {
+  return str.replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+}
 
 function getRouteRegex(normalizedRoute) {
   // Escape all characters that could be considered RegEx
-  const escapedRoute = (normalizedRoute.replace(/\/$/, '') || '/').replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+  const escapedRoute = escapeRegex(normalizedRoute.replace(/\/$/, '') || '/');
   const groups = {};
   let groupIndex = 1;
   const parameterizedRoute = escapedRoute.replace(/\/\\\[([^/]+?)\\\](?=\/|$)/g, (_, $1) => {
@@ -2894,10 +2917,24 @@ function getRouteRegex(normalizedRoute) {
     };
     return isCatchAll ? '/(.+?)' : '/([^/]+?)';
   });
-  return {
+  let namedParameterizedRoute; // dead code eliminate for browser since it's only needed
+  // while generating routes-manifest
+
+  if (true) {
+    namedParameterizedRoute = escapedRoute.replace(/\/\\\[([^/]+?)\\\](?=\/|$)/g, (_, $1) => {
+      const isCatchAll = /^(\\\.){3}/.test($1);
+      const key = $1 // Un-escape key
+      .replace(/\\([|\\{}()[\]^$+*?.-])/g, '$1').replace(/^\.{3}/, '');
+      return isCatchAll ? `/(?<${escapeRegex(key)}>.+?)` : `/(?<${escapeRegex(key)}>[^/]+?)`;
+    });
+  }
+
+  return Object.assign({
     re: new RegExp('^' + parameterizedRoute + '(?:/)?$', 'i'),
     groups
-  };
+  }, namedParameterizedRoute ? {
+    namedRegex: `^${namedParameterizedRoute}(?:/)?$`
+  } : {});
 }
 
 exports.getRouteRegex = getRouteRegex;
@@ -2926,11 +2963,11 @@ const url_1 = __webpack_require__(/*! url */ "url");
 
 function execOnce(fn) {
   let used = false;
-  let result = null;
+  let result;
   return (...args) => {
     if (!used) {
       used = true;
-      result = fn.apply(this, args);
+      result = fn(...args);
     }
 
     return result;
@@ -3160,6 +3197,262 @@ module.exports = _typeof;
 
 /***/ }),
 
+/***/ "./node_modules/next/node_modules/react-is/cjs/react-is.development.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/next/node_modules/react-is/cjs/react-is.development.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.8.6
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+
+var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+
+function isValidElementType(type) {
+  return typeof type === 'string' || typeof type === 'function' ||
+  // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+}
+
+/**
+ * Forked from fbjs/warning:
+ * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
+ *
+ * Only change is we use console.warn instead of console.error,
+ * and do nothing when 'console' is not supported.
+ * This really simplifies the code.
+ * ---
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var lowPriorityWarning = function () {};
+
+{
+  var printWarning = function (format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.warn(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  lowPriorityWarning = function (condition, format) {
+    if (format === undefined) {
+      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
+}
+
+var lowPriorityWarning$1 = lowPriorityWarning;
+
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_ASYNC_MODE_TYPE:
+          case REACT_CONCURRENT_MODE_TYPE:
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+            return type;
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+              default:
+                return $$typeof;
+            }
+        }
+      case REACT_LAZY_TYPE:
+      case REACT_MEMO_TYPE:
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+}
+
+// AsyncMode is deprecated along with isAsyncMode
+var AsyncMode = REACT_ASYNC_MODE_TYPE;
+var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+
+var hasWarnedAboutDeprecatedIsAsyncMode = false;
+
+// AsyncMode should be deprecated
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true;
+      lowPriorityWarning$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+    }
+  }
+  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+}
+function isConcurrentMode(object) {
+  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+exports.typeOf = typeOf;
+exports.AsyncMode = AsyncMode;
+exports.ConcurrentMode = ConcurrentMode;
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.isValidElementType = isValidElementType;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/react-is/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/next/node_modules/react-is/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/next/node_modules/react-is/cjs/react-is.development.js");
+}
+
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -3242,7 +3535,7 @@ const LandingPage = () => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__[
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/profile_pic-104fe5c3838ce64a9ae40f681cd1a650.png";
+module.exports = "/_next/static/images/profile_pic-f8347a1d5df3d0370fb3ce8d1991ad98.png";
 
 /***/ }),
 
@@ -3369,17 +3662,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-ga");
-
-/***/ }),
-
-/***/ "react-is":
-/*!***************************!*\
-  !*** external "react-is" ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-is");
 
 /***/ }),
 

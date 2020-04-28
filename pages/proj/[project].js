@@ -200,10 +200,11 @@ export default () => {
         .layout {
           line-height: 1.7;
           min-height: 100vh;
+          height: 100%;
         }
         .body-wrap {
           padding: 80px 150px;
-          height: 100%;
+          min-height: 100vh;
           box-shadow: LightGray 0px 0px 10px 0px;
           background-color: ${theme.colors["pink-l"]};
           background-image: linear-gradient(

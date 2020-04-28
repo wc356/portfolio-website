@@ -278,7 +278,9 @@ const Resume = () => {
           }
           .background {
             display: flex;
+            min-height: 100vh;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             width: 100%;
             padding: 6rem;

@@ -66,9 +66,7 @@ export default () => {
       <style jsx>
         {`
           .layout {
-            padding-top: 70px;
-            padding-left: 120px;
-            padding-right: 30px;
+            padding: 70px 30px 0 120px;
             min-height: 100vh;
             background-image: linear-gradient(
               0deg,
