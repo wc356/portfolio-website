@@ -16,6 +16,11 @@ export default () => {
       if (post.title === title) {
         return (
           <div className="container" key={uuidv4()}>
+            <Link href="/blog">
+              <div className="btn-wrapper">
+                <a className="btn">BACK</a>
+              </div>
+            </Link>
             <div className="img-wrapper">
               <img src={post.picPath} />
             </div>
@@ -33,6 +38,35 @@ export default () => {
                   flex-direction: column;
                   align-items: center;
                 }
+                .btn-wrapper {
+                  display: flex;
+                  width: 100%;
+                  position: sticky;
+                  position: -web-sticky;
+                  top: 4rem;
+                }
+                .btn {
+                  display: inline-block;
+                  position: relative;
+                  left: -140px;
+                  border-radius: 0 1.5rem 0 1.5rem;
+                  letter-spacing: 1px;
+                  padding: 1rem;
+                  font-size: 15px;
+                  font-weight: 900;
+                  text-decoration: none;
+                  color: white;
+                  background-color: ${theme.colors.dark};
+                  box-shadow: ${theme.colors.dark} 0px 0px 10px 0px;
+                }
+                .btn:hover {
+                  background-color: ${theme.colors.pink};
+                  transform: scale(1.08);
+                }
+                .btn:visited {
+                  color: white;
+                }
+
                 .img-wrapper {
                   object-fit: cover;
                   max-width: 100%;
@@ -50,6 +84,19 @@ export default () => {
                     padding: 0;
                     margin: 2rem 0;
                   }
+                  .btn {
+                    left: -130px;
+                    padding: 0.5rem;
+                    border-radius: 0 1em 0 1em;
+                  }
+                  @media only screen and (max-width: 992px) {
+                    .btn-wrapper {
+                      top: 3rem;
+                    }
+                    .btn {
+                      left: -70px;
+                    }
+                  }
                 }
               `}
             </style>
@@ -61,11 +108,7 @@ export default () => {
   return (
     <Layout>
       <div className="background">
-        <div>
-          <Link href="/blog">
-            <a className="btn">BACK</a>
-          </Link>
-        </div>
+        <div></div>
         <div className="body">
           <h1>{title}</h1>
           {handleBody()}
@@ -75,10 +118,12 @@ export default () => {
         h1 {
           font-size: 34px;
           font-weight: 600;
-          margin-bottom: 40px;
+          margin-bottom: 1rem;
           text-align: center;
         }
         .background {
+          display: flex;
+          align-items: center;
           padding: 50px 210px;
           line-height: 1.8;
           background-color: rgb(239, 239, 239);
@@ -94,33 +139,11 @@ export default () => {
           background: white;
           color: ${theme.colors.black};
           padding: 60px 100px;
-          height: 100%;
           border-radius: 10px;
           box-shadow: LightGray 0px 0px 10px 0px;
           min-width: 10rem;
         }
-        .btn {
-          display: block;
-          position: fixed;
-          left: 10rem;
-          top: 10rem;
-          border-radius: 0 1.5rem 0 1.5rem;
-          letter-spacing: 1px;
-          padding: 1rem;
-          font-size: 15px;
-          font-weight: 900;
-          text-decoration: none;
-          color: white;
-          background-color: ${theme.colors.dark};
-          box-shadow: ${theme.colors.dark} 0px 0px 10px 0px;
-        }
-        .btn:hover {
-          background-color: ${theme.colors.pink};
-          transform: scale(1.08);
-        }
-        .btn:visited {
-          color: white;
-        }
+
         @media only screen and (max-width: 992px) {
           h1 {
             font-size: 1.5rem;
@@ -131,11 +154,6 @@ export default () => {
           .body {
             padding: 3em;
             min-width: 0;
-          }
-          .btn {
-            left: 0.5em;
-            padding: 0.5rem;
-            border-radius: 0 1em 0 1em;
           }
         }
       `}</style>

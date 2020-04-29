@@ -199,10 +199,14 @@ export default () => {
       <style jsx>{`
         .layout {
           line-height: 1.7;
+          width: 100%;
           min-height: 100vh;
           height: 100%;
         }
         .body-wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           padding: 80px 150px;
           min-height: 100vh;
           box-shadow: LightGray 0px 0px 10px 0px;
@@ -217,6 +221,7 @@ export default () => {
         .body {
           background: white;
           border-radius: 15px;
+          min-height: 100%;
         }
         .scroll-carousel {
           overflow: scroll;

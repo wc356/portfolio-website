@@ -9272,7 +9272,7 @@ var logException = function logException() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!*****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FWooChoi%2FDesktop%2FReact.js%2Fweb-portfolio%2Fpages%2Findex.js&hotRouterUpdates=true ***!
   \*****************************************************************************************************************************************************************/
@@ -9295,5 +9295,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
