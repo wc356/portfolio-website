@@ -1492,10 +1492,6 @@ const otherProjects = [{
   link: "//github.com/wc356/react-ravenous",
   description: ["ReactJS", "JavaScript", "SASS", "HTML"]
 }, {
-  project: "To Do List ✅",
-  link: "//github.com/wc356/ReactNative-Todo",
-  description: ["JavaScript", "React Native", "SASS"]
-}, {
   project: "Chorebot 🤖",
   link: "//github.com/wc356/chorebot",
   description: ["JavaScript", "SASS", "HTML"]
