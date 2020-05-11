@@ -1,9 +1,10 @@
 import React from "react";
+
 import Card from "./Card";
 import { projects } from "../database/projects";
 
 const Projects = () => {
-  const makeCard = () => {
+  const Cards = () => {
     const keys = Object.keys(projects);
     return keys.map((item) => (
       <Card
@@ -11,13 +12,16 @@ const Projects = () => {
         key={item}
         quote={projects[item].quote}
         description={projects[item].description}
+        ongoing={projects[item].ongoing}
       />
     ));
   };
+
   return (
     <section className="projects">
       <h1 className="title">Selected Projects</h1>
-      {makeCard()}
+      <Cards />
+
       <style jsx>
         {`
           .projects {

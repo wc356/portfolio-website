@@ -4,25 +4,39 @@ import Link from "next/link";
 import { projects } from "../../database/projects";
 import { v4 as uuidv4 } from "uuid";
 
-export const PostProjLink = ({ project = "PROJECT TITLE" }) => (
+export const PostProjLink = ({ project = "PROJECT TITLE", ongoing }) => (
   <>
     <Link href="/proj/[project]" as={`/proj/${project}`}>
-      <a className="title">{project}</a>
+      <a>{project}</a>
     </Link>
+
     <style jsx>
       {`
-        .title {
+        a {
+          display: inline-block;
           font-size: 25px;
           font-weight: 600;
           text-decoration: none;
           color: ${theme.colors.link};
         }
-        .title:hover {
+        a:hover {
           opacity: 1;
           text-shadow: 6px 6px ${theme.colors["pink-link"]};
         }
         a:visited {
           color: ${theme.colors.link};
+        }
+        a::after {
+          content: '${ongoing ? "ongoing" : ""}';
+          position: absolute;
+          bottom: 95%;
+          color: gray;
+          font-weight: 300;
+          font-size: .9rem;
+          text-shadow: none;
+        }
+        a:hover::after {
+          transition: all 0.15s;
         }
       `}
     </style>

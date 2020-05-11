@@ -66,6 +66,7 @@ export default () => {
                 BACK
               </a>
             </div>
+
             <style jsx>
               {`
                 a {
@@ -196,6 +197,7 @@ export default () => {
           </div>
         </div>
       </div>
+
       <style jsx>{`
         .layout {
           line-height: 1.7;
@@ -242,6 +244,8 @@ export default () => {
         }
         .img {
           margin-right: 30px;
+          object-fit: cover;
+          height: 100%;
         }
         .caption {
           color: ${theme.colors.black};

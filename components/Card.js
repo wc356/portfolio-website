@@ -9,6 +9,7 @@ const Card = ({
   project,
   quote = "QUOTE",
   description = "DESCRIPTION HERE",
+  ongoing,
 }) => {
   const renderProject = () =>
     projects.map((proj) => {
@@ -18,6 +19,7 @@ const Card = ({
             {proj.technology.map((tech) => (
               <li key={uuidv4()}>{tech}</li>
             ))}
+
             <style jsx>
               {`
                 ul {
@@ -78,6 +80,7 @@ const Card = ({
                 );
               }
             })}
+
             <style jsx>
               {`
                 a {
@@ -123,13 +126,14 @@ const Card = ({
       </section>
       <section className="card--text">
         <section className="text">
-          <PostProjLink project={project} />
+          <PostProjLink project={project} ongoing={ongoing} />
           <h1 className="quote">{quote}</h1>
           <p className="description">{description}</p>
           {renderLinks()}
         </section>
         <section className="tech-wrapper">{renderProject()}</section>
       </section>
+
       <style jsx>
         {`
           .cards-container {

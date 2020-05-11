@@ -1,6 +1,43 @@
 export const projects = [
   {
+    project: "Code Cards",
+    ongoing: true,
+    quote: `Flashcard Study App For Developers`,
+    description:
+      "Front-end flashcard application with built-in code block markdown",
+    links: [{ text: "GitHub", src: "//github.com/wc356/Code-Card" }],
+    technology: ["ReactJS", "JavaScript", "styled-jsx", "Git", "Markdown"],
+    body: [
+      {
+        OVERVIEW:
+          "The project was initially created for my personal need of a flash-card application with special markdown to properly render code. It allows the end user to make flashcard with the problem and the solution in code, with the user's selected coding language of choice.",
+      },
+      {
+        APPROACH: [
+          "Identify the Components of the App",
+          "Case Studies of Exisiting Apps",
+          "Identify Necessary Tools—React Markdown",
+          "Styling and Implementation",
+        ],
+      },
+      {
+        CHALLENGES: ["Learning the syntax of React-Markdown"],
+      },
+      {
+        REFLECTIONS: [
+          "Though the project is still ongoing, I would like to be able to implement a database and an authorization for all users to Add and Save their cards. As of now, the temporary placeholder for newly added cards is Local Storage, which is definitely not a viable solution to save the cards.",
+          "It would be great to make the app a Progressive Web App so that users can access the app offline, and download the app on their devices.",
+        ],
+      },
+    ],
+    pictures: [
+      { path: "/images/01_codecards.gif", caption: "AdobeXD Prototyping" },
+    ],
+    cover: "/images/01_codecards.gif",
+  },
+  {
     project: "Web-Portfolio",
+    ongoing: true,
     quote: `Dynamic site with custom design & prototyping`,
     description: "Front-end website built with React and Next",
     links: [{ text: "GitHub", src: "//github.com/wc356/portfolio-website" }],
@@ -54,6 +91,7 @@ export const projects = [
   },
   {
     project: "Expensify",
+    ongoing: false,
     quote: "Quickly Sort & Track your Expenses",
     description: "Full-stack web application built with React and Redux",
     links: [
@@ -117,6 +155,7 @@ export const projects = [
   },
   {
     project: "Specula",
+    ongoing: true,
     quote: "Compare and Track Phone Specs",
     description: "Full-stack web application built with React",
     links: [
@@ -178,6 +217,7 @@ export const projects = [
   },
   {
     project: "React-Tetris",
+    ongoing: false,
     quote: "The Classic Tetris Game",
     description: "Original Tetris game built with React",
     links: [
@@ -228,6 +268,7 @@ export const projects = [
   },
   {
     project: "Indecision",
+    ongoing: false,
     quote: "Get Things Done",
     description: "Front-end web application built with React",
     links: [

@@ -29,6 +29,10 @@
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/proj/[project]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

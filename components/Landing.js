@@ -14,29 +14,34 @@ const Landing = () => (
           min-height: 100vh;
           text-align: center;
         }
-        .title {
+
+        .main .title {
           font-family: Futura, Montserrat;
           font-size: 75px;
           font-weight: 600;
           margin-bottom: 25px;
           animation: text-drop 0.75s 1;
         }
-        .description {
+
+        .main .description {
           font-size: 27px;
           font-weight: 500;
           letter-spacing: 2px;
           color: ${theme.colors.black};
         }
+
         @keyframes text-drop {
           0% {
             opacity: 0;
             margin-bottom: -200px;
           }
         }
+
         @media only screen and (max-width: 1024px) {
           .main {
             flex-direction: column;
           }
+
           .description {
             font-size: 1em;
           }
