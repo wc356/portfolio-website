@@ -400,6 +400,9 @@ var projects = [{
   links: [{
     text: "GitHub",
     src: "//github.com/wc356/hsu-website"
+  }, {
+    text: "Try Demo",
+    src: "//hsu-website.now.sh/"
   }],
   technology: ["ReactJS", "NextJS", "JavaScript", "styled-jsx", "Git", "Markdown", "Responsive Design"],
   body: [{
@@ -427,6 +430,9 @@ var projects = [{
   links: [{
     text: "GitHub",
     src: "//github.com/wc356/Code-Card"
+  }, {
+    text: "Try Demo",
+    src: "//code-card.now.sh"
   }],
   technology: ["ReactJS", "NextJS", "JavaScript", "styled-jsx", "Git", "Markdown", "Responsive Design"],
   body: [{
@@ -8734,7 +8740,7 @@ var logException = function logException() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fproj%2F%5Bproject%5D&absolutePagePath=%2FUsers%2FWooChoi%2FDesktop%2FReact.js%2Fweb-portfolio%2Fpages%2Fproj%2F%5Bproject%5D.js&hotRouterUpdates=true ***!
   \****************************************************************************************************************************************************************************************************/
@@ -8757,5 +8763,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[project].js.map

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1351,6 +1351,9 @@ const projects = [{
   links: [{
     text: "GitHub",
     src: "//github.com/wc356/hsu-website"
+  }, {
+    text: "Try Demo",
+    src: "//hsu-website.now.sh/"
   }],
   technology: ["ReactJS", "NextJS", "JavaScript", "styled-jsx", "Git", "Markdown", "Responsive Design"],
   body: [{
@@ -1378,6 +1381,9 @@ const projects = [{
   links: [{
     text: "GitHub",
     src: "//github.com/wc356/Code-Card"
+  }, {
+    text: "Try Demo",
+    src: "//code-card.now.sh"
   }],
   technology: ["ReactJS", "NextJS", "JavaScript", "styled-jsx", "Git", "Markdown", "Responsive Design"],
   body: [{
@@ -3669,7 +3675,7 @@ const logException = (description = "", fatal = false) => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

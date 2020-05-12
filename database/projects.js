@@ -5,7 +5,10 @@ export const projects = [
     quote: `Dynamically Rendered Portfolio Site & Blog`,
     description:
       "Dynamically Rendered Front-End Website for Violist—Serena Hsu",
-    links: [{ text: "GitHub", src: "//github.com/wc356/hsu-website" }],
+    links: [
+      { text: "GitHub", src: "//github.com/wc356/hsu-website" },
+      { text: "Try Demo", src: "//hsu-website.now.sh/" },
+    ],
     technology: [
       "ReactJS",
       "NextJS",
@@ -59,7 +62,10 @@ export const projects = [
     quote: `Flashcard Study App For Developers`,
     description:
       "Front-end flashcard application with built-in code block markdown",
-    links: [{ text: "GitHub", src: "//github.com/wc356/Code-Card" }],
+    links: [
+      { text: "GitHub", src: "//github.com/wc356/Code-Card" },
+      { text: "Try Demo", src: "//code-card.now.sh" },
+    ],
     technology: [
       "ReactJS",
       "NextJS",

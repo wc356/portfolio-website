@@ -1252,6 +1252,9 @@ var projects = [{
   links: [{
     text: "GitHub",
     src: "//github.com/wc356/hsu-website"
+  }, {
+    text: "Try Demo",
+    src: "//hsu-website.now.sh/"
   }],
   technology: ["ReactJS", "NextJS", "JavaScript", "styled-jsx", "Git", "Markdown", "Responsive Design"],
   body: [{
@@ -1279,6 +1282,9 @@ var projects = [{
   links: [{
     text: "GitHub",
     src: "//github.com/wc356/Code-Card"
+  }, {
+    text: "Try Demo",
+    src: "//code-card.now.sh"
   }],
   technology: ["ReactJS", "NextJS", "JavaScript", "styled-jsx", "Git", "Markdown", "Responsive Design"],
   body: [{
