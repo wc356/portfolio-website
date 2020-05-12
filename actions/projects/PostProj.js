@@ -35,9 +35,6 @@ export const PostProjLink = ({ project = "PROJECT TITLE", ongoing }) => (
           font-size: .9rem;
           text-shadow: none;
         }
-        a:hover::after {
-          transition: all 0.15s;
-        }
       `}
     </style>
   </>
@@ -47,17 +44,16 @@ export const PostProjImg = ({ project }) => (
   <>
     <Link href="/proj/[project]" as={`/proj/${project}`}>
       <div className="img--wrapper">
-        {projects.map((obj) => {
-          if (obj.project === project) {
-            return (
+        {projects.map(
+          (obj) =>
+            obj.project === project && (
               <img
                 key={uuidv4()}
                 src={obj.cover}
                 alt={`picture of ${obj.project}`}
               />
-            );
-          }
-        })}
+            )
+        )}
         <div className="overlay">
           <p className="text">About Project</p>
         </div>
@@ -72,6 +68,7 @@ export const PostProjImg = ({ project }) => (
           text-align: center;
           box-shadow: 1px 1px 5px gray;
           border-radius: 5px;
+          object-fit: cover;
         }
         .img--wrapper:hover .overlay {
           opacity: 0.8;
@@ -79,7 +76,8 @@ export const PostProjImg = ({ project }) => (
           border-radius: 5px;
         }
         img {
-          object-position: 50% 50%;
+          width: 100%;
+          height: auto;
         }
         .overlay {
           position: absolute;

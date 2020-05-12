@@ -393,6 +393,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "projects", function() { return projects; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "otherProjects", function() { return otherProjects; });
 var projects = [{
+  project: "Violist Portfolio Site",
+  ongoing: true,
+  quote: "Dynamically Rendered Portfolio Site & Blog",
+  description: "Dynamically Rendered Front-End Website for Violist—Serena Hsu",
+  links: [{
+    text: "GitHub",
+    src: "//github.com/wc356/hsu-website"
+  }],
+  technology: ["ReactJS", "NextJS", "JavaScript", "styled-jsx", "Git", "Markdown", "Responsive Design"],
+  body: [{
+    OVERVIEW: "The client is a violist in need of a personal website to serve as a portfolio and a blog. She had asked for a clean, professional, yet warm UI/UX that would best present her professionalism and training. She had rough ideas about her needs, and provided sketched blueprints of the website for me to realize in code. The website will consist of—Landing Page, About Page, Media Page, Concerts Schedules, Personal Projects and Blog Page, and a final Photo Gallery Page."
+  }, {
+    APPROACH: ["Extract Goals of the Client ", "Understand the Tools Needed for the Job", "Set Internal Deadlines and Communicate with Client", "Styling and Implementation"]
+  }, {
+    CHALLENGES: ["Responsive CSS Grids", "Realizing Client's Design into Code", "Approximating Deadlines for Client"]
+  }, {
+    REFLECTIONS: ["This is the first project for a real client, and because the site incorporates so many features—Blog, Photo Gallery, Concert Schedule, Experience—that are constantly updated, it would be very convenient to develop a Content Management System (CMS) that the end user can access to update the contents by him/herself, as opposed to relying on the developer to update the site content everytime."]
+  }],
+  pictures: [{
+    path: "/images/01_hsu-website.gif",
+    caption: "Dynamically Rendered Pages & Content"
+  }, {
+    path: "/images/02_hsu-website.gif",
+    caption: "CSS Responsive Grid"
+  }],
+  cover: "/images/01_hsu-website.gif"
+}, {
   project: "Code Cards",
   ongoing: true,
   quote: "Flashcard Study App For Developers",
@@ -401,9 +428,9 @@ var projects = [{
     text: "GitHub",
     src: "//github.com/wc356/Code-Card"
   }],
-  technology: ["ReactJS", "JavaScript", "styled-jsx", "Git", "Markdown"],
+  technology: ["ReactJS", "NextJS", "JavaScript", "styled-jsx", "Git", "Markdown", "Responsive Design"],
   body: [{
-    OVERVIEW: "The project was initially created for my personal need of a flash-card application with special markdown to properly render code. It allows the end user to make flashcard with the problem and the solution in code, with the user's selected coding language of choice."
+    OVERVIEW: "The project was initially created for my personal need of a flash-card application with special markdown to properly render code. I wanted an app that would let me study code-related subjects—datastructures, algorithms, leetcode, etc.—on the computer and on mobile devices that supported code markdown. It allows the end user to make flashcard with the problem and the solution in code, with the user's selected coding language of choice."
   }, {
     APPROACH: ["Identify the Components of the App", "Case Studies of Exisiting Apps", "Identify Necessary Tools—React Markdown", "Styling and Implementation"]
   }, {
@@ -413,7 +440,7 @@ var projects = [{
   }],
   pictures: [{
     path: "/images/01_codecards.gif",
-    caption: "AdobeXD Prototyping"
+    caption: "Mobile-First Design & Card Counter"
   }],
   cover: "/images/01_codecards.gif"
 }, {
@@ -8707,7 +8734,7 @@ var logException = function logException() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fproj%2F%5Bproject%5D&absolutePagePath=%2FUsers%2FWooChoi%2FDesktop%2FReact.js%2Fweb-portfolio%2Fpages%2Fproj%2F%5Bproject%5D.js&hotRouterUpdates=true ***!
   \****************************************************************************************************************************************************************************************************/
@@ -8730,5 +8757,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[project].js.map
