@@ -53,6 +53,7 @@ const Layout = (props) => {
           a {
             transition: all 0.15s;
             text-decoration-skip-ink: auto;
+            cursor: pointer;
           }
           a:hover {
             transform: translateY(-3px);

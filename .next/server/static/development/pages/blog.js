@@ -150,7 +150,7 @@ const Layout = props => {
     Object(_utils_analytics__WEBPACK_IMPORTED_MODULE_2__["logPageView"])();
   }, []);
   return __jsx("div", {
-    className: "jsx-1228749320",
+    className: "jsx-988675148",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -165,7 +165,7 @@ const Layout = props => {
       columnNumber: 7
     }
   }, __jsx("title", {
-    className: "jsx-1228749320",
+    className: "jsx-988675148",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -174,7 +174,7 @@ const Layout = props => {
     }
   }, "Woo Young Choi Portfolio \uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDCBB"), __jsx("meta", {
     charSet: "UTF-8",
-    className: "jsx-1228749320",
+    className: "jsx-988675148",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -184,7 +184,7 @@ const Layout = props => {
   }), __jsx("meta", {
     name: "author",
     content: "Woo Young Choi",
-    className: "jsx-1228749320",
+    className: "jsx-988675148",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -194,7 +194,7 @@ const Layout = props => {
   }), __jsx("meta", {
     name: "description",
     content: "\uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDCBB Woo Young Choi Front-end Developer Portfolio \u2615\uFE0F",
-    className: "jsx-1228749320",
+    className: "jsx-988675148",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -204,7 +204,7 @@ const Layout = props => {
   }), __jsx("meta", {
     name: "keywords",
     content: "JavaScript, HTML, CSS, SASS, SCSS, XML, React, ReactJS, Next, NextJS, software engineer, developer, software developer, front-end developer, front-end, full-stack engineer, web portfolio, developer portfolio, Woo Young Choi",
-    className: "jsx-1228749320",
+    className: "jsx-988675148",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -214,7 +214,7 @@ const Layout = props => {
   }), __jsx("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1.0",
-    className: "jsx-1228749320",
+    className: "jsx-988675148",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -229,7 +229,7 @@ const Layout = props => {
       columnNumber: 7
     }
   }), __jsx("div", {
-    className: "jsx-1228749320",
+    className: "jsx-988675148",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -237,9 +237,9 @@ const Layout = props => {
       columnNumber: 7
     }
   }, props.children), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "1228749320",
+    id: "988675148",
     __self: undefined
-  }, "@import url(\"https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap\");*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}h1,h3,p,a,li,button{font-family:Montserrat;}a{-webkit-transition:all 0.15s;transition:all 0.15s;-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;}a:hover{-webkit-transform:translateY(-3px);-ms-transform:translateY(-3px);transform:translateY(-3px);}ul{list-style:none;}img{object-fit:cover;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb29DaG9pL0Rlc2t0b3AvUmVhY3QuanMvd2ViLXBvcnRmb2xpby9jb21wb25lbnRzL0xheW91dC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFrQ1MsQUFFcUcsQUFLbEUsQUFVQyxBQUdGLEFBSU0sQUFHWCxBQUdDLGdCQUZuQixDQUdBLEtBdkJXLENBVVgsUUFUWSxVQUNaLFNBV2dDLDJDQUloQyx5QkFIQSIsImZpbGUiOiIvVXNlcnMvV29vQ2hvaS9EZXNrdG9wL1JlYWN0LmpzL3dlYi1wb3J0Zm9saW8vY29tcG9uZW50cy9MYXlvdXQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlRWZmZWN0IH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgeyBpbml0R0EsIGxvZ1BhZ2VWaWV3IH0gZnJvbSBcIi4uL3V0aWxzL2FuYWx5dGljc1wiO1xuaW1wb3J0IE1ldGFUYWdzIGZyb20gXCJyZWFjdC1tZXRhLXRhZ3NcIjtcblxuaW1wb3J0IE5hdiBmcm9tIFwiLi9OYXZcIjtcblxuY29uc3QgTGF5b3V0ID0gKHByb3BzKSA9PiB7XG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgaWYgKCF3aW5kb3cuR0FfSU5JVElBTElaRUQpIHtcbiAgICAgIGluaXRHQSgpO1xuICAgICAgd2luZG93LkdBX0lOSVRJQUxJWkVEID0gdHJ1ZTtcbiAgICB9XG4gICAgbG9nUGFnZVZpZXcoKTtcbiAgfSwgW10pO1xuXG4gIHJldHVybiAoXG4gICAgPGRpdj5cbiAgICAgIDxNZXRhVGFncz5cbiAgICAgICAgPHRpdGxlPldvbyBZb3VuZyBDaG9pIFBvcnRmb2xpbyDwn5Go8J+Pu+KAjfCfkrs8L3RpdGxlPlxuICAgICAgICA8bWV0YSBjaGFyU2V0PVwiVVRGLThcIiAvPlxuICAgICAgICA8bWV0YSBuYW1lPVwiYXV0aG9yXCIgY29udGVudD1cIldvbyBZb3VuZyBDaG9pXCIgLz5cbiAgICAgICAgPG1ldGFcbiAgICAgICAgICBuYW1lPVwiZGVzY3JpcHRpb25cIlxuICAgICAgICAgIGNvbnRlbnQ9XCLwn5Go8J+Pu+KAjfCfkrsgV29vIFlvdW5nIENob2kgRnJvbnQtZW5kIERldmVsb3BlciBQb3J0Zm9saW8g4piV77iPXCJcbiAgICAgICAgLz5cbiAgICAgICAgPG1ldGFcbiAgICAgICAgICBuYW1lPVwia2V5d29yZHNcIlxuICAgICAgICAgIGNvbnRlbnQ9XCJKYXZhU2NyaXB0LCBIVE1MLCBDU1MsIFNBU1MsIFNDU1MsIFhNTCwgUmVhY3QsIFJlYWN0SlMsIE5leHQsIE5leHRKUywgc29mdHdhcmUgZW5naW5lZXIsIGRldmVsb3Blciwgc29mdHdhcmUgZGV2ZWxvcGVyLCBmcm9udC1lbmQgZGV2ZWxvcGVyLCBmcm9udC1lbmQsIGZ1bGwtc3RhY2sgZW5naW5lZXIsIHdlYiBwb3J0Zm9saW8sIGRldmVsb3BlciBwb3J0Zm9saW8sIFdvbyBZb3VuZyBDaG9pXCJcbiAgICAgICAgLz5cbiAgICAgICAgPG1ldGEgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjBcIiAvPlxuICAgICAgPC9NZXRhVGFncz5cbiAgICAgIDxOYXYgLz5cbiAgICAgIDxkaXY+e3Byb3BzLmNoaWxkcmVufTwvZGl2PlxuICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+XG4gICAgICAgIHtgXG4gICAgICAgICAgQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9TW9udHNlcnJhdDo0MDAsNTAwLDYwMCZkaXNwbGF5PXN3YXBcIik7XG5cbiAgICAgICAgICAqLFxuICAgICAgICAgICo6OmJlZm9yZSxcbiAgICAgICAgICAqOjphZnRlciB7XG4gICAgICAgICAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgICB9XG4gICAgICAgICAgaDEsXG4gICAgICAgICAgaDMsXG4gICAgICAgICAgcCxcbiAgICAgICAgICBhLFxuICAgICAgICAgIGxpLFxuICAgICAgICAgIGJ1dHRvbiB7XG4gICAgICAgICAgICBmb250LWZhbWlseTogTW9udHNlcnJhdDtcbiAgICAgICAgICB9XG4gICAgICAgICAgYSB7XG4gICAgICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4xNXM7XG4gICAgICAgICAgICB0ZXh0LWRlY29yYXRpb24tc2tpcC1pbms6IGF1dG87XG4gICAgICAgICAgfVxuICAgICAgICAgIGE6aG92ZXIge1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0zcHgpO1xuICAgICAgICAgIH1cbiAgICAgICAgICB1bCB7XG4gICAgICAgICAgICBsaXN0LXN0eWxlOiBub25lO1xuICAgICAgICAgIH1cbiAgICAgICAgICBpbWcge1xuICAgICAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgICAgfVxuICAgICAgICBgfVxuICAgICAgPC9zdHlsZT5cbiAgICA8L2Rpdj5cbiAgKTtcbn07XG5cbmV4cG9ydCBkZWZhdWx0IExheW91dDtcbiJdfQ== */\n/*@ sourceURL=/Users/WooChoi/Desktop/React.js/web-portfolio/components/Layout.js */"));
+  }, "@import url(\"https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap\");*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}h1,h3,p,a,li,button{font-family:Montserrat;}a{-webkit-transition:all 0.15s;transition:all 0.15s;-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;cursor:pointer;}a:hover{-webkit-transform:translateY(-3px);-ms-transform:translateY(-3px);transform:translateY(-3px);}ul{list-style:none;}img{object-fit:cover;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb29DaG9pL0Rlc2t0b3AvUmVhY3QuanMvd2ViLXBvcnRmb2xpby9jb21wb25lbnRzL0xheW91dC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFrQ1MsQUFFcUcsQUFLbEUsQUFVQyxBQUdGLEFBS00sQUFHWCxBQUdDLGdCQUZuQixDQUdBLEtBeEJXLENBVVgsUUFUWSxVQUNaLFNBV2dDLDJDQUtoQyx5QkFKaUIsZUFDakIiLCJmaWxlIjoiL1VzZXJzL1dvb0Nob2kvRGVza3RvcC9SZWFjdC5qcy93ZWItcG9ydGZvbGlvL2NvbXBvbmVudHMvTGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgaW5pdEdBLCBsb2dQYWdlVmlldyB9IGZyb20gXCIuLi91dGlscy9hbmFseXRpY3NcIjtcbmltcG9ydCBNZXRhVGFncyBmcm9tIFwicmVhY3QtbWV0YS10YWdzXCI7XG5cbmltcG9ydCBOYXYgZnJvbSBcIi4vTmF2XCI7XG5cbmNvbnN0IExheW91dCA9IChwcm9wcykgPT4ge1xuICB1c2VFZmZlY3QoKCkgPT4ge1xuICAgIGlmICghd2luZG93LkdBX0lOSVRJQUxJWkVEKSB7XG4gICAgICBpbml0R0EoKTtcbiAgICAgIHdpbmRvdy5HQV9JTklUSUFMSVpFRCA9IHRydWU7XG4gICAgfVxuICAgIGxvZ1BhZ2VWaWV3KCk7XG4gIH0sIFtdKTtcblxuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgICA8TWV0YVRhZ3M+XG4gICAgICAgIDx0aXRsZT5Xb28gWW91bmcgQ2hvaSBQb3J0Zm9saW8g8J+RqPCfj7vigI3wn5K7PC90aXRsZT5cbiAgICAgICAgPG1ldGEgY2hhclNldD1cIlVURi04XCIgLz5cbiAgICAgICAgPG1ldGEgbmFtZT1cImF1dGhvclwiIGNvbnRlbnQ9XCJXb28gWW91bmcgQ2hvaVwiIC8+XG4gICAgICAgIDxtZXRhXG4gICAgICAgICAgbmFtZT1cImRlc2NyaXB0aW9uXCJcbiAgICAgICAgICBjb250ZW50PVwi8J+RqPCfj7vigI3wn5K7IFdvbyBZb3VuZyBDaG9pIEZyb250LWVuZCBEZXZlbG9wZXIgUG9ydGZvbGlvIOKYle+4j1wiXG4gICAgICAgIC8+XG4gICAgICAgIDxtZXRhXG4gICAgICAgICAgbmFtZT1cImtleXdvcmRzXCJcbiAgICAgICAgICBjb250ZW50PVwiSmF2YVNjcmlwdCwgSFRNTCwgQ1NTLCBTQVNTLCBTQ1NTLCBYTUwsIFJlYWN0LCBSZWFjdEpTLCBOZXh0LCBOZXh0SlMsIHNvZnR3YXJlIGVuZ2luZWVyLCBkZXZlbG9wZXIsIHNvZnR3YXJlIGRldmVsb3BlciwgZnJvbnQtZW5kIGRldmVsb3BlciwgZnJvbnQtZW5kLCBmdWxsLXN0YWNrIGVuZ2luZWVyLCB3ZWIgcG9ydGZvbGlvLCBkZXZlbG9wZXIgcG9ydGZvbGlvLCBXb28gWW91bmcgQ2hvaVwiXG4gICAgICAgIC8+XG4gICAgICAgIDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wXCIgLz5cbiAgICAgIDwvTWV0YVRhZ3M+XG4gICAgICA8TmF2IC8+XG4gICAgICA8ZGl2Pntwcm9wcy5jaGlsZHJlbn08L2Rpdj5cbiAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPlxuICAgICAgICB7YFxuICAgICAgICAgIEBpbXBvcnQgdXJsKFwiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PU1vbnRzZXJyYXQ6NDAwLDUwMCw2MDAmZGlzcGxheT1zd2FwXCIpO1xuXG4gICAgICAgICAgKixcbiAgICAgICAgICAqOjpiZWZvcmUsXG4gICAgICAgICAgKjo6YWZ0ZXIge1xuICAgICAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgfVxuICAgICAgICAgIGgxLFxuICAgICAgICAgIGgzLFxuICAgICAgICAgIHAsXG4gICAgICAgICAgYSxcbiAgICAgICAgICBsaSxcbiAgICAgICAgICBidXR0b24ge1xuICAgICAgICAgICAgZm9udC1mYW1pbHk6IE1vbnRzZXJyYXQ7XG4gICAgICAgICAgfVxuICAgICAgICAgIGEge1xuICAgICAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMTVzO1xuICAgICAgICAgICAgdGV4dC1kZWNvcmF0aW9uLXNraXAtaW5rOiBhdXRvO1xuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgIH1cbiAgICAgICAgICBhOmhvdmVyIHtcbiAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtM3B4KTtcbiAgICAgICAgICB9XG4gICAgICAgICAgdWwge1xuICAgICAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcbiAgICAgICAgICB9XG4gICAgICAgICAgaW1nIHtcbiAgICAgICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgICAgICAgIH1cbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9kaXY+XG4gICk7XG59O1xuXG5leHBvcnQgZGVmYXVsdCBMYXlvdXQ7XG4iXX0= */\n/*@ sourceURL=/Users/WooChoi/Desktop/React.js/web-portfolio/components/Layout.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
