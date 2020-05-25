@@ -124,6 +124,7 @@ const Card = ({
       <section className="card--img">
         <PostProjImg project={project} />
       </section>
+
       <section className="card--text">
         <section className="text">
           <PostProjLink project={project} ongoing={ongoing} />

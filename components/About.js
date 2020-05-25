@@ -1,9 +1,8 @@
-import theme from "../styles/theme";
 import ProfilePic from "../public/images/profile_pic.png";
 
 const About = () => (
   <div className="main">
-    <section className="img-wrapper">
+    <section className="wrapper">
       <div className="headshot">
         <img src={ProfilePic} alt="profile picture" />
       </div>
@@ -26,6 +25,7 @@ ReactJS as his preferred framework.
         </p>
       </div>
     </section>
+
     <style jsx>
       {`
         .main {
@@ -34,7 +34,7 @@ ReactJS as his preferred framework.
           justify-content: space-between;
           padding: 300px 100px;
         }
-        .img-wrapper {
+        .wrapper {
           display: flex;
           justify-content: center;
           text-align: center;

@@ -40,4 +40,15 @@ export default [
     \n\nI will post updates to my progress with vim, and struggles as well in the near future 🏃🏻‍♂️.",
     picPath: "/images/vim-meme.jpg",
   },
+  {
+    id: "rise-of-deno",
+    date: "May 25, 2020",
+    title: "Rise of... Deno 🦕🦖",
+    body:
+      'As an aspiring full-stack developer, I was predestined to start learning NodeJS as a current Front-end Developer. MERN stack is something I am trying to pick up, and as I am currently learning NodeJS, the wealth of information for the server logic is giving me a great overall understanding of the website landscape.\
+    \n\nAs I was fascinated by all the intracacies of the servers and how they manipulate the different file types, I first saw an article with the title—"Deno, the successor to NodeJS?" 👁👄👁💧\
+    \n\nAnd eversince, I\'ve been seeing similar titles—"Should You Learn Deno Instead of NodeJS?", "What is Deno & Will it replace NodeJS?", "Deno vs NodeJS". Truth be told, I was a bit scared and in the moment a bit hesitant when I kept seeing the same topic come up over and over, but they all seemed to point towards a similar message—It\'s still worth learning NodeJS for newcomers. NodeJS has an established community and is not going away any time soon. Also, Deno will need time to stabilize from its initial v1.0.0, in which, when it does mature, it won\'t be too late to learn it then.',
+    picPath:
+      "/images/me-promise-all-it-this-multithreading-who-needs-low-level-languages-61352303.png",
+  },
 ];
