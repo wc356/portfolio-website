@@ -18,19 +18,16 @@ const Landing = () => (
           text-align: center;
         }
 
-        .title {
-        }
-
         .title .title__name {
           font-family: Futura, Montserrat;
-          font-size: 75px;
+          font-size: 4.6rem;
           font-weight: 600;
-          margin-bottom: 25px;
+          margin-bottom: 1.5rem;
           animation: text-drop 0.75s 1;
         }
 
         .title .title__description {
-          font-size: 27px;
+          font-size: 1.7rem;
           font-weight: 500;
           letter-spacing: 2px;
           color: ${theme.colors.black};
@@ -71,9 +68,12 @@ const Landing = () => (
           .flex-container {
             flex-direction: column;
           }
+          .title .title__name {
+            font-size: 3.5rem;
+          }
 
-          .description {
-            font-size: 1em;
+          .title .title__description {
+            font-size: 1rem;
           }
         }
       `}
