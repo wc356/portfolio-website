@@ -1,12 +1,15 @@
 import theme from "../styles/theme";
 
 const Landing = () => (
-  <div className="main">
-    <h1 className="title">WOO YOUNG CHOI</h1>
-    <p className="description">UI/UX & Front-end Developer</p>
+  <div className="flex-container">
+    <div className="title">
+      <h1 className="title__name">WOO YOUNG CHOI</h1>
+      <p className="title__description">UI/UX & Front-end Developer</p>
+    </div>
+    <span></span>
     <style jsx>
       {`
-        .main {
+        .flex-container {
           display: flex;
           align-items: center;
           flex-direction: column;
@@ -15,7 +18,10 @@ const Landing = () => (
           text-align: center;
         }
 
-        .main .title {
+        .title {
+        }
+
+        .title .title__name {
           font-family: Futura, Montserrat;
           font-size: 75px;
           font-weight: 600;
@@ -23,11 +29,23 @@ const Landing = () => (
           animation: text-drop 0.75s 1;
         }
 
-        .main .description {
+        .title .title__description {
           font-size: 27px;
           font-weight: 500;
           letter-spacing: 2px;
           color: ${theme.colors.black};
+        }
+
+        span {
+          position: absolute;
+          margin-top: 25rem;
+          display: inline-block;
+          width: 3.5rem;
+          height: 3.5rem;
+          border-left: 3px solid gray;
+          border-bottom: 3px solid gray;
+          transform: rotate(-45deg);
+          animation: arrow-down 1.5s infinite;
         }
 
         @keyframes text-drop {
@@ -37,8 +55,20 @@ const Landing = () => (
           }
         }
 
+        @keyframes arrow-down {
+          0% {
+            transform: rotate(-45deg) translate(0, 0);
+          }
+          20% {
+            transform: rotate(-45deg) translate(-1.5rem, 1.5rem);
+          }
+          40% {
+            transform: rotate(-45deg) translate(0, 0);
+          }
+        }
+
         @media only screen and (max-width: 1024px) {
-          .main {
+          .flex-container {
             flex-direction: column;
           }
 
