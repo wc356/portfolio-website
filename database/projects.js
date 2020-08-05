@@ -7,7 +7,7 @@ export const projects = [
       "Dynamically Rendered Front-End Website for Violist—Serena Hsu",
     links: [
       { text: "GitHub", src: "//github.com/wc356/hsu-website" },
-      { text: "Try Demo", src: "//hsu-website.now.sh/" },
+      { text: "Try Demo", src: "//hsu-website.vercel.app/" },
     ],
     technology: [
       "ReactJS",
