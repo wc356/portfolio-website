@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
+import Head from "next/head";
 import { initGA, logPageView } from "../utils/analytics";
-import MetaTags from "react-meta-tags";
 
 import Nav from "./Nav";
 
@@ -15,7 +15,7 @@ const Layout = (props) => {
 
   return (
     <div>
-      <MetaTags>
+      <Head>
         <title>Woo Young Choi Portfolio 👨🏻‍💻</title>
         <meta charSet="UTF-8" />
         <meta name="author" content="Woo Young Choi" />
@@ -28,7 +28,7 @@ const Layout = (props) => {
           content="JavaScript, HTML, CSS, SASS, SCSS, XML, React, ReactJS, Next, NextJS, software engineer, developer, software developer, front-end developer, front-end, full-stack engineer, web portfolio, developer portfolio, Woo Young Choi"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </MetaTags>
+      </Head>
       <Nav />
       <div>{props.children}</div>
       <style jsx global>

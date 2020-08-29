@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 
 import Layout from "../components/Layout";
@@ -16,7 +17,7 @@ export default () => {
 
     return mapReverse(blog, (post) => (
       <Link key={post.id} href="/p/[title]" as={`/p/${post.title}`}>
-        <li className="card">
+        <a className="card">
           <h1 className="title">{post.title}</h1>
           <p className="date">{post.date}</p>
           <style jsx>
@@ -34,6 +35,7 @@ export default () => {
                 transition: all 0.15s;
                 background: white;
                 box-shadow: white 0 0 0.5rem 0;
+                text-decoration: none;
               }
               .card:hover {
                 border: ${theme.colors.dark} 1px solid;
@@ -53,13 +55,20 @@ export default () => {
               }
             `}
           </style>
-        </li>
+        </a>
       </Link>
     ));
   };
 
   return (
     <Layout>
+      <Head>
+        <script
+          data-ad-client="ca-pub-1984387598243036"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+      </Head>
       <div className="layout">
         <ul className="cards">{addPosts()}</ul>
       </div>

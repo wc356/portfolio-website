@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
@@ -107,8 +108,15 @@ export default () => {
 
   return (
     <Layout>
+      <Head>
+        <script
+          data-ad-client="ca-pub-1984387598243036"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+      </Head>
       <div className="background">
-        <div></div>
+        <div />
         <div className="body">
           <h1>{title}</h1>
           {handleBody()}
