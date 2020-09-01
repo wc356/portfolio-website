@@ -109,11 +109,11 @@ export default () => {
   return (
     <Layout>
       <Head>
-        <script
+        <
           data-ad-client="ca-pub-1984387598243036"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
+        />
       </Head>
       <div className="background">
         <div />
