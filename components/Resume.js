@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import resume from "../database/resume";
@@ -6,200 +6,71 @@ import resume from "../database/resume";
 const Resume = () => {
   const values = Object.values(resume);
 
-  const renderSectionName = () => (
-    <div className="name">
-      <h1>{values[0]}</h1>
-      <style jsx>
-        {`
-          a {
-            color: ${values[9].highlight};
-            text-decoration: none;
-            font-weight: 500;
-          }
-          li,
-          p {
-            color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
-          .background {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: 0.5rem;
-            border-radius: 0 0.7rem 0 0.7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
-          }
-          .professional-exp {
-            padding-top: 4rem;
-          }
-          .page-content {
-            display: flex;
-            height: 100%;
-          }
-          .left-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
-          .right-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .contact {
-            font-size: 14px;
-            margin: 9px 0 20px 15px;
-            white-space: nowrap;
-          }
-          a {
-            display: block;
-            transition: all 0.15s;
-          }
-          a:hover {
-            transform: translateY(-3px);
-          }
-          .subsection {
-            padding: 15px;
-          }
-          .title {
-            margin-bottom: 10px;
-          }
-        `}
-      </style>
-    </div>
-  );
+  function renderSectionName() {
+    return (
+      <div className="name">
+        <h1>{values[0]}</h1>
+        <style jsx>
+          {`
+            .name {
+              display: block;
+              font-size: 2.6rem;
+              padding-top: 1rem;
+              white-space: nowrap;
+            }
+          `}
+        </style>
+      </div>
+    );
+  }
 
-  const renderSectionBtn = () => (
-    <div className="btn-wrapper">
-      <a className="btn-download" href={values[10][1]} target="_blank">
-        {values[10][0]}
-      </a>
-      <style jsx>
-        {`
-          a {
-            color: ${values[9].highlight};
-            text-decoration: none;
-            font-weight: 500;
-          }
-          li,
-          p {
-            color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
-          .background {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: 0.5rem;
-            border-radius: 0 0.7rem 0 0.7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
-          }
-          .professional-exp {
-            padding-top: 4rem;
-          }
-          .page-content {
-            display: flex;
-            height: 100%;
-          }
-          .left-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
-          .right-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .contact {
-            font-size: 14px;
-            margin: 9px 0 20px 15px;
-            white-space: nowrap;
-          }
-          a {
-            display: block;
-            transition: all 0.15s;
-          }
-          a:hover {
-            transform: translateY(-3px);
-          }
-          .subsection {
-            padding: 15px;
-          }
-          .title {
-            margin-bottom: 10px;
-          }
-        `}
-      </style>
-    </div>
-  );
+  function renderSectionBtn() {
+    return (
+      <div className="btn-wrapper">
+        <a className="btn-download" href={values[10][1]} target="_blank">
+          {values[10][0]}
+        </a>
+        <style jsx>
+          {`
+            a {
+              color: ${values[9].highlight};
+              text-decoration: none;
+              font-weight: 500;
+              display: block;
+              transition: all 0.15s;
+            }
+            a:hover {
+              transform: translateY(-3px);
+            }
+            .btn-wrapper {
+              position: sticky;
+              position: -webkit-sticky;
+              top: 4rem;
+            }
+            .btn-download {
+              display: inline-block;
+              position: relative;
+              left: -10rem;
+              white-space: nowrap;
+              color: white;
+              background-color: ${values[9].highlight};
+              padding: 0.5rem;
+              border-radius: 0 0.7rem 0 0.7rem;
+              box-shadow: ${values[9].highlight} 0 0 10px 0;
+            }
+            .btn-download:hover {
+              background-color: pink;
+            }
+          `}
+        </style>
+      </div>
+    );
+  }
 
-  const renderExperience = (expType) => {
+  function renderExperience(expType) {
     const renderifLocationExist = (exp) =>
       exp.location && (
-        <>
+        <Fragment>
           , <span>{exp.location}</span>
           <style jsx>
             {`
@@ -209,7 +80,7 @@ const Resume = () => {
               }
             `}
           </style>
-        </>
+        </Fragment>
       );
 
     const renderGithubLink = (exp, expType) => {
@@ -218,7 +89,7 @@ const Resume = () => {
           return "";
         case "project":
           return (
-            <>
+            <Fragment>
               -{" "}
               <a
                 href={exp.link[1]}
@@ -272,19 +143,23 @@ const Resume = () => {
                   }
                 `}
               </style>
-            </>
+            </Fragment>
           );
       }
     };
 
+    const renderTitle = (company, title) => (
+      <Fragment>{company ? `${company} - ${title}` : title}</Fragment>
+    );
+
     return (
-      <>
+      <Fragment>
         <h3>{expType.toUpperCase()} EXPERIENCE</h3>
         {values[3][expType].map((exp) => {
           return (
             <div key={uuidv4()} className="project">
               <h2 className="project-header">
-                {`${exp.company} — ${exp.title}`}
+                {renderTitle(exp.company, exp.title)}
                 {renderifLocationExist(exp)} {renderGithubLink(exp, expType)}
               </h2>
               <p>{exp.subTitle}</p>
@@ -311,18 +186,14 @@ const Resume = () => {
               padding: 5px;
               color: ${values[9].body};
             }
-            span {
-              font-size: 17px;
-              color: gray;
-            }
             .project {
               margin: 10px;
             }
           `}
         </style>
-      </>
+      </Fragment>
     );
-  };
+  }
 
   const renderSectionEducation = () => (
     <div className="education">
@@ -388,9 +259,6 @@ const Resume = () => {
       </ul>
       <style jsx>
         {`
-          h3 {
-            color: ${values[9].highlight};
-          }
           a {
             color: ${values[9].highlight};
             text-decoration: none;
@@ -399,63 +267,6 @@ const Resume = () => {
           li,
           p {
             color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
-          .background {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: 0.5rem;
-            border-radius: 0 0.7rem 0 0.7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
-          }
-          .professional-exp {
-            padding-top: 4rem;
-          }
-          .page-content {
-            display: flex;
-            height: 100%;
-          }
-          .left-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
-          .right-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
           }
           .contact {
             font-size: 14px;
@@ -468,12 +279,6 @@ const Resume = () => {
           }
           a:hover {
             transform: translateY(-3px);
-          }
-          .subsection {
-            padding: 15px;
-          }
-          .title {
-            margin-bottom: 10px;
           }
         `}
       </style>
@@ -490,91 +295,14 @@ const Resume = () => {
       </ul>
       <style jsx>
         {`
-          h3 {
-            color: ${values[9].highlight};
-          }
-          a {
-            color: ${values[9].highlight};
-            text-decoration: none;
-            font-weight: 500;
-          }
-          li,
-          p {
+          li {
             color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
-          .background {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: 0.5rem;
-            border-radius: 0 0.7rem 0 0.7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
-          }
-          .professional-exp {
-            padding-top: 4rem;
-          }
-          .page-content {
-            display: flex;
-            height: 100%;
-          }
-          .left-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
-          .right-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .contact {
-            font-size: 14px;
-            margin: 9px 0 20px 15px;
-            white-space: nowrap;
-          }
-          a {
-            display: block;
-            transition: all 0.15s;
-          }
-          a:hover {
-            transform: translateY(-3px);
           }
           .subsection {
             padding: 15px;
           }
           .title {
+            color: ${values[9].highlight};
             margin-bottom: 10px;
           }
         `}
@@ -587,94 +315,16 @@ const Resume = () => {
       <h3 className="title">HONORS</h3>
       <p>{values[5].title}</p>
       <p>{values[5].description}</p>
-
       <style jsx>
         {`
-          h3 {
-            color: ${values[9].highlight};
-          }
-          a {
-            color: ${values[9].highlight};
-            text-decoration: none;
-            font-weight: 500;
-          }
-          li,
           p {
             color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
-          .background {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: 0.5rem;
-            border-radius: 0 0.7rem 0 0.7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
-          }
-          .professional-exp {
-            padding-top: 4rem;
-          }
-          .page-content {
-            display: flex;
-            height: 100%;
-          }
-          .left-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
-          .right-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .contact {
-            font-size: 14px;
-            margin: 9px 0 20px 15px;
-            white-space: nowrap;
-          }
-          a {
-            display: block;
-            transition: all 0.15s;
-          }
-          a:hover {
-            transform: translateY(-3px);
           }
           .subsection {
             padding: 15px;
           }
           .title {
+            color: ${values[9].highlight};
             margin-bottom: 10px;
           }
         `}
@@ -690,94 +340,16 @@ const Resume = () => {
           <li key={uuidv4()}>{lang}</li>
         ))}
       </ul>
-
       <style jsx>
         {`
-          h3 {
-            color: ${values[9].highlight};
-          }
-          a {
-            color: ${values[9].highlight};
-            text-decoration: none;
-            font-weight: 500;
-          }
-          li,
-          p {
+          li {
             color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
-          .background {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: 0.5rem;
-            border-radius: 0 0.7rem 0 0.7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
-          }
-          .professional-exp {
-            padding-top: 4rem;
-          }
-          .page-content {
-            display: flex;
-            height: 100%;
-          }
-          .left-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
-          .right-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .contact {
-            font-size: 14px;
-            margin: 9px 0 20px 15px;
-            white-space: nowrap;
-          }
-          a {
-            display: block;
-            transition: all 0.15s;
-          }
-          a:hover {
-            transform: translateY(-3px);
           }
           .subsection {
             padding: 15px;
           }
           .title {
+            color: ${values[9].highlight};
             margin-bottom: 10px;
           }
         `}
@@ -793,95 +365,17 @@ const Resume = () => {
           <li key={uuidv4()}>{int}</li>
         ))}
       </ul>
-
       <style jsx>
         {`
-          h3 {
-            color: ${values[9].highlight};
-          }
-          a {
-            color: ${values[9].highlight};
-            text-decoration: none;
-            font-weight: 500;
-          }
-          li,
-          p {
+          li {
             color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
-          .background {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: 0.5rem;
-            border-radius: 0 0.7rem 0 0.7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
-          }
-          .professional-exp {
-            padding-top: 4rem;
-          }
-          .page-content {
-            display: flex;
-            height: 100%;
-          }
-          .left-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
-          .right-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .contact {
-            font-size: 14px;
-            margin: 9px 0 20px 15px;
-            white-space: nowrap;
-          }
-          a {
-            display: block;
-            transition: all 0.15s;
-          }
-          a:hover {
-            transform: translateY(-3px);
           }
           .subsection {
             padding: 15px;
           }
           .title {
             margin-bottom: 10px;
+            color: ${values[9].highlight};
           }
         `}
       </style>
@@ -896,89 +390,13 @@ const Resume = () => {
           <li key={uuidv4()}>{hobby}</li>
         ))}
       </ul>
-
       <style jsx>
         {`
           h3 {
             color: ${values[9].highlight};
           }
-          a {
-            color: ${values[9].highlight};
-            text-decoration: none;
-            font-weight: 500;
-          }
-          li,
-          p {
+          li {
             color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
-          .background {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: 0.5rem;
-            border-radius: 0 0.7rem 0 0.7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
-          }
-          .professional-exp {
-            padding-top: 4rem;
-          }
-          .page-content {
-            display: flex;
-            height: 100%;
-          }
-          .left-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
-          .right-column {
-            display: flex;
-            min-height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .contact {
-            font-size: 14px;
-            margin: 9px 0 20px 15px;
-            white-space: nowrap;
-          }
-          a {
-            display: block;
-            transition: all 0.15s;
-          }
-          a:hover {
-            transform: translateY(-3px);
           }
           .subsection {
             padding: 15px;
@@ -1016,21 +434,6 @@ const Resume = () => {
       </div>
       <style jsx>
         {`
-          h3 {
-              color: ${values[9].highlight};
-            }
-          a {
-            color: ${values[9].highlight};
-            text-decoration: none;
-            font-weight: 500;
-          }
-          li, p {
-            color: ${values[9].body};
-          }
-          span {
-            color: gray;
-            font-size: 20px;
-          }
           .background {
             display: flex;
             min-height: 100vh;
@@ -1039,25 +442,6 @@ const Resume = () => {
             align-items: center;
             width: 100%;
             padding: 6rem;
-          }
-          .btn-wrapper {
-            position: sticky;
-            position: -webkit-sticky;
-            top: 4rem;
-          }
-          .btn-download {
-            display: inline-block;
-            position: relative;
-            left: -10rem;
-            white-space: nowrap;
-            color: white;
-            background-color: ${values[9].highlight};
-            padding: .5rem;
-            border-radius: 0 .7rem 0 .7rem;
-            box-shadow: ${values[9].highlight} 0 0 10px 0;
-          }
-          .btn-download:hover {
-            background-color: pink;
           }
           .page {
             display: flex;
@@ -1072,12 +456,6 @@ const Resume = () => {
             border-left: 1px solid ${values[9].border};
             box-shadow 10px 10px 10px ${values[9].shadow};
             height: 100%;
-          }
-          .name {
-            display: block;
-            font-size: 2.6rem;
-            padding-top: 1rem;
-            white-space: nowrap;
           }
           .professional-exp {
             padding-top: 4rem;
@@ -1098,24 +476,6 @@ const Resume = () => {
             flex-direction: column;
             justify-content: space-between;
           }
-          .contact {
-            font-size: 14px;
-            margin: 9px 0 20px 15px;
-            white-space: nowrap;
-          }
-          a {
-            display: block;
-            transition: all 0.15s;
-          }
-          a:hover {
-            transform: translateY(-3px);
-          }
-          .subsection {
-            padding: 15px;
-          }
-          .title {
-            margin-bottom: 10px;
-          }
           @media only screen and (max-width: 900px) {
             .background {
               padding: 0;
@@ -1126,29 +486,11 @@ const Resume = () => {
             .page-content {
               flex-direction: column;
             }
-            .btn-wrapper {
-              display: flex;
-              justify-content: flex-end;
-            }
-            .btn-download {
-              position: static;
-            }
-            .name {
-              padding: 2rem 0;
-            }
             .professional-exp {
               padding: 0;
             }
           }
-          @media only screen and (max-width: 376px) {
-            .name {
-              font-size: 1.65rem;
-            }
-          }
           @media print {
-            .btn-wrapper {
-              display: none;
-            }
             .background {
               padding: 0;
             }
@@ -1159,9 +501,6 @@ const Resume = () => {
             }
             .professional-exp {
               padding-top: 48px;
-            }
-            .subsection {
-              padding: 10px;
             }
           }
         `}

@@ -39,6 +39,7 @@ export default {
       },
       {
         title: "Frontend Developer",
+        company: "GrowSquares",
         location: "Remote",
         subTitle: "May 2020 - Present",
         description: [
