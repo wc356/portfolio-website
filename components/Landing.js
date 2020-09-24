@@ -4,7 +4,7 @@ const Landing = () => (
   <div className="flex-container">
     <div className="title">
       <h1 className="title__name">WOO YOUNG CHOI</h1>
-      <p className="title__description">UI/UX & Front-end Developer</p>
+      <p className="title__description">UI/UX & Fullstack Development</p>
     </div>
     <span></span>
     <style jsx>
